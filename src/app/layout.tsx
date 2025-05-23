@@ -4,6 +4,7 @@ import { Roboto } from "next/font/google";
 
 import "./globals.css";
 import ReduxProvider from "@/lib/redux/ReduxProvider";
+import Main_Header from "@/components/Main_Header";
 
 export const metadata: Metadata = {
   title: "dictionary-cards",
@@ -23,9 +24,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={roboto.className}>
-      <body className="!p-[16px]">
+      <body className="">
         <ReduxProvider>
-          <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
+          <AppRouterCacheProvider>
+            <>
+              <Main_Header />
+              <div className="!p-[16px]">
+
+              {children}
+              </div>
+            </>
+          </AppRouterCacheProvider>
         </ReduxProvider>
       </body>
     </html>

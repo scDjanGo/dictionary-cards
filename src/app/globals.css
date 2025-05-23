@@ -1,1 +1,94 @@
 @import "tailwindcss";
+
+
+
+@theme {
+    --color-white-100: #FFFFFF;
+    --color-white-200: #F4F7FF;
+    --color-white-300: #F1F1F1;
+    --color-white-400: #E5E7EB80;
+    --color-white-500: #F8F8F8;
+    --color-white-600: #515355;
+    --color-white-700: #A1A1A1;
+    --color-white-800: #F2F1F0;
+    --color-white-900: #FFFFFFCC;
+    --color-white-110: #F3F4FA;
+    --color-white-120: #848484;
+    --color-white-130: #F1F3F5;
+    --color-white-140: #FDFDFD;
+    --color-white-150: #FEFEFF;
+
+    --color-black-100: #000000;
+    --color-black-200: #292929;
+    --color-black-300: #1E1E1E;
+    --color-black-400: #141414;
+    --color-black-500: #666666;
+    --color-black-600: #333333;
+    --color-black-700: #E3E2E1;
+    --color-black-800: #110229;
+    --color-black-900: #1e1e1e0d;
+    --color-black-110: #292522;
+    --color-black-120: #202020;
+    --color-black-130: #202224;
+    --color-black-140: #040506;
+    --color-black-150: #404040;
+    --color-black-160: #121212;
+    --color-black-170: #1E1E1E66;
+    --color-black-180: #0000000D;
+    --color-black-190: #343434;
+    --color-black-210: #262D2980;
+
+    --color-blue-100: #00AAFF;
+    --color-blue-200: #DCDCEB;
+    --color-blue-300: #1DAEFF;
+    --color-blue-400: #667085;
+    --color-blue-500: #6B6F7B;
+    --color-blue-600: #585981;
+    --color-blue-700: #8F90A6;
+    --color-blue-800: #778088;
+    --color-blue-900: #6B7280;
+    --color-blue-110: #374151;
+    --color-blue-120: #DFEAF2;
+    --color-blue-130: #1C2B38;
+    --color-blue-140: #F1F5F9;
+    --color-blue-150: #F4F7FB;
+    --color-blue-160: #EBF0F78C;
+    --color-blue-170: #1D1F24;
+
+    --color-green-100: #60D669;
+
+    --color-red-100: #F32222;
+    --color-red-200: #F83427;
+    --color-red-300: #EF3826;
+
+    --color-gray-100: #262D29;
+    --color-gray-200: #262D2966;
+    --color-gray-300: #1F293780;
+    --color-gray-400: #00000033;
+    --color-gray-500: #262D2999;
+    --color-gray-600: #676D75;
+
+    --color-blueCl: #1976D2;
+
+
+    --font-golos: "Golos Text", sans-serif;
+
+    --breakpoint-1400px: 1440px;
+    --breakpoint-1200px: 1240px;
+    --breakpoint-1040px: 1040px;
+    --breakpoint-1000px: 1040px;
+    --breakpoint-895px: 895px;
+    --breakpoint-800px: 840px;
+    --breakpoint-695px: 695px;
+    --breakpoint-640px: 640px;
+    --breakpoint-600px: 640px;
+    --breakpoint-595px: 595px;
+    --breakpoint-425px: 445px;
+    --breakpoint-375px: 395px;
+    --breakpoint-325px: 345px;
+}
+
+
+* {
+    text-decoration: none;
+}

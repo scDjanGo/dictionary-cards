@@ -37,15 +37,15 @@ export default function CategoriesPage() {
 
   const other_categories = [
     {
-      id: 6,
-      name: "Blocked",
-      intlName: "Заблокированные",
-      childCategories: [],
-    },
-    {
       id: 7,
       name: "My cards",
       intlName: "Мои карты",
+      childCategories: [],
+    },
+    {
+      id: 6,
+      name: "Blocked",
+      intlName: "Заблокированные",
       childCategories: [],
     },
   ];
@@ -61,6 +61,75 @@ export default function CategoriesPage() {
         margin: "0 auto",
       }}
     >
+      <Link
+        className={``}
+        href={`/my-cards`}
+        passHref
+      >
+        <Stack
+          sx={{
+            position: "relative",
+            cursor: "pointer",
+            "&:hover > *:first-child": {
+              transform: "translateY(-2px)",
+              boxShadow: "0 6px 12px rgba(0,0,0,0.15)",
+            },
+            "&:active > *:first-child": {
+              transform: "translateY(0)",
+            },
+          }}
+        >
+          <Button
+            className="line-clamp-2 flex flex-col gap-[5px]"
+            variant="contained"
+            sx={{
+              position: "relative",
+              zIndex: 3,
+              py: 2,
+              borderRadius: "8px",
+              boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+              transition: "all 0.3s ease",
+              bgcolor: "primary.main",
+              color: "white",
+              fontSize: "1.1rem",
+              fontWeight: 500,
+            }}
+          >
+            <span>{other_categories[0].name}</span>
+            <span>------------</span>
+            {other_categories[0].intlName}
+          </Button>
+
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: "-4px",
+              left: "4px",
+              right: "4px",
+              height: "100%",
+              bgcolor: "primary.dark",
+              borderRadius: "8px",
+              zIndex: 2,
+              opacity: 0.7,
+            }}
+          />
+
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: "-8px",
+              left: "8px",
+              right: "8px",
+              height: "100%",
+              bgcolor: "primary.dark",
+              borderRadius: "8px",
+              zIndex: 1,
+              opacity: 0.4,
+            }}
+          />
+        </Stack>
+      </Link>
+
       {categories.map((item) => (
         <Link
           className={``}
@@ -132,78 +201,74 @@ export default function CategoriesPage() {
           </Stack>
         </Link>
       ))}
-      
-      {other_categories.map((item) => (
-        <Link
-          className={``}
-          href={`/categories/${item.id}`}
-          key={item.id}
-          passHref
+      <Link
+        className={``}
+        href={`/blocked-cards`}
+        passHref
+      >
+        <Stack
+          sx={{
+            position: "relative",
+            cursor: "pointer",
+            "&:hover > *:first-child": {
+              transform: "translateY(-2px)",
+              boxShadow: "0 6px 12px rgba(0,0,0,0.15)",
+            },
+            "&:active > *:first-child": {
+              transform: "translateY(0)",
+            },
+          }}
         >
-          <Stack
+          <Button
+            className="line-clamp-2 flex flex-col gap-[5px]"
+            variant="contained"
             sx={{
               position: "relative",
-              cursor: "pointer",
-              "&:hover > *:first-child": {
-                transform: "translateY(-2px)",
-                boxShadow: "0 6px 12px rgba(0,0,0,0.15)",
-              },
-              "&:active > *:first-child": {
-                transform: "translateY(0)",
-              },
+              zIndex: 3,
+              py: 2,
+              borderRadius: "8px",
+              boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+              transition: "all 0.3s ease",
+              bgcolor: "primary.main",
+              color: "white",
+              fontSize: "1.1rem",
+              fontWeight: 500,
             }}
           >
-            <Button
-              className="line-clamp-2 flex flex-col gap-[5px]"
-              variant="contained"
-              sx={{
-                position: "relative",
-                zIndex: 3,
-                py: 2,
-                borderRadius: "8px",
-                boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
-                transition: "all 0.3s ease",
-                bgcolor: "primary.main",
-                color: "white",
-                fontSize: "1.1rem",
-                fontWeight: 500,
-              }}
-            >
-              <span>{item.name}</span>
-              <span>------------</span>
-              {item.intlName}
-            </Button>
+            <span>{other_categories[1].name}</span>
+            <span>------------</span>
+            {other_categories[1].intlName}
+          </Button>
 
-            <Box
-              sx={{
-                position: "absolute",
-                bottom: "-4px",
-                left: "4px",
-                right: "4px",
-                height: "100%",
-                bgcolor: "primary.dark",
-                borderRadius: "8px",
-                zIndex: 2,
-                opacity: 0.7,
-              }}
-            />
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: "-4px",
+              left: "4px",
+              right: "4px",
+              height: "100%",
+              bgcolor: "primary.dark",
+              borderRadius: "8px",
+              zIndex: 2,
+              opacity: 0.7,
+            }}
+          />
 
-            <Box
-              sx={{
-                position: "absolute",
-                bottom: "-8px",
-                left: "8px",
-                right: "8px",
-                height: "100%",
-                bgcolor: "primary.dark",
-                borderRadius: "8px",
-                zIndex: 1,
-                opacity: 0.4,
-              }}
-            />
-          </Stack>
-        </Link>
-      ))}
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: "-8px",
+              left: "8px",
+              right: "8px",
+              height: "100%",
+              bgcolor: "primary.dark",
+              borderRadius: "8px",
+              zIndex: 1,
+              opacity: 0.4,
+            }}
+          />
+        </Stack>
+      </Link>
     </Box>
   );
 }

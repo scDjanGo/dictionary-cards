@@ -45,7 +45,7 @@ export default function Subcategory_Cards_Container({
               },
             }}
           >
-            <Default_Card data={word} />
+            <Default_Card data={word as any} />
           </Card>
         </Box>
       ))}
