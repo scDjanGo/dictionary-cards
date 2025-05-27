@@ -1,12 +1,13 @@
 // store/store.ts
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
-import counterSlice from "@/lib/redux/slices/counterSlice/counterSlice"
-
+import currentCardsSlice from "@/lib/redux/slices/currentCardsSlice/currentCardsSlice"
+import testConfigurationSlice from '@/lib/redux/slices/testConfigurationSlice/testConfigurationSlice'
 
 export const store = configureStore({
   reducer: {
-    counterSlice,
+    currentCardsSlice,
+    testConfigurationSlice,
   },
 });
 

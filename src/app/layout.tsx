@@ -29,10 +29,7 @@ export default function RootLayout({
           <AppRouterCacheProvider>
             <>
               <Main_Header />
-              <div className="!p-[16px]">
-
-              {children}
-              </div>
+              <div className="!p-[88px_16px_16px_16px]">{children}</div>
             </>
           </AppRouterCacheProvider>
         </ReduxProvider>
