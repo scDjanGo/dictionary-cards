@@ -4,12 +4,14 @@ import { useEffect, useRef, useState } from "react";
 import { PlayArrow, Search, Quiz } from "@mui/icons-material";
 import { CardType } from "@/lib/types/types";
 import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
+import { useRouter } from "next/navigation";
 
 export default function Active_Header({
   currentCards,
 }: {
   currentCards: CardType[];
 }) {
+  const router = useRouter()
   const [defaultCards, setDefaultCards] = useState<CardType[]>([]);
   const setCurrentCards = useCurrentCardsStore(
     (state) => state.setCurrentCards
@@ -17,9 +19,15 @@ export default function Active_Header({
 
   const [value, setValue] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+
+
   useEffect(() => {
     setDefaultCards(currentCards);
   }, []);
+
+
+
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
     setValue(newValue);
@@ -39,7 +47,8 @@ export default function Active_Header({
   };
 
   const handlePlayClick = () => {
-    console.log("Нажата кнопка Play");
+    sessionStorage.setItem("quiz-cards", JSON.stringify(currentCards))
+    router.push(`quiz`)
   };
 
   const handleSearchIconClick = () => {

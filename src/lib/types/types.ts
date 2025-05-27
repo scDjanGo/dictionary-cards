@@ -8,3 +8,12 @@ export type CardType = {
   inBasket: boolean;
   isUserCard: boolean;
 };
+
+
+
+export type QuizSettingsType = {
+  language: "ru" | "en";
+  time: boolean;
+  type: "swipe" | "write" | "speak";
+  random: boolean
+}

@@ -88,7 +88,7 @@ export default function CategoryAccordion() {
                 <div key={cat.id}>
                   <ListItem disablePadding>
                     <Link
-                      href={`/category/${cat.id}`}
+                      href={`/my-cards/${cat.id}`}
                       className="w-full no-underline text-[#1976D2]"
                     >
                       <ListItemButton>

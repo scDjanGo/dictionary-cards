@@ -1,0 +1,61 @@
+"use client";
+
+import Loading_Component from "@/components/loading-component/Loading_Component";
+import { CardType, QuizSettingsType } from "@/lib/types/types";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import Play_Quiz_Swipe_Type from "./Play_Quiz_Swipe_Type";
+
+export default function Play_Quiz_Main() {
+  const router = useRouter();
+  const [quizCards, setQuizCards] = useState<null | CardType[]>(null);
+  const [quizSettings, setQuizSetting] = useState<null | QuizSettingsType>(
+    null
+  );
+
+  useEffect(() => {
+    const quiz_cards = JSON.parse(sessionStorage.getItem("quiz-cards") || "[]");
+
+    if (Array.isArray(quiz_cards) && quiz_cards.length) {
+      setQuizCards(quiz_cards);
+      console.log("quiz-cards", quiz_cards);
+      return;
+    }
+
+    if (window.history.length <= 1) {
+      router.push("/categories");
+    } else {
+      router.back();
+    }
+  }, []);
+
+  useEffect(() => {
+    const quiz_settings = JSON.parse(
+      sessionStorage.getItem("quiz-settings") || "[]"
+    );
+    if (!Array.isArray(quiz_settings)) {
+      setQuizSetting(quiz_settings);
+      return;
+    }
+
+    if (window.history.length <= 1) {
+      router.push("/categories");
+    } else {
+      router.back();
+    }
+  }, []);
+
+  console.log(quizCards);
+
+  return (
+    <div>
+      <Loading_Component
+        open={!quizCards || !quizSettings}
+        message="Подгружаем контент"
+      />
+      {quizCards && quizSettings && quizSettings.type === "swipe" && (
+        <Play_Quiz_Swipe_Type cards={quizCards} random={quizSettings.random} />
+      )}
+    </div>
+  );
+}

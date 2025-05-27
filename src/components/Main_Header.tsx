@@ -16,6 +16,24 @@ export default function Main_Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
+    const my_categories: any[] = JSON.parse(
+      localStorage.getItem(`my-categories`) || "[]"
+    );
+
+    if (!my_categories || !my_categories.length) {
+      const newCategory = {
+        id: 0,
+        name: "Others",
+        intlName: "Другие",
+        createDate: Date.now(),
+      };console.log("ok");
+      
+      localStorage.setItem("my-categories", JSON.stringify([newCategory]));
+      return;
+    }
+  }, []);
+
+  useEffect(() => {
     setCanGoBack(window.history.length > 1);
   }, []);
 
@@ -88,19 +106,39 @@ export default function Main_Header() {
             </IconButton>
           </div>
           <nav className="flex flex-col space-y-4 px-6 text-lg font-medium">
-            <Link href="/" className="text-white hover:underline" onClick={() => setOpen(false)}>
+            <Link
+              href="/"
+              className="text-white hover:underline"
+              onClick={() => setOpen(false)}
+            >
               Главная
             </Link>
-            <Link href="/my-cards" className="text-white hover:underline" onClick={() => setOpen(false)}>
+            <Link
+              href="/my-cards"
+              className="text-white hover:underline"
+              onClick={() => setOpen(false)}
+            >
               Мои карточки
             </Link>
-            <Link href="/create-card" className="text-white hover:underline" onClick={() => setOpen(false)}>
+            <Link
+              href="/create-card"
+              className="text-white hover:underline"
+              onClick={() => setOpen(false)}
+            >
               Создать карточку
             </Link>
-            <Link href="/create-category" className="text-white hover:underline" onClick={() => setOpen(false)}>
+            <Link
+              href="/create-category"
+              className="text-white hover:underline"
+              onClick={() => setOpen(false)}
+            >
               Создать категорию
             </Link>
-            <Link href="/blocked-cards" className="text-white hover:underline" onClick={() => setOpen(false)}>
+            <Link
+              href="/blocked-cards"
+              className="text-white hover:underline"
+              onClick={() => setOpen(false)}
+            >
               Заблакированные
             </Link>
           </nav>

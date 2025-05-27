@@ -10,7 +10,11 @@ import Active_Header from "@/components/Active_Header";
 import { useToggle } from "@/features/hooks/useToggle";
 import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
 
-export default function My_Cards_Component() {
+export default function My_Cards_Component({
+  currentCardsProps,
+}: {
+  currentCardsProps?: CardType[];
+}) {
   const [render, setRender] = useToggle();
   const currentCards = useCurrentCardsStore((state) => state.currentCards);
   const setCurrentCards = useCurrentCardsStore(
@@ -18,6 +22,11 @@ export default function My_Cards_Component() {
   );
 
   useEffect(() => {
+    if (Array.isArray(currentCardsProps)) {
+      setRender(true);
+      return;
+    }
+
     const userCards: CardType[] = JSON.parse(
       localStorage.getItem("my-cards") || "[]"
     );
