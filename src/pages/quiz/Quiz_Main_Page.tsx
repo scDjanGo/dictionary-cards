@@ -25,9 +25,11 @@ import MicIcon from "@mui/icons-material/Mic";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import { useRouter } from "next/navigation";
 import { QuizSettingsType } from "@/lib/types/types";
+import { useQuizSettingsStore } from "@/lib/zustand/quizSettings/useQuizSettings";
 
 export default function Quiz_Main_Page() {
   const router = useRouter();
+  const setQuizSettingsStore = useQuizSettingsStore(state => state.setQuizSettingsStore)
   const [quizSettings, setQuizSettings] = useState<QuizSettingsType>({
     language: "en",
     time: false,
@@ -50,14 +52,6 @@ export default function Quiz_Main_Page() {
     }
   }, []);
 
-  // useEffect(() => {
-  //   const lastQuizSettings = JSON.parse(
-  //     sessionStorage.getItem("quiz-settings") || "[]"
-  //   );
-  //   if (Array.isArray(lastQuizSettings)) return;
-  //   setQuizSettings(lastQuizSettings);
-  // }, []);
-
   const handleChange = (
     key: keyof QuizSettingsType,
     value: QuizSettingsType[keyof QuizSettingsType]
@@ -68,7 +62,7 @@ export default function Quiz_Main_Page() {
   const handleStartQuiz = () => {
     sessionStorage.setItem("quiz-settings", JSON.stringify(quizSettings));
     localStorage.setItem("quiz-settings", JSON.stringify(quizSettings));
-
+    setQuizSettingsStore(quizSettings)
     router.push(`/quiz/play`);
   };
 

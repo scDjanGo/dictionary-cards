@@ -1,13 +1,13 @@
 import { create } from "zustand";
 import { CardType } from "../types/types";
 
-interface currentCardsStore {
+interface CurrentCardsStore {
   currentCards: CardType[];
   setCurrentCards: (cards: CardType[]) => void;
   removeCardFromState: (id: number) => void;
 }
 
-export const useCurrentCardsStore = create<currentCardsStore>((set) => ({
+export const useCurrentCardsStore = create<CurrentCardsStore>((set) => ({
   currentCards: [],
   setCurrentCards: (cards) => set({ currentCards: cards }),
   removeCardFromState: (id) =>

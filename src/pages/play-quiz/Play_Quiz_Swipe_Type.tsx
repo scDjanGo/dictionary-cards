@@ -16,6 +16,7 @@ import {
   ButtonBase,
   Button,
 } from "@mui/material";
+import { useQuizSettingsStore } from "@/lib/zustand/quizSettings/useQuizSettings";
 
 const PRIMARY_COLOR = "#1976D2";
 const PRIMARY_LIGHT = "#E3F2FD";
@@ -34,7 +35,8 @@ export default function Play_Quiz_Swipe_Type({
 }) {
   const [cardDeck, setCardDeck] = useState<CardType[]>([]);
   const [flipped, setFlipped] = useState(false);
-  const router = useRouter()
+  const quizSettings = useQuizSettingsStore((state) => state.quizSettingsStore);
+  const router = useRouter();
 
   useEffect(() => {
     setCardDeck(random ? shuffleArray(cards) : [...cards]);
@@ -132,6 +134,9 @@ export default function Play_Quiz_Swipe_Type({
                   gutterBottom
                   sx={{ textAlign: "center", color: PRIMARY_COLOR }}
                 >
+                  {quizSettings.language === "ru"
+                    ? currentCard.name
+                    : currentCard.intlName}
                   {currentCard.name}
                 </Typography>
                 <Typography
@@ -139,7 +144,9 @@ export default function Play_Quiz_Swipe_Type({
                   color="text.secondary"
                   sx={{ textAlign: "center" }}
                 >
-                  {currentCard.intlName}
+                  {quizSettings.language === "en"
+                    ? currentCard.description
+                    : currentCard.intlDescription}
                 </Typography>
               </>
             ) : (

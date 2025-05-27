@@ -5,10 +5,12 @@ import { CardType, QuizSettingsType } from "@/lib/types/types";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Play_Quiz_Swipe_Type from "./Play_Quiz_Swipe_Type";
+import { useQuizSettingsStore } from "@/lib/zustand/quizSettings/useQuizSettings";
 
 export default function Play_Quiz_Main() {
   const router = useRouter();
   const [quizCards, setQuizCards] = useState<null | CardType[]>(null);
+  const setQuizSettingsStore = useQuizSettingsStore(state => state.setQuizSettingsStore)
   const [quizSettings, setQuizSetting] = useState<null | QuizSettingsType>(
     null
   );
@@ -34,7 +36,7 @@ export default function Play_Quiz_Main() {
       sessionStorage.getItem("quiz-settings") || "[]"
     );
     if (!Array.isArray(quiz_settings)) {
-      setQuizSetting(quiz_settings);
+      setQuizSetting(quiz_settings);setQuizSettingsStore(quiz_settings)
       return;
     }
 
