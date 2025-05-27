@@ -4,17 +4,18 @@ import { Card } from "@mui/material";
 import Box from "@mui/material/Box";
 import { useEffect } from "react";
 import Default_Card from "@/components/cards/Default_Card";
-import { useAppDispatch, useAppSelector } from "@/lib/redux/hooks";
-import { setCurrentCards } from "@/lib/redux/slices/currentCardsSlice/currentCardsSlice";
 import { CardType } from "@/lib/types/types";
 import Empty_My_Cards_Page from "@/components/empty-pages/Empty_My_Cards_Page";
 import Active_Header from "@/components/Active_Header";
 import { useToggle } from "@/features/hooks/useToggle";
+import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
 
 export default function My_Cards_Component() {
-  const dispatch = useAppDispatch();
-  const currentCards = useAppSelector((state) => state.currentCardsSlice.value);
   const [render, setRender] = useToggle();
+  const currentCards = useCurrentCardsStore((state) => state.currentCards);
+  const setCurrentCards = useCurrentCardsStore(
+    (state) => state.setCurrentCards
+  );
 
   useEffect(() => {
     const userCards: CardType[] = JSON.parse(
@@ -24,16 +25,14 @@ export default function My_Cards_Component() {
       localStorage.getItem("basket-cards") || "[]"
     );
     if (!basket_cards.length) {
-      dispatch(setCurrentCards(userCards));
+      setCurrentCards(userCards);
       setRender(true);
       return;
     }
 
-    dispatch(
-      setCurrentCards(
-        userCards.filter(
-          (item) => !basket_cards.some((elem) => elem.id === item.id)
-        )
+    setCurrentCards(
+      userCards.filter(
+        (item) => !basket_cards.some((elem) => elem.id === item.id)
       )
     );
     setRender(true);

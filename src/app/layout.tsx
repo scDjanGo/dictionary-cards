@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 
 import "./globals.css";
-import StoreProvider from "./StoreProvider";
 import Main_Header from "@/components/Main_Header";
 
 export const metadata: Metadata = {
@@ -23,16 +22,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={roboto.className}>
-      <body className="">
-        <StoreProvider>
-          <AppRouterCacheProvider>
-            <>
-              <Main_Header />
-              <div className="!p-[88px_16px_16px_16px]">{children}</div>
-            </>
-          </AppRouterCacheProvider>
-        </StoreProvider>
+    <html lang="ru">
+      <body className={roboto.className}>
+        <AppRouterCacheProvider>
+          <>
+            <Main_Header />
+            <div className="!p-[88px_16px_16px_16px]">{children}</div>
+          </>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );

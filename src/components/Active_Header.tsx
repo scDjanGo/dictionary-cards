@@ -3,16 +3,17 @@
 import { useEffect, useRef, useState } from "react";
 import { PlayArrow, Search, Quiz } from "@mui/icons-material";
 import { CardType } from "@/lib/types/types";
-import { useAppDispatch } from "@/lib/redux/hooks";
-import { setCurrentCards } from "@/lib/redux/slices/currentCardsSlice/currentCardsSlice";
+import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
 
 export default function Active_Header({
   currentCards,
 }: {
   currentCards: CardType[];
 }) {
-  const dispatch = useAppDispatch();
   const [defaultCards, setDefaultCards] = useState<CardType[]>([]);
+  const setCurrentCards = useCurrentCardsStore(
+    (state) => state.setCurrentCards
+  );
 
   const [value, setValue] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
@@ -23,7 +24,7 @@ export default function Active_Header({
     const newValue = e.target.value;
     setValue(newValue);
     if (!newValue) {
-      dispatch(setCurrentCards(defaultCards));
+      setCurrentCards(defaultCards);
       return;
     }
     const filterCards = currentCards.filter(
@@ -33,7 +34,8 @@ export default function Active_Header({
         item.description.includes(newValue) ||
         item.intlDescription.includes(newValue)
     );
-    dispatch(setCurrentCards(filterCards));
+
+    setCurrentCards(filterCards);
   };
 
   const handlePlayClick = () => {

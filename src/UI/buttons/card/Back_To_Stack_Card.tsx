@@ -1,17 +1,18 @@
 "use client";
 
-import { removeCardFromState } from "@/lib/redux/slices/currentCardsSlice/currentCardsSlice";
 import { CardType } from "@/lib/types/types";
 import { useState } from "react";
-import { useAppDispatch } from "@/lib/redux/hooks";
+import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
 
 type ButtonProps = {
   card: CardType;
 };
 
 export default function Back_To_Stack_Card({ card }: ButtonProps) {
-  const dispatch = useAppDispatch();
   const [open, setOpen] = useState(false);
+  const removeCardFromState = useCurrentCardsStore(
+    (state) => state.removeCardFromState
+  );
 
   const handleOpen = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -33,7 +34,8 @@ export default function Back_To_Stack_Card({ card }: ButtonProps) {
       "basket-cards",
       JSON.stringify([...cardsFromBasket.filter((item) => item.id !== card.id)])
     );
-    dispatch(removeCardFromState(card.id));
+
+    removeCardFromState(card.id);
     setOpen(false);
   };
 

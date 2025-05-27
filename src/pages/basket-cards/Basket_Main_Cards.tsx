@@ -1,24 +1,25 @@
-"use client"
+"use client";
 
 import { Card } from "@mui/material";
 import Box from "@mui/material/Box";
 import { useEffect } from "react";
-import { useAppSelector, useAppDispatch } from "@/lib/redux/hooks";
 import Default_Card from "@/components/cards/Default_Card";
-import { setCurrentCards } from "@/lib/redux/slices/currentCardsSlice/currentCardsSlice";
 import { CardType } from "@/lib/types/types";
 import Empty_Page from "@/components/empty-pages/Empty_Page";
+import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
 
 export default function Basket_Main_Cards() {
-  const dispatch = useAppDispatch();
-  const currentCards = useAppSelector((state) => state.currentCardsSlice.value);
+  const currentCards = useCurrentCardsStore((state) => state.currentCards);
+  const setCurrentCards = useCurrentCardsStore(
+    (state) => state.setCurrentCards
+  );
 
   useEffect(() => {
     const basket_cards: CardType[] = JSON.parse(
       localStorage.getItem("basket-cards") || "[]"
     );
 
-    dispatch(setCurrentCards(basket_cards));
+    setCurrentCards(basket_cards);
   }, []);
 
   return currentCards.length ? (

@@ -14,6 +14,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FolderIcon from "@mui/icons-material/Folder";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import FolderOpenIcon from "@mui/icons-material/FolderOpen";
 
 interface Category {
   id: number;
@@ -66,7 +67,12 @@ export default function CategoryAccordion() {
             borderRadius: "8px 8px 0 0",
           }}
         >
-          <Typography fontWeight={600}>📂 Мои категории</Typography>
+          <Typography fontWeight={600}>
+            <FolderOpenIcon
+              sx={{ fontSize: 20, verticalAlign: "middle", mr: 1 }}
+            />
+            Мои категории
+          </Typography>
         </AccordionSummary>
         <AccordionDetails className="bg-white rounded-b-md">
           {categories.length === 0 ? (
