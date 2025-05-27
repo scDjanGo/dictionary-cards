@@ -1,9 +1,9 @@
 "use client";
 
 import { removeCardFromState } from "@/lib/redux/slices/currentCardsSlice/currentCardsSlice";
-import { useAppDispatch } from "@/lib/redux/store";
 import { useState } from "react";
 import { CardType } from "@/lib/types/types";
+import { useAppDispatch } from "@/lib/redux/hooks";
 
 type ButtonProps = {
   id: number;

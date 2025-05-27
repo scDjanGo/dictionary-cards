@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 
 import "./globals.css";
-import ReduxProvider from "@/lib/redux/ReduxProvider";
+import StoreProvider from "./StoreProvider";
 import Main_Header from "@/components/Main_Header";
 
 export const metadata: Metadata = {
@@ -25,14 +25,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={roboto.className}>
       <body className="">
-        <ReduxProvider>
+        <StoreProvider>
           <AppRouterCacheProvider>
             <>
               <Main_Header />
               <div className="!p-[88px_16px_16px_16px]">{children}</div>
             </>
           </AppRouterCacheProvider>
-        </ReduxProvider>
+        </StoreProvider>
       </body>
     </html>
   );

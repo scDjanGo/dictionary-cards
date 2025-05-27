@@ -1,7 +1,7 @@
 "use client";
 
 import { removeCardFromState } from "@/lib/redux/slices/currentCardsSlice/currentCardsSlice";
-import { useAppDispatch } from "@/lib/redux/store";
+import { useAppDispatch } from "@/lib/redux/hooks";
 import { CardType } from "@/lib/types/types";
 import { useState } from "react";
 

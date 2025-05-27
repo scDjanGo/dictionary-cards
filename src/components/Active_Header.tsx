@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { PlayArrow, Search, Quiz } from "@mui/icons-material";
 import { CardType } from "@/lib/types/types";
-import { useAppDispatch } from "@/lib/redux/store";
+import { useAppDispatch } from "@/lib/redux/hooks";
 import { setCurrentCards } from "@/lib/redux/slices/currentCardsSlice/currentCardsSlice";
 
 export default function Active_Header({

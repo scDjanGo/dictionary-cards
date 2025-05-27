@@ -1,10 +1,10 @@
-"use client";
+"use client"
 
 import { Card } from "@mui/material";
 import Box from "@mui/material/Box";
 import { useEffect } from "react";
+import { useAppSelector, useAppDispatch } from "@/lib/redux/hooks";
 import Default_Card from "@/components/cards/Default_Card";
-import { useAppDispatch, useAppSelector } from "@/lib/redux/store";
 import { setCurrentCards } from "@/lib/redux/slices/currentCardsSlice/currentCardsSlice";
 import { CardType } from "@/lib/types/types";
 import Empty_Page from "@/components/empty-pages/Empty_Page";

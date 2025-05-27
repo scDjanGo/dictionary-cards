@@ -4,7 +4,7 @@ import { Card } from "@mui/material";
 import Box from "@mui/material/Box";
 import { useEffect } from "react";
 import Default_Card from "@/components/cards/Default_Card";
-import { useAppDispatch, useAppSelector } from "@/lib/redux/store";
+import { useAppDispatch, useAppSelector } from "@/lib/redux/hooks";
 import { setCurrentCards } from "@/lib/redux/slices/currentCardsSlice/currentCardsSlice";
 import { CardType } from "@/lib/types/types";
 import Empty_My_Cards_Page from "@/components/empty-pages/Empty_My_Cards_Page";
