@@ -48,7 +48,7 @@ export default function Active_Header({
 
   const handlePlayClick = () => {
     sessionStorage.setItem("quiz-cards", JSON.stringify(currentCards))
-    router.push(`quiz`)
+    router.push(`/quiz`)
   };
 
   const handleSearchIconClick = () => {

@@ -134,10 +134,9 @@ export default function Play_Quiz_Swipe_Type({
                   gutterBottom
                   sx={{ textAlign: "center", color: PRIMARY_COLOR }}
                 >
-                  {quizSettings.language === "ru"
+                  {quizSettings.language === "en"
                     ? currentCard.name
                     : currentCard.intlName}
-                  {currentCard.name}
                 </Typography>
                 <Typography
                   variant="body1"
