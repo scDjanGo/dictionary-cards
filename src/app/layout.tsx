@@ -6,7 +6,7 @@ import "./globals.css";
 import Main_Header from "@/components/Main_Header";
 
 export const metadata: Metadata = {
-  title: "dictionary-cards",
+  title: "cards",
   description: "Made by scDjanGo",
 };
 
