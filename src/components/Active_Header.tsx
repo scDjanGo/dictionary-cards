@@ -62,7 +62,7 @@ export default function Active_Header({
   };
 
   return (
-    <div className="flex flex-col items-center gap-6 max-w-full mx-auto mt-[12px]">
+    <div className="flex flex-col items-center gap-6 max-w-full mx-auto mt-[12px] mb-[12px]">
       {/* Комбинированная строка с input и кнопкой Play */}
       <div className="flex items-center w-full gap-2">
         {/* Поле ввода с иконкой поиска */}

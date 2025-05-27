@@ -115,7 +115,7 @@ export default function Quiz_Main_Page() {
         </Box>
 
         {/* Timer */}
-        <Box mt={4}>
+        {/* <Box mt={4}>
           <FormControlLabel
             control={
               <Switch
@@ -130,7 +130,7 @@ export default function Quiz_Main_Page() {
               </Box>
             }
           />
-        </Box>
+        </Box> */}
         <Box mt={4}>
           <FormControlLabel
             control={
@@ -172,7 +172,7 @@ export default function Quiz_Main_Page() {
                   </Box>
                 }
               />
-              <FormControlLabel
+              {/* <FormControlLabel
                 value="write"
                 control={<Radio />}
                 label={
@@ -181,7 +181,7 @@ export default function Quiz_Main_Page() {
                     Write
                   </Box>
                 }
-              />
+              /> */}
               {/* <FormControlLabel
                 value="speak"
                 control={<Radio />}

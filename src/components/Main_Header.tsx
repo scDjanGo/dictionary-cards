@@ -107,7 +107,7 @@ export default function Main_Header() {
           </div>
           <nav className="flex flex-col space-y-4 px-6 text-lg font-medium">
             <Link
-              href="/"
+              href="/categories"
               className="text-white hover:underline"
               onClick={() => setOpen(false)}
             >
