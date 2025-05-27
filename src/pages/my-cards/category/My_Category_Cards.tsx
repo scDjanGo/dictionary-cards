@@ -10,7 +10,7 @@ import { useToggle } from "@/features/hooks/useToggle";
 
 export default function My_Category_Cards() {
   const router = useRouter();
-  const { category } = useParams<{ category: string | undefined }>();
+  const params = useParams<{ category: string | undefined }>();
   const [render, setRender] = useToggle();
   const currentCards = useCurrentCardsStore((state) => state.currentCards);
   const setCurrentCards = useCurrentCardsStore(
@@ -26,10 +26,10 @@ export default function My_Category_Cards() {
       router.push("/my-cards");
     }
 
-    setCurrentCards(my_cards.filter((item) => item.catId === Number(category)));
+    setCurrentCards(my_cards.filter((item) => item.catId === Number(params.category)));
 
     setRender(true);
-  }, [category]);
+  }, [params]);
 
   if (!render) return;
 
