@@ -54,12 +54,19 @@ export default async function page({ params }: typePage) {
     { id: 24, parentId: 5, name: "Time of day", intlName: "Время суток" },
     { id: 25, parentId: 5, name: "Clock time", intlName: "Время на часах" },
 
-    
-    { id: 26, parentId: 6, name: "Irregular verbs", intlName: "Неправильные глаголы" },
-    { id: 27, parentId: 6, name: "Regular verbs", intlName: "Правильные глаголы" },
+    {
+      id: 26,
+      parentId: 6,
+      name: "Irregular verbs",
+      intlName: "Неправильные глаголы",
+    },
+    {
+      id: 27,
+      parentId: 6,
+      name: "Regular verbs",
+      intlName: "Правильные глаголы",
+    },
   ];
-
-
 
   return (
     <Box
@@ -73,9 +80,15 @@ export default async function page({ params }: typePage) {
       }}
     >
       {subcategories
+        .reverse()
         .filter((item) => item.parentId === Number(category))
         .map((item) => (
-          <Link className={``} href={`/categories/${category}/${item.id}`} key={item.id} passHref>
+          <Link
+            className={``}
+            href={`/categories/${category}/${item.id}`}
+            key={item.id}
+            passHref
+          >
             <Stack
               sx={{
                 position: "relative",
