@@ -33,6 +33,12 @@ export default function CategoriesPage() {
       intlName: "Время",
       childCategories: [],
     },
+    {
+      id: 6,
+      name: "Post simple",
+      intlName: "Прошедшее простое",
+      childCategories: [],
+    },
   ];
 
   const other_categories = [

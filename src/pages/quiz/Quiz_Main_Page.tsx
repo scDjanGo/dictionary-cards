@@ -29,7 +29,9 @@ import { useQuizSettingsStore } from "@/lib/zustand/quizSettings/useQuizSettings
 
 export default function Quiz_Main_Page() {
   const router = useRouter();
-  const setQuizSettingsStore = useQuizSettingsStore(state => state.setQuizSettingsStore)
+  const setQuizSettingsStore = useQuizSettingsStore(
+    (state) => state.setQuizSettingsStore
+  );
   const [quizSettings, setQuizSettings] = useState<QuizSettingsType>({
     language: "en",
     time: false,
@@ -62,7 +64,7 @@ export default function Quiz_Main_Page() {
   const handleStartQuiz = () => {
     sessionStorage.setItem("quiz-settings", JSON.stringify(quizSettings));
     localStorage.setItem("quiz-settings", JSON.stringify(quizSettings));
-    setQuizSettingsStore(quizSettings)
+    setQuizSettingsStore(quizSettings);
     router.push(`/quiz/play`);
   };
 
@@ -172,7 +174,7 @@ export default function Quiz_Main_Page() {
                   </Box>
                 }
               />
-              {/* <FormControlLabel
+              <FormControlLabel
                 value="write"
                 control={<Radio />}
                 label={
@@ -181,7 +183,7 @@ export default function Quiz_Main_Page() {
                     Write
                   </Box>
                 }
-              /> */}
+              />
               {/* <FormControlLabel
                 value="speak"
                 control={<Radio />}

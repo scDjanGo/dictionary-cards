@@ -6,11 +6,14 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Play_Quiz_Swipe_Type from "./Play_Quiz_Swipe_Type";
 import { useQuizSettingsStore } from "@/lib/zustand/quizSettings/useQuizSettings";
+import Play_Quiz_Write_Type from "./Play_Quiz_Write";
 
 export default function Play_Quiz_Main() {
   const router = useRouter();
   const [quizCards, setQuizCards] = useState<null | CardType[]>(null);
-  const setQuizSettingsStore = useQuizSettingsStore(state => state.setQuizSettingsStore)
+  const setQuizSettingsStore = useQuizSettingsStore(
+    (state) => state.setQuizSettingsStore
+  );
   const [quizSettings, setQuizSetting] = useState<null | QuizSettingsType>(
     null
   );
@@ -20,7 +23,6 @@ export default function Play_Quiz_Main() {
 
     if (Array.isArray(quiz_cards) && quiz_cards.length) {
       setQuizCards(quiz_cards);
-      console.log("quiz-cards", quiz_cards);
       return;
     }
 
@@ -36,7 +38,8 @@ export default function Play_Quiz_Main() {
       sessionStorage.getItem("quiz-settings") || "[]"
     );
     if (!Array.isArray(quiz_settings)) {
-      setQuizSetting(quiz_settings);setQuizSettingsStore(quiz_settings)
+      setQuizSetting(quiz_settings);
+      setQuizSettingsStore(quiz_settings);
       return;
     }
 
@@ -47,8 +50,6 @@ export default function Play_Quiz_Main() {
     }
   }, []);
 
-  console.log(quizCards);
-
   return (
     <div>
       <Loading_Component
@@ -57,6 +58,9 @@ export default function Play_Quiz_Main() {
       />
       {quizCards && quizSettings && quizSettings.type === "swipe" && (
         <Play_Quiz_Swipe_Type cards={quizCards} random={quizSettings.random} />
+      )}{" "}
+      {quizCards && quizSettings && quizSettings.type === "write" && (
+        <Play_Quiz_Write_Type cards={quizCards} random={quizSettings.random} />
       )}
     </div>
   );

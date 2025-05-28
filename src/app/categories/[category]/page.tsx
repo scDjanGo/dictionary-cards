@@ -53,6 +53,10 @@ export default async function page({ params }: typePage) {
     { id: 23, parentId: 5, name: "Seasons", intlName: "Времена года" },
     { id: 24, parentId: 5, name: "Time of day", intlName: "Время суток" },
     { id: 25, parentId: 5, name: "Clock time", intlName: "Время на часах" },
+
+    
+    { id: 26, parentId: 6, name: "Irregular verbs", intlName: "Неправильные глаголы" },
+    { id: 27, parentId: 6, name: "Regular verbs", intlName: "Правильные глаголы" },
   ];
 
 

@@ -11,7 +11,7 @@ export default function Active_Header({
 }: {
   currentCards: CardType[];
 }) {
-  const router = useRouter()
+  const router = useRouter();
   const [defaultCards, setDefaultCards] = useState<CardType[]>([]);
   const setCurrentCards = useCurrentCardsStore(
     (state) => state.setCurrentCards
@@ -20,13 +20,9 @@ export default function Active_Header({
   const [value, setValue] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
 
-
   useEffect(() => {
     setDefaultCards(currentCards);
   }, []);
-
-
-
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
@@ -37,18 +33,18 @@ export default function Active_Header({
     }
     const filterCards = currentCards.filter(
       (item) =>
-        item.name.includes(newValue) ||
-        item.intlName.includes(newValue) ||
-        item.description.includes(newValue) ||
-        item.intlDescription.includes(newValue)
+        item.name.toLowerCase().includes(newValue.toLowerCase()) ||
+        item.intlName.toLowerCase().includes(newValue.toLowerCase()) ||
+        item.description.toLowerCase().includes(newValue.toLowerCase()) ||
+        item.intlDescription.toLowerCase().includes(newValue.toLowerCase())
     );
 
     setCurrentCards(filterCards);
   };
 
   const handlePlayClick = () => {
-    sessionStorage.setItem("quiz-cards", JSON.stringify(currentCards))
-    router.push(`/quiz`)
+    sessionStorage.setItem("quiz-cards", JSON.stringify(currentCards));
+    router.push(`/quiz`);
   };
 
   const handleSearchIconClick = () => {

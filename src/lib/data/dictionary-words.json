@@ -12864,5 +12864,1207 @@
     "intlDescription": "Часы, показывающие время в разных странах",
     "inBasket": false,
     "isUserCard": false
+  },
+  {
+    "id": 1297,
+    "catId": 26,
+    "name": "was/were",
+    "intlName": "быть",
+    "description": "Past simple of 'be'",
+    "intlDescription": "Прошедшая форма глагола 'be' — быть",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1298,
+    "catId": 26,
+    "name": "became",
+    "intlName": "становиться",
+    "description": "Past simple of 'become'",
+    "intlDescription": "Прошедшая форма глагола 'become' — становиться",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1299,
+    "catId": 26,
+    "name": "began",
+    "intlName": "начинать",
+    "description": "Past simple of 'begin'",
+    "intlDescription": "Прошедшая форма глагола 'begin' — начинать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1300,
+    "catId": 26,
+    "name": "broke",
+    "intlName": "ломать",
+    "description": "Past simple of 'break'",
+    "intlDescription": "Прошедшая форма глагола 'break' — ломать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1301,
+    "catId": 26,
+    "name": "brought",
+    "intlName": "приносить",
+    "description": "Past simple of 'bring'",
+    "intlDescription": "Прошедшая форма глагола 'bring' — приносить",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1302,
+    "catId": 26,
+    "name": "built",
+    "intlName": "строить",
+    "description": "Past simple of 'build'",
+    "intlDescription": "Прошедшая форма глагола 'build' — строить",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1303,
+    "catId": 26,
+    "name": "bought",
+    "intlName": "покупать",
+    "description": "Past simple of 'buy'",
+    "intlDescription": "Прошедшая форма глагола 'buy' — покупать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1304,
+    "catId": 26,
+    "name": "caught",
+    "intlName": "ловить",
+    "description": "Past simple of 'catch'",
+    "intlDescription": "Прошедшая форма глагола 'catch' — ловить",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1305,
+    "catId": 26,
+    "name": "chose",
+    "intlName": "выбирать",
+    "description": "Past simple of 'choose'",
+    "intlDescription": "Прошедшая форма глагола 'choose' — выбирать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1306,
+    "catId": 26,
+    "name": "came",
+    "intlName": "приходить",
+    "description": "Past simple of 'come'",
+    "intlDescription": "Прошедшая форма глагола 'come' — приходить",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1307,
+    "catId": 26,
+    "name": "did",
+    "intlName": "делать",
+    "description": "Past simple of 'do'",
+    "intlDescription": "Прошедшая форма глагола 'do' — делать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1308,
+    "catId": 26,
+    "name": "drank",
+    "intlName": "пить",
+    "description": "Past simple of 'drink'",
+    "intlDescription": "Прошедшая форма глагола 'drink' — пить",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1309,
+    "catId": 26,
+    "name": "drove",
+    "intlName": "водить",
+    "description": "Past simple of 'drive'",
+    "intlDescription": "Прошедшая форма глагола 'drive' — водить",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1310,
+    "catId": 26,
+    "name": "ate",
+    "intlName": "есть",
+    "description": "Past simple of 'eat'",
+    "intlDescription": "Прошедшая форма глагола 'eat' — есть",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1311,
+    "catId": 26,
+    "name": "fell",
+    "intlName": "падать",
+    "description": "Past simple of 'fall'",
+    "intlDescription": "Прошедшая форма глагола 'fall' — падать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1312,
+    "catId": 26,
+    "name": "felt",
+    "intlName": "чувствовать",
+    "description": "Past simple of 'feel'",
+    "intlDescription": "Прошедшая форма глагола 'feel' — чувствовать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1313,
+    "catId": 26,
+    "name": "found",
+    "intlName": "находить",
+    "description": "Past simple of 'find'",
+    "intlDescription": "Прошедшая форма глагола 'find' — находить",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1314,
+    "catId": 26,
+    "name": "flew",
+    "intlName": "летать",
+    "description": "Past simple of 'fly'",
+    "intlDescription": "Прошедшая форма глагола 'fly' — летать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1315,
+    "catId": 26,
+    "name": "forgot",
+    "intlName": "забывать",
+    "description": "Past simple of 'forget'",
+    "intlDescription": "Прошедшая форма глагола 'forget' — забывать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1316,
+    "catId": 26,
+    "name": "got",
+    "intlName": "получать",
+    "description": "Past simple of 'get'",
+    "intlDescription": "Прошедшая форма глагола 'get' — получать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1317,
+    "catId": 26,
+    "name": "gave",
+    "intlName": "давать",
+    "description": "Past simple of 'give'",
+    "intlDescription": "Прошедшая форма глагола 'give' — давать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1318,
+    "catId": 26,
+    "name": "went",
+    "intlName": "идти",
+    "description": "Past simple of 'go'",
+    "intlDescription": "Прошедшая форма глагола 'go' — идти",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1319,
+    "catId": 26,
+    "name": "grew",
+    "intlName": "расти",
+    "description": "Past simple of 'grow'",
+    "intlDescription": "Прошедшая форма глагола 'grow' — расти",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1320,
+    "catId": 26,
+    "name": "had",
+    "intlName": "иметь",
+    "description": "Past simple of 'have'",
+    "intlDescription": "Прошедшая форма глагола 'have' — иметь",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1321,
+    "catId": 26,
+    "name": "heard",
+    "intlName": "слышать",
+    "description": "Past simple of 'hear'",
+    "intlDescription": "Прошедшая форма глагола 'hear' — слышать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1322,
+    "catId": 26,
+    "name": "held",
+    "intlName": "держать",
+    "description": "Past simple of 'hold'",
+    "intlDescription": "Прошедшая форма глагола 'hold' — держать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1323,
+    "catId": 26,
+    "name": "kept",
+    "intlName": "хранить",
+    "description": "Past simple of 'keep'",
+    "intlDescription": "Прошедшая форма глагола 'keep' — хранить",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1324,
+    "catId": 26,
+    "name": "knew",
+    "intlName": "знать",
+    "description": "Past simple of 'know'",
+    "intlDescription": "Прошедшая форма глагола 'know' — знать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1325,
+    "catId": 26,
+    "name": "left",
+    "intlName": "покидать",
+    "description": "Past simple of 'leave'",
+    "intlDescription": "Прошедшая форма глагола 'leave' — покидать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1326,
+    "catId": 26,
+    "name": "lost",
+    "intlName": "терять",
+    "description": "Past simple of 'lose'",
+    "intlDescription": "Прошедшая форма глагола 'lose' — терять",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1327,
+    "catId": 26,
+    "name": "made",
+    "intlName": "делать",
+    "description": "Past simple of 'make'",
+    "intlDescription": "Прошедшая форма глагола 'make' — делать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1328,
+    "catId": 26,
+    "name": "meant",
+    "intlName": "означать",
+    "description": "Past simple of 'mean'",
+    "intlDescription": "Прошедшая форма глагола 'mean' — означать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1329,
+    "catId": 26,
+    "name": "met",
+    "intlName": "встречать",
+    "description": "Past simple of 'meet'",
+    "intlDescription": "Прошедшая форма глагола 'meet' — встречать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1330,
+    "catId": 26,
+    "name": "paid",
+    "intlName": "платить",
+    "description": "Past simple of 'pay'",
+    "intlDescription": "Прошедшая форма глагола 'pay' — платить",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1331,
+    "catId": 26,
+    "name": "put",
+    "intlName": "класть",
+    "description": "Past simple of 'put'",
+    "intlDescription": "Прошедшая форма глагола 'put' — класть",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1332,
+    "catId": 26,
+    "name": "read",
+    "intlName": "читать",
+    "description": "Past simple of 'read'",
+    "intlDescription": "Прошедшая форма глагола 'read' — читать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1333,
+    "catId": 26,
+    "name": "rode",
+    "intlName": "ехать верхом",
+    "description": "Past simple of 'ride'",
+    "intlDescription": "Прошедшая форма глагола 'ride' — ехать верхом",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1334,
+    "catId": 26,
+    "name": "rang",
+    "intlName": "звонить",
+    "description": "Past simple of 'ring'",
+    "intlDescription": "Прошедшая форма глагола 'ring' — звонить",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1335,
+    "catId": 26,
+    "name": "ran",
+    "intlName": "бегать",
+    "description": "Past simple of 'run'",
+    "intlDescription": "Прошедшая форма глагола 'run' — бегать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1336,
+    "catId": 26,
+    "name": "said",
+    "intlName": "сказать",
+    "description": "Past simple of 'say'",
+    "intlDescription": "Прошедшая форма глагола 'say' — сказать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1337,
+    "catId": 26,
+    "name": "saw",
+    "intlName": "видеть",
+    "description": "Past simple of 'see'",
+    "intlDescription": "Прошедшая форма глагола 'see' — видеть",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1338,
+    "catId": 26,
+    "name": "sold",
+    "intlName": "продавать",
+    "description": "Past simple of 'sell'",
+    "intlDescription": "Прошедшая форма глагола 'sell' — продавать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1339,
+    "catId": 26,
+    "name": "sent",
+    "intlName": "посылать",
+    "description": "Past simple of 'send'",
+    "intlDescription": "Прошедшая форма глагола 'send' — посылать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1340,
+    "catId": 26,
+    "name": "showed",
+    "intlName": "показывать",
+    "description": "Past simple of 'show'",
+    "intlDescription": "Прошедшая форма глагола 'show' — показывать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1341,
+    "catId": 26,
+    "name": "sang",
+    "intlName": "петь",
+    "description": "Past simple of 'sing'",
+    "intlDescription": "Прошедшая форма глагола 'sing' — петь",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1342,
+    "catId": 26,
+    "name": "sat",
+    "intlName": "сидеть",
+    "description": "Past simple of 'sit'",
+    "intlDescription": "Прошедшая форма глагола 'sit' — сидеть",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1343,
+    "catId": 26,
+    "name": "slept",
+    "intlName": "спать",
+    "description": "Past simple of 'sleep'",
+    "intlDescription": "Прошедшая форма глагола 'sleep' — спать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1344,
+    "catId": 26,
+    "name": "spoke",
+    "intlName": "говорить",
+    "description": "Past simple of 'speak'",
+    "intlDescription": "Прошедшая форма глагола 'speak' — говорить",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1345,
+    "catId": 26,
+    "name": "spent",
+    "intlName": "тратить",
+    "description": "Past simple of 'spend'",
+    "intlDescription": "Прошедшая форма глагола 'spend' — тратить",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1346,
+    "catId": 26,
+    "name": "stood",
+    "intlName": "стоять",
+    "description": "Past simple of 'stand'",
+    "intlDescription": "Прошедшая форма глагола 'stand' — стоять",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1347,
+    "catId": 26,
+    "name": "swam",
+    "intlName": "плавать",
+    "description": "Past simple of 'swim'",
+    "intlDescription": "Прошедшая форма глагола 'swim' — плавать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1348,
+    "catId": 26,
+    "name": "took",
+    "intlName": "брать",
+    "description": "Past simple of 'take'",
+    "intlDescription": "Прошедшая форма глагола 'take' — брать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1349,
+    "catId": 26,
+    "name": "taught",
+    "intlName": "учить",
+    "description": "Past simple of 'teach'",
+    "intlDescription": "Прошедшая форма глагола 'teach' — учить",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1350,
+    "catId": 26,
+    "name": "told",
+    "intlName": "рассказывать",
+    "description": "Past simple of 'tell'",
+    "intlDescription": "Прошедшая форма глагола 'tell' — рассказывать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1351,
+    "catId": 26,
+    "name": "thought",
+    "intlName": "думать",
+    "description": "Past simple of 'think'",
+    "intlDescription": "Прошедшая форма глагола 'think' — думать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1352,
+    "catId": 26,
+    "name": "understood",
+    "intlName": "понимать",
+    "description": "Past simple of 'understand'",
+    "intlDescription": "Прошедшая форма глагола 'understand' — понимать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1353,
+    "catId": 26,
+    "name": "woke",
+    "intlName": "просыпаться",
+    "description": "Past simple of 'wake'",
+    "intlDescription": "Прошедшая форма глагола 'wake' — просыпаться",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1354,
+    "catId": 26,
+    "name": "wore",
+    "intlName": "носить",
+    "description": "Past simple of 'wear'",
+    "intlDescription": "Прошедшая форма глагола 'wear' — носить",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1355,
+    "catId": 26,
+    "name": "won",
+    "intlName": "побеждать",
+    "description": "Past simple of 'win'",
+    "intlDescription": "Прошедшая форма глагола 'win' — побеждать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1356,
+    "catId": 26,
+    "name": "wrote",
+    "intlName": "писать",
+    "description": "Past simple of 'write'",
+    "intlDescription": "Прошедшая форма глагола 'write' — писать",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1357,
+    "catId": 27,
+    "name": "asked",
+    "intlName": "спрашивать",
+    "description": "Past simple form of the regular verb 'ask'.",
+    "intlDescription": "Прошедшее время правильного глагола 'ask' — спрашивать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1358,
+    "catId": 27,
+    "name": "answered",
+    "intlName": "отвечать",
+    "description": "Past simple form of the regular verb 'answer'.",
+    "intlDescription": "Прошедшее время правильного глагола 'answer' — отвечать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1359,
+    "catId": 27,
+    "name": "baked",
+    "intlName": "печь",
+    "description": "Past simple form of the regular verb 'bake'.",
+    "intlDescription": "Прошедшее время правильного глагола 'bake' — печь.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1360,
+    "catId": 27,
+    "name": "called",
+    "intlName": "звонить",
+    "description": "Past simple form of the regular verb 'call'.",
+    "intlDescription": "Прошедшее время правильного глагола 'call' — звонить.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1361,
+    "catId": 27,
+    "name": "cleaned",
+    "intlName": "чистить",
+    "description": "Past simple form of the regular verb 'clean'.",
+    "intlDescription": "Прошедшее время правильного глагола 'clean' — чистить.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1362,
+    "catId": 27,
+    "name": "closed",
+    "intlName": "закрывать",
+    "description": "Past simple form of the regular verb 'close'.",
+    "intlDescription": "Прошедшее время правильного глагола 'close' — закрывать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1363,
+    "catId": 27,
+    "name": "cooked",
+    "intlName": "готовить",
+    "description": "Past simple form of the regular verb 'cook'.",
+    "intlDescription": "Прошедшее время правильного глагола 'cook' — готовить.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1364,
+    "catId": 27,
+    "name": "danced",
+    "intlName": "танцевать",
+    "description": "Past simple form of the regular verb 'dance'.",
+    "intlDescription": "Прошедшее время правильного глагола 'dance' — танцевать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1365,
+    "catId": 27,
+    "name": "discovered",
+    "intlName": "открывать (обнаруживать)",
+    "description": "Past simple form of the regular verb 'discover'.",
+    "intlDescription": "Прошедшее время правильного глагола 'discover' — открывать (обнаруживать).",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1366,
+    "catId": 27,
+    "name": "dried",
+    "intlName": "сушить",
+    "description": "Past simple form of the regular verb 'dry'.",
+    "intlDescription": "Прошедшее время правильного глагола 'dry' — сушить.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1367,
+    "catId": 27,
+    "name": "enjoyed",
+    "intlName": "наслаждаться",
+    "description": "Past simple form of the regular verb 'enjoy'.",
+    "intlDescription": "Прошедшее время правильного глагола 'enjoy' — наслаждаться.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1368,
+    "catId": 27,
+    "name": "explained",
+    "intlName": "объяснять",
+    "description": "Past simple form of the regular verb 'explain'.",
+    "intlDescription": "Прошедшее время правильного глагола 'explain' — объяснять.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1369,
+    "catId": 27,
+    "name": "helped",
+    "intlName": "помогать",
+    "description": "Past simple form of the regular verb 'help'.",
+    "intlDescription": "Прошедшее время правильного глагола 'help' — помогать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1370,
+    "catId": 27,
+    "name": "hugged",
+    "intlName": "обнимать",
+    "description": "Past simple form of the regular verb 'hug'.",
+    "intlDescription": "Прошедшее время правильного глагола 'hug' — обнимать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1371,
+    "catId": 27,
+    "name": "invited",
+    "intlName": "приглашать",
+    "description": "Past simple form of the regular verb 'invite'.",
+    "intlDescription": "Прошедшее время правильного глагола 'invite' — приглашать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1372,
+    "catId": 27,
+    "name": "jumped",
+    "intlName": "прыгать",
+    "description": "Past simple form of the regular verb 'jump'.",
+    "intlDescription": "Прошедшее время правильного глагола 'jump' — прыгать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1373,
+    "catId": 27,
+    "name": "kissed",
+    "intlName": "целовать",
+    "description": "Past simple form of the regular verb 'kiss'.",
+    "intlDescription": "Прошедшее время правильного глагола 'kiss' — целовать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1374,
+    "catId": 27,
+    "name": "laughed",
+    "intlName": "смеяться",
+    "description": "Past simple form of the regular verb 'laugh'.",
+    "intlDescription": "Прошедшее время правильного глагола 'laugh' — смеяться.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1375,
+    "catId": 27,
+    "name": "liked",
+    "intlName": "нравиться",
+    "description": "Past simple form of the regular verb 'like'.",
+    "intlDescription": "Прошедшее время правильного глагола 'like' — нравиться.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1376,
+    "catId": 27,
+    "name": "lived",
+    "intlName": "жить",
+    "description": "Past simple form of the regular verb 'live'.",
+    "intlDescription": "Прошедшее время правильного глагола 'live' — жить.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1377,
+    "catId": 27,
+    "name": "looked",
+    "intlName": "смотреть",
+    "description": "Past simple form of the regular verb 'look'.",
+    "intlDescription": "Прошедшее время правильного глагола 'look' — смотреть.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1378,
+    "catId": 27,
+    "name": "loved",
+    "intlName": "любить",
+    "description": "Past simple form of the regular verb 'love'.",
+    "intlDescription": "Прошедшее время правильного глагола 'love' — любить.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1379,
+    "catId": 27,
+    "name": "moved",
+    "intlName": "двигаться",
+    "description": "Past simple form of the regular verb 'move'.",
+    "intlDescription": "Прошедшее время правильного глагола 'move' — двигаться.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1380,
+    "catId": 27,
+    "name": "needed",
+    "intlName": "нуждаться",
+    "description": "Past simple form of the regular verb 'need'.",
+    "intlDescription": "Прошедшее время правильного глагола 'need' — нуждаться.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1381,
+    "catId": 27,
+    "name": "opened",
+    "intlName": "открывать",
+    "description": "Past simple form of the regular verb 'open'.",
+    "intlDescription": "Прошедшее время правильного глагола 'open' — открывать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1382,
+    "catId": 27,
+    "name": "played",
+    "intlName": "играть",
+    "description": "Past simple form of the regular verb 'play'.",
+    "intlDescription": "Прошедшее время правильного глагола 'play' — играть.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1383,
+    "catId": 27,
+    "name": "rained",
+    "intlName": "идти (о дожде)",
+    "description": "Past simple form of the regular verb 'rain'.",
+    "intlDescription": "Прошедшее время правильного глагола 'rain' — идти (о дожде).",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1384,
+    "catId": 27,
+    "name": "remembered",
+    "intlName": "помнить",
+    "description": "Past simple form of the regular verb 'remember'.",
+    "intlDescription": "Прошедшее время правильного глагола 'remember' — помнить.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1385,
+    "catId": 27,
+    "name": "returned",
+    "intlName": "возвращаться",
+    "description": "Past simple form of the regular verb 'return'.",
+    "intlDescription": "Прошедшее время правильного глагола 'return' — возвращаться.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1386,
+    "catId": 27,
+    "name": "started",
+    "intlName": "начинать",
+    "description": "Past simple form of the regular verb 'start'.",
+    "intlDescription": "Прошедшее время правильного глагола 'start' — начинать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1387,
+    "catId": 27,
+    "name": "stayed",
+    "intlName": "оставаться",
+    "description": "Past simple form of the regular verb 'stay'.",
+    "intlDescription": "Прошедшее время правильного глагола 'stay' — оставаться.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1388,
+    "catId": 27,
+    "name": "talked",
+    "intlName": "разговаривать",
+    "description": "Past simple form of the regular verb 'talk'.",
+    "intlDescription": "Прошедшее время правильного глагола 'talk' — разговаривать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1389,
+    "catId": 27,
+    "name": "traveled",
+    "intlName": "путешествовать",
+    "description": "Past simple form of the regular verb 'travel'.",
+    "intlDescription": "Прошедшее время правильного глагола 'travel' — путешествовать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1390,
+    "catId": 27,
+    "name": "tried",
+    "intlName": "пытаться",
+    "description": "Past simple form of the regular verb 'try'.",
+    "intlDescription": "Прошедшее время правильного глагола 'try' — пытаться.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1391,
+    "catId": 27,
+    "name": "used",
+    "intlName": "использовать",
+    "description": "Past simple form of the regular verb 'use'.",
+    "intlDescription": "Прошедшее время правильного глагола 'use' — использовать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1392,
+    "catId": 27,
+    "name": "visited",
+    "intlName": "посещать",
+    "description": "Past simple form of the regular verb 'visit'.",
+    "intlDescription": "Прошедшее время правильного глагола 'visit' — посещать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1393,
+    "catId": 27,
+    "name": "waited",
+    "intlName": "ждать",
+    "description": "Past simple form of the regular verb 'wait'.",
+    "intlDescription": "Прошедшее время правильного глагола 'wait' — ждать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1394,
+    "catId": 27,
+    "name": "walked",
+    "intlName": "гулять",
+    "description": "Past simple form of the regular verb 'walk'.",
+    "intlDescription": "Прошедшее время правильного глагола 'walk' — гулять.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1395,
+    "catId": 27,
+    "name": "wanted",
+    "intlName": "хотеть",
+    "description": "Past simple form of the regular verb 'want'.",
+    "intlDescription": "Прошедшее время правильного глагола 'want' — хотеть.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1396,
+    "catId": 27,
+    "name": "washed",
+    "intlName": "мыть",
+    "description": "Past simple form of the regular verb 'wash'.",
+    "intlDescription": "Прошедшее время правильного глагола 'wash' — мыть.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1397,
+    "catId": 27,
+    "name": "watched",
+    "intlName": "смотреть (ТВ и т.п.)",
+    "description": "Past simple form of the regular verb 'watch'.",
+    "intlDescription": "Прошедшее время правильного глагола 'watch' — смотреть (ТВ и т.п.).",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1398,
+    "catId": 27,
+    "name": "worked",
+    "intlName": "работать",
+    "description": "Past simple form of the regular verb 'work'.",
+    "intlDescription": "Прошедшее время правильного глагола 'work' — работать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1399,
+    "catId": 27,
+    "name": "arrived",
+    "intlName": "прибывать",
+    "description": "Past simple form of the regular verb 'arrive'.",
+    "intlDescription": "Прошедшее время правильного глагола 'arrive' — прибывать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1400,
+    "catId": 27,
+    "name": "believed",
+    "intlName": "верить",
+    "description": "Past simple form of the regular verb 'believe'.",
+    "intlDescription": "Прошедшее время правильного глагола 'believe' — верить.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1401,
+    "catId": 27,
+    "name": "changed",
+    "intlName": "менять",
+    "description": "Past simple form of the regular verb 'change'.",
+    "intlDescription": "Прошедшее время правильного глагола 'change' — менять.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1402,
+    "catId": 27,
+    "name": "climbed",
+    "intlName": "взбираться",
+    "description": "Past simple form of the regular verb 'climb'.",
+    "intlDescription": "Прошедшее время правильного глагола 'climb' — взбираться.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1403,
+    "catId": 27,
+    "name": "compared",
+    "intlName": "сравнивать",
+    "description": "Past simple form of the regular verb 'compare'.",
+    "intlDescription": "Прошедшее время правильного глагола 'compare' — сравнивать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1404,
+    "catId": 27,
+    "name": "continued",
+    "intlName": "продолжать",
+    "description": "Past simple form of the regular verb 'continue'.",
+    "intlDescription": "Прошедшее время правильного глагола 'continue' — продолжать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1405,
+    "catId": 27,
+    "name": "cried",
+    "intlName": "плакать",
+    "description": "Past simple form of the regular verb 'cry'.",
+    "intlDescription": "Прошедшее время правильного глагола 'cry' — плакать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1406,
+    "catId": 27,
+    "name": "decided",
+    "intlName": "решать",
+    "description": "Past simple form of the regular verb 'decide'.",
+    "intlDescription": "Прошедшее время правильного глагола 'decide' — решать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1407,
+    "catId": 27,
+    "name": "described",
+    "intlName": "описывать",
+    "description": "Past simple form of the regular verb 'describe'.",
+    "intlDescription": "Прошедшее время правильного глагола 'describe' — описывать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1408,
+    "catId": 27,
+    "name": "disliked",
+    "intlName": "не нравиться",
+    "description": "Past simple form of the regular verb 'dislike'.",
+    "intlDescription": "Прошедшее время правильного глагола 'dislike' — не нравиться.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1409,
+    "catId": 27,
+    "name": "ended",
+    "intlName": "заканчивать",
+    "description": "Past simple form of the regular verb 'end'.",
+    "intlDescription": "Прошедшее время правильного глагола 'end' — заканчивать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1410,
+    "catId": 27,
+    "name": "imagined",
+    "intlName": "представлять себе",
+    "description": "Past simple form of the regular verb 'imagine'.",
+    "intlDescription": "Прошедшее время правильного глагола 'imagine' — представлять себе.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1411,
+    "catId": 27,
+    "name": "improved",
+    "intlName": "улучшать",
+    "description": "Past simple form of the regular verb 'improve'.",
+    "intlDescription": "Прошедшее время правильного глагола 'improve' — улучшать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1412,
+    "catId": 27,
+    "name": "joined",
+    "intlName": "присоединяться",
+    "description": "Past simple form of the regular verb 'join'.",
+    "intlDescription": "Прошедшее время правильного глагола 'join' — присоединяться.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1413,
+    "catId": 27,
+    "name": "learned",
+    "intlName": "учить",
+    "description": "Past simple form of the regular verb 'learn'.",
+    "intlDescription": "Прошедшее время правильного глагола 'learn' — учить.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1414,
+    "catId": 27,
+    "name": "listened",
+    "intlName": "слушать",
+    "description": "Past simple form of the regular verb 'listen'.",
+    "intlDescription": "Прошедшее время правильного глагола 'listen' — слушать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1415,
+    "catId": 27,
+    "name": "marched",
+    "intlName": "маршировать",
+    "description": "Past simple form of the regular verb 'march'.",
+    "intlDescription": "Прошедшее время правильного глагола 'march' — маршировать.",
+    "inBasket": false,
+    "isUserCard": false
+  },
+  {
+    "id": 1416,
+    "catId": 27,
+    "name": "missed",
+    "intlName": "скучать / пропускать",
+    "description": "Past simple form of the regular verb 'miss'.",
+    "intlDescription": "Прошедшее время правильного глагола 'miss' — скучать / пропускать.",
+    "inBasket": false,
+    "isUserCard": false
   }
+
+
 ]

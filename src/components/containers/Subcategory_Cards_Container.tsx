@@ -6,18 +6,21 @@ import DefaultDictionary_Words from "@/lib/data/dictionary-words.json";
 import Default_Card from "../cards/Default_Card";
 import Active_Header from "../Active_Header";
 import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
-import { CardType } from "@/lib/types/types";
 import { useEffect } from "react";
+import { useToggle } from "@/features/hooks/useToggle";
+import { usePathname } from "next/navigation";
 
 export default function Subcategory_Cards_Container({
   subcategory,
 }: {
   subcategory?: string;
 }) {
+  const pathname = usePathname();
   const currentCards = useCurrentCardsStore((state) => state.currentCards);
   const setCurrentCards = useCurrentCardsStore(
     (state) => state.setCurrentCards
   );
+  const [render, setRender] = useToggle(false);
 
   useEffect(() => {
     const Filter_Dictionary: any[] = subcategory
@@ -27,14 +30,10 @@ export default function Subcategory_Cards_Container({
       : DefaultDictionary_Words;
 
     setCurrentCards(Filter_Dictionary);
-  }, []);
-  // const Filter_Dictionary: any[] = subcategory
-  //   ? DefaultDictionary_Words.filter(
-  //       (item) => item.catId === Number(subcategory)
-  //     )
-  //   : DefaultDictionary_Words;
+    setRender(true);
+  }, [pathname]);
 
-  // setCurrentCards(Filter_Dictionary);
+  if (!render) return;
 
   return (
     <>
