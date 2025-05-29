@@ -35,7 +35,7 @@ export default function CategoriesPage() {
     },
     {
       id: 6,
-      name: "Post simple",
+      name: "Past simple",
       intlName: "Прошедшее простое",
       childCategories: [],
     },
