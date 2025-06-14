@@ -139,7 +139,7 @@ export default function Main_Header() {
               className="text-white hover:underline"
               onClick={() => setOpen(false)}
             >
-              Заблакированные
+              Заблокированные
             </Link>
           </nav>
         </Drawer>
