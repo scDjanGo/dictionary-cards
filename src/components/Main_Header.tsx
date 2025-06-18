@@ -90,7 +90,7 @@ export default function Main_Header() {
         {/* Mobile menu icon */}
 
         <div className={`flex items-center gap-[12px]`}>
-          <IconButton
+          {pathname?.includes("my-cards") && <IconButton
             onClick={() => setSaveCards(true)}
             className={`hidden text-[#1976D2] translate-y-[-1.5px] ${
               pathname?.includes("my-cards") && "!block"
@@ -98,7 +98,8 @@ export default function Main_Header() {
             style={{ backgroundColor: "white" }}
           >
             <CloudUploadIcon sx={{ color: "#1976D2" }} />
-          </IconButton>
+          </IconButton>}
+          
           <IconButton
             onClick={() => setOpen(true)}
             className="md:hidden text-[#1976D2]"
