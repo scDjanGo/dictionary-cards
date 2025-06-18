@@ -91,7 +91,9 @@ export default function Main_Header() {
         <div className={`flex items-center gap-[12px]`}>
           <IconButton
             onClick={() => setSaveCards(true)}
-            className="text-[#1976D2]"
+            className={`hidden text-[#1976D2] translate-y-[-1.5px] ${
+              pathname?.includes("my-cards") && "!block"
+            }`}
             style={{ backgroundColor: "white" }}
           >
             <SaveIcon sx={{ color: "#1976D2" }} />
