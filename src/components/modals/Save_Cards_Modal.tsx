@@ -9,6 +9,7 @@ import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
+import SaveIcon from "@mui/icons-material/Save";
 
 const style = {
   position: "absolute" as const,
@@ -307,7 +308,7 @@ const Save_Cards_Modal: React.FC<Props> = ({ open, onClose }) => {
             variant="outlined"
             onClick={handleDownload}
             style={{ borderColor: "#1976D2", color: "#1976D2" }}
-            startIcon={<CloudUploadIcon sx={{ color: "#1976D2" }} />}
+            startIcon={<SaveIcon sx={{ color: "#1976D2" }} />}
           >
             Загрузить
           </Button>

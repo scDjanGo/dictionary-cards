@@ -10,6 +10,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useToggle } from "@/features/hooks/useToggle";
 import Save_Cards_Modal from "./modals/Save_Cards_Modal";
 import SaveIcon from "@mui/icons-material/Save";
+import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 
 export default function Main_Header() {
   const router = useRouter();
@@ -96,7 +97,7 @@ export default function Main_Header() {
             }`}
             style={{ backgroundColor: "white" }}
           >
-            <SaveIcon sx={{ color: "#1976D2" }} />
+            <CloudUploadIcon sx={{ color: "#1976D2" }} />
           </IconButton>
           <IconButton
             onClick={() => setOpen(true)}
