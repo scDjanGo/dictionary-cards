@@ -280,7 +280,7 @@ export default function CreateCardForm() {
     if (storedCategories.length > 0) {
       setFormData((prev) => ({
         ...prev,
-        catId: storedCategories[storedCategories.length - 1].id.toString(),
+        catId: storedCategories[0].id.toString(),
       }));
     }
   }, []);
@@ -410,7 +410,7 @@ export default function CreateCardForm() {
         <TextField
           select
           fullWidth
-          label="Категория *"
+          label="Категория"
           name="catId"
           value={formData.catId}
           onChange={handleChange}

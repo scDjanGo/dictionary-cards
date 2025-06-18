@@ -5,15 +5,20 @@ import Link from "next/link";
 import { Drawer, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { useToggle } from "@/features/hooks/useToggle";
+import Save_Cards_Modal from "./modals/Save_Cards_Modal";
+import SaveIcon from "@mui/icons-material/Save";
 
 export default function Main_Header() {
   const router = useRouter();
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [canGoBack, setCanGoBack] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [saveCards, setSaveCards] = useToggle();
 
   useEffect(() => {
     const my_categories: any[] = JSON.parse(
@@ -26,8 +31,9 @@ export default function Main_Header() {
         name: "Others",
         intlName: "Другие",
         createDate: Date.now(),
-      };console.log("ok");
-      
+      };
+      console.log("ok");
+
       localStorage.setItem("my-categories", JSON.stringify([newCategory]));
       return;
     }
@@ -72,19 +78,31 @@ export default function Main_Header() {
         {/* Логотип */}
         <button
           onClick={handleBack}
-          className="flex items-center space-x-2 text-2xl font-bold text-[#1976D2] hover:underline cursor-pointer"
+          className={`flex items-center space-x-2 text-2xl font-bold text-[#1976D2] hover:underline cursor-pointer ${
+            (pathname === "/" || pathname === "/categories") && "opacity-0"
+          }`}
         >
           <ArrowBackIcon />
           <span>Назад</span>
         </button>
 
         {/* Mobile menu icon */}
-        <IconButton
-          onClick={() => setOpen(true)}
-          className="md:hidden text-[#1976D2]"
-        >
-          <MenuIcon sx={{ color: "#1976D2" }} />
-        </IconButton>
+
+        <div className={`flex items-center gap-[12px]`}>
+          <IconButton
+            onClick={() => setSaveCards(true)}
+            className="text-[#1976D2]"
+            style={{ backgroundColor: "white" }}
+          >
+            <SaveIcon sx={{ color: "#1976D2" }} />
+          </IconButton>
+          <IconButton
+            onClick={() => setOpen(true)}
+            className="md:hidden text-[#1976D2]"
+          >
+            <MenuIcon sx={{ color: "#1976D2" }} />
+          </IconButton>
+        </div>
 
         {/* Drawer меню */}
         <Drawer
@@ -143,6 +161,8 @@ export default function Main_Header() {
             </Link>
           </nav>
         </Drawer>
+
+        <Save_Cards_Modal open={saveCards} onClose={setSaveCards} />
       </div>
     </header>
   );
