@@ -14,7 +14,7 @@ export type CardType = {
 export type QuizSettingsType = {
   language: "ru" | "en";
   time: boolean;
-  type: "swipe" | "write" | "speak";
+  type: "swipe" | "write" | "speech";
   random: boolean
 }
 

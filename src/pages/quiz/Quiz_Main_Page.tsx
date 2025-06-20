@@ -19,6 +19,7 @@ import {
 
 import TranslateIcon from "@mui/icons-material/Translate";
 import TimerIcon from "@mui/icons-material/Timer";
+import HearingIcon from '@mui/icons-material/Hearing';
 import TouchAppIcon from "@mui/icons-material/TouchApp";
 import EditIcon from "@mui/icons-material/Edit";
 import MicIcon from "@mui/icons-material/Mic";
@@ -160,7 +161,7 @@ export default function Quiz_Main_Page() {
               onChange={(e) =>
                 handleChange(
                   "type",
-                  e.target.value as "swipe" | "write" | "speak"
+                  e.target.value as "swipe" | "write" | "speech"
                 )
               }
             >
@@ -184,16 +185,16 @@ export default function Quiz_Main_Page() {
                   </Box>
                 }
               />
-              {/* <FormControlLabel
-                value="speak"
+              <FormControlLabel
+                value="speech"
                 control={<Radio />}
                 label={
                   <Box display="flex" alignItems="center">
-                    <MicIcon sx={{ mr: 0.5 }} />
-                    Speak
+                    <HearingIcon sx={{ mr: 0.5 }} />
+                    Listen
                   </Box>
                 }
-              /> */}
+              />
             </RadioGroup>
           </FormControl>
         </Box>
