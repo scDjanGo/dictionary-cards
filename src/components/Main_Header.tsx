@@ -1,25 +1,23 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { Drawer, IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
 import { usePathname, useRouter } from "next/navigation";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { useToggle } from "@/features/hooks/useToggle";
-import Save_Cards_Modal from "./modals/Save_Cards_Modal";
-import SaveIcon from "@mui/icons-material/Save";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
+import { typeSidebars, typeUiModals } from "@/lib/types/types";
+import { useUiModalsStore } from "@/lib/zustand/uiModals/useUiModals";
+import { useSidebarsStore } from "@/lib/zustand/sidebarsStore/useSidebarsStore";
 
 export default function Main_Header() {
   const router = useRouter();
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
+  const uiModals = useUiModalsStore((state) => state);
+  const sidebarsStore = useSidebarsStore((state) => state);
   const [canGoBack, setCanGoBack] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [saveCards, setSaveCards] = useToggle();
 
   useEffect(() => {
     const my_categories: any[] = JSON.parse(
@@ -69,6 +67,16 @@ export default function Main_Header() {
     }
   };
 
+  const handleTurnModal = (modal?: typeUiModals["value"]) => {
+    modal ? uiModals.setUiModalsStore(modal) : uiModals.offUiModalsStore();
+  };
+
+  const handleTurnSidebar = (sidebar: typeSidebars["value"]) => {
+    sidebar
+      ? sidebarsStore.setSidebarStore(sidebar)
+      : sidebarsStore.offSidebarStore();
+  };
+
   return (
     <header
       className={`bg-white shadow-md fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
@@ -90,83 +98,24 @@ export default function Main_Header() {
         {/* Mobile menu icon */}
 
         <div className={`flex items-center gap-[12px]`}>
-          {pathname?.includes("my-cards") && <IconButton
-            onClick={() => setSaveCards(true)}
-            className={`hidden text-[#1976D2] translate-y-[-1.5px] ${
-              pathname?.includes("my-cards") && "!block"
-            }`}
-            style={{ backgroundColor: "white" }}
+          <IconButton
+            onClick={() => handleTurnModal("save-cards")}
+            className={`hidden text-[#1976D2] translate-y-[-1.5px]`}
+            style={{
+              backgroundColor: "white",
+              display: pathname?.includes("my-cards") ? "block" : "none",
+            }}
           >
             <CloudUploadIcon sx={{ color: "#1976D2" }} />
-          </IconButton>}
-          
+          </IconButton>
+
           <IconButton
-            onClick={() => setOpen(true)}
+            onClick={() => handleTurnSidebar("main-sidebar")}
             className="md:hidden text-[#1976D2]"
           >
             <MenuIcon sx={{ color: "#1976D2" }} />
           </IconButton>
         </div>
-
-        {/* Drawer меню */}
-        <Drawer
-          anchor="right"
-          open={open}
-          onClose={() => setOpen(false)}
-          PaperProps={{
-            sx: {
-              backgroundColor: "#1976D2",
-              color: "white",
-              width: 250,
-              borderLeft: "4px solid white",
-            },
-          }}
-        >
-          <div className="flex justify-end p-4">
-            <IconButton onClick={() => setOpen(false)} className="text-white">
-              <CloseIcon sx={{ color: "#ffffff" }} />
-            </IconButton>
-          </div>
-          <nav className="flex flex-col space-y-4 px-6 text-lg font-medium">
-            <Link
-              href="/categories"
-              className="text-white hover:underline"
-              onClick={() => setOpen(false)}
-            >
-              Главная
-            </Link>
-            <Link
-              href="/my-cards"
-              className="text-white hover:underline"
-              onClick={() => setOpen(false)}
-            >
-              Мои карточки
-            </Link>
-            <Link
-              href="/create-card"
-              className="text-white hover:underline"
-              onClick={() => setOpen(false)}
-            >
-              Создать карточку
-            </Link>
-            <Link
-              href="/create-category"
-              className="text-white hover:underline"
-              onClick={() => setOpen(false)}
-            >
-              Создать категорию
-            </Link>
-            <Link
-              href="/blocked-cards"
-              className="text-white hover:underline"
-              onClick={() => setOpen(false)}
-            >
-              Заблокированные
-            </Link>
-          </nav>
-        </Drawer>
-
-        <Save_Cards_Modal open={saveCards} onClose={setSaveCards} />
       </div>
     </header>
   );

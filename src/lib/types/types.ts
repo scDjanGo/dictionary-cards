@@ -17,3 +17,17 @@ export type QuizSettingsType = {
   type: "swipe" | "write" | "speak";
   random: boolean
 }
+
+
+
+
+export type typeUiModals = {
+  value: "save-cards",
+  state: boolean
+}
+
+
+export type typeSidebars = {
+  value: "main-sidebar",
+  state: boolean
+}

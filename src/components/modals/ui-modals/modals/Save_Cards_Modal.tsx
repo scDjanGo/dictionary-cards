@@ -10,6 +10,7 @@ import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 import SaveIcon from "@mui/icons-material/Save";
+import { useUiModalsStore } from "@/lib/zustand/uiModals/useUiModals";
 
 const style = {
   position: "absolute" as const,
@@ -24,12 +25,9 @@ const style = {
   width: "300px",
 };
 
-interface Props {
-  open: boolean;
-  onClose: () => void;
-}
-
-const Save_Cards_Modal: React.FC<Props> = ({ open, onClose }) => {
+const Save_Cards_Modal: React.FC = () => {
+  const offUiModalsStore = useUiModalsStore((state) => state.offUiModalsStore);
+  const isOpen = useUiModalsStore((state) => state.uiModalsStore.state);
   const currentCards = useCurrentCardsStore((state) => state.currentCards);
 
   const handleSaveAsPDF = async () => {
@@ -56,14 +54,12 @@ const Save_Cards_Modal: React.FC<Props> = ({ open, onClose }) => {
 
       doc.text("Список карточек", 14, 20);
 
-      const headers = [
-        ["Название", "Описание", "Межд. Название", "Межд. Описание"],
-      ];
+      const headers = [["Name", "Название", "Description", "Описание"]];
 
       const data = (currentCards || []).map((card) => [
         card.name || ".",
-        card.description || ".",
         card.intlName || ".",
+        card.description || ".",
         card.intlDescription || ".",
       ]);
 
@@ -141,12 +137,10 @@ const Save_Cards_Modal: React.FC<Props> = ({ open, onClose }) => {
     description: string;
     intlDescription: string;
   }> | null> => {
-    // Создаем input элемент для выбора файла
     const input = document.createElement("input");
     input.type = "file";
     input.accept = ".json,.pdf";
 
-    // Обещание для обработки выбора файла
     return new Promise((resolve) => {
       input.onchange = async (e) => {
         const file = (e.target as HTMLInputElement).files?.[0];
@@ -168,7 +162,6 @@ const Save_Cards_Modal: React.FC<Props> = ({ open, onClose }) => {
 
         try {
           if (isJSON) {
-            // Обработка JSON файла
             const text = await file.text();
             const jsonData = JSON.parse(text);
 
@@ -178,7 +171,6 @@ const Save_Cards_Modal: React.FC<Props> = ({ open, onClose }) => {
               return;
             }
 
-            // Проверяем структуру каждого элемента
             for (const item of jsonData) {
               const requiredKeys = [
                 "name",
@@ -198,8 +190,6 @@ const Save_Cards_Modal: React.FC<Props> = ({ open, onClose }) => {
             resolve(jsonData);
             setLocalStorage(jsonData);
           } else if (isPDF) {
-            // Обработка PDF файла (эмуляция - в реальности извлечь данные из PDF сложнее)
-            // Здесь просто возвращаем данные в том же формате, что и для JSON
             const data = (currentCards || []).map((card) => ({
               name: card.name || "",
               intlName: card.intlName || "",
@@ -222,7 +212,6 @@ const Save_Cards_Modal: React.FC<Props> = ({ open, onClose }) => {
         }
       };
 
-      // Запускаем диалог выбора файла
       input.click();
     });
   };
@@ -235,19 +224,16 @@ const Save_Cards_Modal: React.FC<Props> = ({ open, onClose }) => {
       intlDescription: string;
     }>
   ) {
-    // Получаем текущие данные из localStorage
     const cards: any[] = JSON.parse(localStorage.getItem("my-cards") || "[]");
     const categories: any[] = JSON.parse(
       localStorage.getItem("my-categories") || "[]"
     );
 
-    // Находим минимальные ID для карточек и категорий
     let smallestCardId =
       cards.length > 0 ? Math.min(...cards.map((card) => card.id)) : -1;
     let smallestCategoryId =
       categories.length > 0 ? Math.min(...categories.map((cat) => cat.id)) : -1;
 
-    // Создаем новую категорию с ID на 1 меньше текущего минимального
     const newCategory = {
       createDate: Date.now(),
       id: smallestCategoryId - 1,
@@ -255,7 +241,6 @@ const Save_Cards_Modal: React.FC<Props> = ({ open, onClose }) => {
       name: `Downloaded ${Math.abs(smallestCategoryId - 1)}`,
     };
 
-    // Создаем новые карточки с уменьшающимися ID
     const newCards = data.map((item, index) => ({
       catId: newCategory.id,
       name: item.name,
@@ -264,27 +249,32 @@ const Save_Cards_Modal: React.FC<Props> = ({ open, onClose }) => {
       intlDescription: item.intlDescription,
       inBasket: false,
       isUserCard: true,
-      id: smallestCardId - 1 - index, // Уменьшаем ID для каждой следующей карточки
+      id: smallestCardId - 1 - index,
     }));
 
-    // Добавляем новые данные в начало массивов
     categories.unshift(newCategory);
     cards.unshift(...newCards);
 
-    // Сохраняем обновленные данные в localStorage
     localStorage.setItem("my-categories", JSON.stringify(categories));
     localStorage.setItem("my-cards", JSON.stringify(cards));
 
-    // Перезагружаем страницу
     window.location.reload();
+    handleOffModal();
   }
 
+  const handleOffModal = () => {
+    offUiModalsStore();
+  };
+
   return (
-    <Modal open={open} onClose={onClose}>
+    <Modal open={isOpen} onClose={handleOffModal}>
       <Box sx={style}>
-        <h2 className="text-[#1976D2] text-lg font-bold mb-4">
+        <h2 className="text-[#1976D2] text-center text-lg font-bold">
           Выберите вариант
-        </h2>
+        </h2>{" "}
+        <h3 className="text-[#1976D2] text-[8px] text-center leading-[1.1] font-bold mb-4">
+          При сохранении все карточки на этой странице будут сохранены
+        </h3>
         <div className="flex flex-col gap-2">
           <Button
             variant="outlined"

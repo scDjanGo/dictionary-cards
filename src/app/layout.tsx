@@ -4,6 +4,8 @@ import { Roboto } from "next/font/google";
 
 import "./globals.css";
 import Main_Header from "@/components/Main_Header";
+import Main_Modals from "@/components/modals/Main_Modals";
+import Sidebars_Container from "@/components/sidebars/Sidebars_Container";
 
 export const metadata: Metadata = {
   title: "Cards",
@@ -26,6 +28,11 @@ export default function RootLayout({
       <body className={roboto.className}>
         <AppRouterCacheProvider>
           <>
+            <>
+            {/* Ui elems */}
+              <Sidebars_Container />
+              <Main_Modals />
+            </>
             <Main_Header />
             <div className="!p-[88px_16px_16px_16px]">{children}</div>
           </>
