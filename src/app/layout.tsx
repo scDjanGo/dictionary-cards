@@ -34,7 +34,7 @@ export default function RootLayout({
               <Main_Modals />
             </>
             <Main_Header />
-            <div className="!p-[88px_16px_16px_16px]">{children}</div>
+            <div className="!p-[60px_16px_16px_16px]">{children}</div>
           </>
         </AppRouterCacheProvider>
       </body>
