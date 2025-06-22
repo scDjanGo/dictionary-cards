@@ -116,12 +116,12 @@ export default function Play_Quiz_Speech_Type({
         <Typography variant="h5" fontWeight="bold" mb={1}>
           Все карточки просмотрены!
         </Typography>
-        {errors.count ? (
+        {errors?.count ? (
           <Typography variant="body1" color="text.secondary" mb={3}>
-            Количество ошибок {errors.count} <br />
+            Количество ошибок {errors?.count} <br />
             <span className={``}>
               Нужно повторить слова:{" "}
-              {errors.cards
+              {errors?.cards
                 .map((item) =>
                   quizSettings.language === "en" ? item.name : item.intlName
                 )
