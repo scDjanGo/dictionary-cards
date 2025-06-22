@@ -1,6 +1,6 @@
 "use client";
 
-import Active_Header from "@/components/Active_Header";
+import Active_Header from "@/components/header/Active_Header";
 import { CardType } from "@/lib/types/types";
 import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
 import { useParams, useRouter } from "next/navigation";

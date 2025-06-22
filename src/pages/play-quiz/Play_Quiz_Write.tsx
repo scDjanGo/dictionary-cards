@@ -27,9 +27,15 @@ function shuffleArray<T>(array: T[]): T[] {
 export default function Play_Quiz_Write_Type({
   cards,
   random,
+  errors,
+  setErrors,
 }: {
   cards: CardType[];
   random: boolean;
+  errors: { count: number; cards: CardType[] };
+  setErrors: React.Dispatch<
+    React.SetStateAction<{ count: number; cards: CardType[] }>
+  >;
 }) {
   const [cardDeck, setCardDeck] = useState<CardType[]>([]);
   const [flipped, setFlipped] = useState(false);
@@ -77,6 +83,12 @@ export default function Play_Quiz_Write_Type({
 
     if (!wasCorrect) {
       newDeck = [...newDeck, currentCard];
+      const isWas = errors.cards.some((item) => item.id === currentCard.id);
+
+      setErrors((prev) => ({
+        count: prev.count + 1,
+        cards: isWas ? prev.cards : [...prev.cards, currentCard],
+      }));
       if (random) newDeck = shuffleArray(newDeck);
     }
 
@@ -107,9 +119,23 @@ export default function Play_Quiz_Write_Type({
         <Typography variant="h5" fontWeight="bold" mb={1}>
           Все карточки просмотрены!
         </Typography>
-        <Typography variant="body1" color="text.secondary" mb={3}>
-          Отличная работа — ты справился!
-        </Typography>
+        {errors.count ? (
+          <Typography variant="body1" color="text.secondary" mb={3}>
+            Количество ошибок {errors.count} <br />
+            <span className={``}>
+              Нужно повторить слова:{" "}
+              {errors.cards
+                .map((item) =>
+                  quizSettings.language === "en" ? item.name : item.intlName
+                )
+                .join(", ")}
+            </span>
+          </Typography>
+        ) : (
+          <Typography variant="body1" color="text.secondary" mb={3}>
+            Отличная работа — ты справился!
+          </Typography>
+        )}
         <Button
           variant="contained"
           endIcon={<ArrowForwardIcon />}

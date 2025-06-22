@@ -1,3 +1,11 @@
+export type CategoryType = {
+  id: number;
+  name: string;
+  intlName: string;
+  createData?: string;
+  childCategories?: any[]
+};
+
 export type CardType = {
   id: number;
   catId: number;
@@ -9,25 +17,19 @@ export type CardType = {
   isUserCard: boolean;
 };
 
-
-
 export type QuizSettingsType = {
   language: "ru" | "en";
   time: boolean;
   type: "swipe" | "write" | "speech";
-  random: boolean
-}
-
-
-
+  random: boolean;
+};
 
 export type typeUiModals = {
-  value: "save-cards",
-  state: boolean
-}
-
+  value: "save-cards";
+  state: boolean;
+};
 
 export type typeSidebars = {
-  value: "main-sidebar",
-  state: boolean
-}
+  value: "main-sidebar";
+  state: boolean;
+};

@@ -19,6 +19,13 @@ export default function Play_Quiz_Main() {
     null
   );
 
+  const [errors, setErrors] = useState<{count: number, cards: CardType[]}>({
+    count: 0,
+    cards: []
+  })
+
+
+  // Check items
   useEffect(() => {
     const quiz_cards = JSON.parse(sessionStorage.getItem("quiz-cards") || "[]");
 
@@ -58,13 +65,13 @@ export default function Play_Quiz_Main() {
         message="Подгружаем контент"
       />
       {quizCards && quizSettings && quizSettings.type === "swipe" && (
-        <Play_Quiz_Swipe_Type cards={quizCards} random={quizSettings.random} />
+        <Play_Quiz_Swipe_Type  cards={quizCards} random={quizSettings.random} errors={errors} setErrors={setErrors} />
       )}{" "}
       {quizCards && quizSettings && quizSettings.type === "write" && (
-        <Play_Quiz_Write_Type cards={quizCards} random={quizSettings.random} />
+        <Play_Quiz_Write_Type cards={quizCards} random={quizSettings.random} errors={errors} setErrors={setErrors}  />
       )}
        {quizCards && quizSettings && quizSettings.type === "speech" && (
-        <Play_Quiz_Speech_Type cards={quizCards} random={quizSettings.random} />
+        <Play_Quiz_Speech_Type cards={quizCards} random={quizSettings.random} errors={errors} setErrors={setErrors} />
       )}
     </div>
   );

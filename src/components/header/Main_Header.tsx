@@ -9,6 +9,7 @@ import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { typeSidebars, typeUiModals } from "@/lib/types/types";
 import { useUiModalsStore } from "@/lib/zustand/uiModals/useUiModals";
 import { useSidebarsStore } from "@/lib/zustand/sidebarsStore/useSidebarsStore";
+import Category_Name from "@/UI/buttons/header/Category_Name";
 
 export default function Main_Header() {
   const router = useRouter();
@@ -18,6 +19,7 @@ export default function Main_Header() {
   const [canGoBack, setCanGoBack] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+
 
   useEffect(() => {
     const my_categories: any[] = JSON.parse(
@@ -84,23 +86,24 @@ export default function Main_Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        {/* Логотип */}
-        <button
-          onClick={handleBack}
-          className={`flex items-center space-x-2 text-2xl font-bold text-[#1976D2] hover:underline cursor-pointer ${
-            (pathname === "/" || pathname === "/categories") && "opacity-0"
-          }`}
-        >
-          <ArrowBackIcon />
-          <span>Назад</span>
-        </button>
+        <div className={`flex items-center gap-[12px]`}>
+          <button
+            onClick={handleBack}
+            className={`flex items-center space-x-2 text-2xl font-bold text-[#1976D2] hover:underline cursor-pointer ${
+              (pathname === "/" || pathname === "/categories") && "opacity-0"
+            }`}
+          >
+            <ArrowBackIcon />
+            {/* <span className={``}>Назад</span> */}
+          </button>
+          <Category_Name />
+        </div>
 
         {/* Mobile menu icon */}
-
         <div className={`flex items-center gap-[12px]`}>
           <IconButton
             onClick={() => handleTurnModal("save-cards")}
-            className={`hidden text-[#1976D2] translate-y-[-1.5px]`}
+            className={`hidden text-blueCl translate-y-[-1.5px]`}
             style={{
               backgroundColor: "white",
               display: pathname?.includes("my-cards") ? "block" : "none",
@@ -111,7 +114,7 @@ export default function Main_Header() {
 
           <IconButton
             onClick={() => handleTurnSidebar("main-sidebar")}
-            className="md:hidden text-[#1976D2]"
+            className="md:hidden text-blueCl"
           >
             <MenuIcon sx={{ color: "#1976D2" }} />
           </IconButton>

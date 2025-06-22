@@ -4,7 +4,7 @@ import { Card } from "@mui/material";
 import Box from "@mui/material/Box";
 import DefaultDictionary_Words from "@/lib/data/dictionary-words.json";
 import Default_Card from "../cards/Default_Card";
-import Active_Header from "../Active_Header";
+import Active_Header from "../header/Active_Header";
 import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
 import { useEffect } from "react";
 import { useToggle } from "@/features/hooks/useToggle";

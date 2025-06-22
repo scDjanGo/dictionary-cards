@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import Default_Card from "@/components/cards/Default_Card";
 import { CardType } from "@/lib/types/types";
 import Empty_My_Cards_Page from "@/components/empty-pages/Empty_My_Cards_Page";
-import Active_Header from "@/components/Active_Header";
+import Active_Header from "@/components/header/Active_Header";
 import { useToggle } from "@/features/hooks/useToggle";
 import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
 

@@ -32,9 +32,15 @@ function shuffleArray<T>(array: T[]): T[] {
 export default function Play_Quiz_Speech_Type({
   cards,
   random,
+  errors,
+  setErrors,
 }: {
   cards: CardType[];
   random: boolean;
+  errors: { count: number; cards: CardType[] };
+  setErrors: React.Dispatch<
+    React.SetStateAction<{ count: number; cards: CardType[] }>
+  >;
 }) {
   const [cardDeck, setCardDeck] = useState<CardType[]>([]);
   const [flipped, setFlipped] = useState(false);
@@ -80,6 +86,12 @@ export default function Play_Quiz_Speech_Type({
 
     if (direction === "left") {
       newDeck = [...newDeck, current];
+      const isWas = errors.cards.some((item) => item.id === current.id);
+
+      setErrors((prev) => ({
+        count: prev.count + 1,
+        cards: isWas ? prev.cards : [...prev.cards, current],
+      }));
       if (random) {
         newDeck = shuffleArray(newDeck);
       }
@@ -104,9 +116,23 @@ export default function Play_Quiz_Speech_Type({
         <Typography variant="h5" fontWeight="bold" mb={1}>
           Все карточки просмотрены!
         </Typography>
-        <Typography variant="body1" color="text.secondary" mb={3}>
-          Отличная работа — ты справился!
-        </Typography>
+        {errors.count ? (
+          <Typography variant="body1" color="text.secondary" mb={3}>
+            Количество ошибок {errors.count} <br />
+            <span className={``}>
+              Нужно повторить слова:{" "}
+              {errors.cards
+                .map((item) =>
+                  quizSettings.language === "en" ? item.name : item.intlName
+                )
+                .join(", ")}
+            </span>
+          </Typography>
+        ) : (
+          <Typography variant="body1" color="text.secondary" mb={3}>
+            Отличная работа — ты справился!
+          </Typography>
+        )}
         <Button
           variant="contained"
           endIcon={<ArrowForwardIcon />}
@@ -128,9 +154,7 @@ export default function Play_Quiz_Speech_Type({
 
   const lang = quizSettings.language === "en" ? "en-US" : "ru-RU";
   const cardTitle =
-    quizSettings.language === "en"
-      ? currentCard.name
-      : currentCard.intlName;
+    quizSettings.language === "en" ? currentCard.name : currentCard.intlName;
   const cardDesc =
     quizSettings.language === "en"
       ? currentCard.description
@@ -174,8 +198,6 @@ export default function Play_Quiz_Speech_Type({
                   {cardTitle}
                 </Typography>
 
-
-
                 <Box
                   display="flex"
                   flexWrap={"wrap"}
@@ -197,10 +219,7 @@ export default function Play_Quiz_Speech_Type({
                     <VisibilityIcon fontSize="small" />
                     Показать
                   </ButtonBase>
-                  <ButtonBase
-                    onClick={handleFlip}
-                    sx={buttonStyle()}
-                  >
+                  <ButtonBase onClick={handleFlip} sx={buttonStyle()}>
                     <FlipIcon fontSize="small" />
                     Перевернуть
                   </ButtonBase>
