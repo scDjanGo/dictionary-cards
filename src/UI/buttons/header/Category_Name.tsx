@@ -5,6 +5,7 @@ import { useParams, usePathname } from "next/navigation";
 import EditIcon from "@mui/icons-material/Edit";
 import { useEffect, useState } from "react";
 import { CategoryType } from "@/lib/types/types";
+import Edit_SVG from "@/UI/svgs/Edit_SVG";
 
 export default function Category_Name() {
   const [userCat, setUserCat] = useState<CategoryType | null>(null);
@@ -43,7 +44,7 @@ export default function Category_Name() {
     userCat && (
       <div className={`flex items-center gap-[12px] max-w-[206px]`}>
         <h2
-          className={`flex items-center space-x-2 text-2xl font-bold text-[#1976D2] hover:underline cursor-pointer line-clamp-1 text-nowrap`}
+          className={`flex items-center space-x-2 text-2xl font-bold text-blueCl dark:text-bgLight hover:underline cursor-pointer line-clamp-1 text-nowrap max-695px:text-[18px]`}
         >
           {userCat.name} - {userCat.intlName}
         </h2>
@@ -53,7 +54,7 @@ export default function Category_Name() {
           aria-label="Редактировать"
           sx={{ color: "#1976D2" }}
         >
-          <EditIcon />
+          <Edit_SVG />
         </IconButton>
       </div>
     )

@@ -1,25 +1,22 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { IconButton } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
 import { usePathname, useRouter } from "next/navigation";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import CloudUploadIcon from "@mui/icons-material/CloudUpload";
-import { typeSidebars, typeUiModals } from "@/lib/types/types";
+import { typeUiModals } from "@/lib/types/types";
 import { useUiModalsStore } from "@/lib/zustand/uiModals/useUiModals";
-import { useSidebarsStore } from "@/lib/zustand/sidebarsStore/useSidebarsStore";
 import Category_Name from "@/UI/buttons/header/Category_Name";
+import Burger_Menu from "./Burger_Menu";
+import Cloud_Upload_SVG from "@/UI/svgs/Cloud_Upload_SVG";
+import Arrow_Button_SVG from "@/UI/svgs/Arrow_Button_SVG";
 
 export default function Main_Header() {
   const router = useRouter();
   const pathname = usePathname();
   const uiModals = useUiModalsStore((state) => state);
-  const sidebarsStore = useSidebarsStore((state) => state);
   const [canGoBack, setCanGoBack] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-
 
   useEffect(() => {
     const my_categories: any[] = JSON.parse(
@@ -42,7 +39,7 @@ export default function Main_Header() {
 
   useEffect(() => {
     setCanGoBack(window.history.length > 1);
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,19 +70,13 @@ export default function Main_Header() {
     modal ? uiModals.setUiModalsStore(modal) : uiModals.offUiModalsStore();
   };
 
-  const handleTurnSidebar = (sidebar: typeSidebars["value"]) => {
-    sidebar
-      ? sidebarsStore.setSidebarStore(sidebar)
-      : sidebarsStore.offSidebarStore();
-  };
-
   return (
     <header
-      className={`bg-white shadow-md fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
+      className={`bg-bgLight dark:bg-bgDark shadow-md fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1 flex justify-between items-center">
+      <div className="bg-bgLight dark:bg-bgDark  max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1 flex justify-between items-center">
         <div className={`flex items-center gap-[12px]`}>
           <button
             onClick={handleBack}
@@ -93,31 +84,25 @@ export default function Main_Header() {
               (pathname === "/" || pathname === "/categories") && "opacity-0"
             }`}
           >
-            <ArrowBackIcon />
-            {/* <span className={``}>Назад</span> */}
+            <Arrow_Button_SVG />
           </button>
           <Category_Name />
         </div>
 
         {/* Mobile menu icon */}
         <div className={`flex items-center gap-[12px]`}>
-          <IconButton
+          <button
             onClick={() => handleTurnModal("save-cards")}
-            className={`hidden text-blueCl translate-y-[-1.5px]`}
+            className="dark:bg-bgDark"
             style={{
               backgroundColor: "white",
               display: pathname?.includes("my-cards") ? "block" : "none",
             }}
           >
-            <CloudUploadIcon sx={{ color: "#1976D2" }} />
-          </IconButton>
+            <Cloud_Upload_SVG />
+          </button>
 
-          <IconButton
-            onClick={() => handleTurnSidebar("main-sidebar")}
-            className="md:hidden text-blueCl"
-          >
-            <MenuIcon sx={{ color: "#1976D2" }} />
-          </IconButton>
+          <Burger_Menu />
         </div>
       </div>
     </header>

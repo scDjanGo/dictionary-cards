@@ -251,7 +251,7 @@ export default function Play_Quiz_Speech_Type({
                   {currentCard.intlDescription}
                 </Typography>
 
-                <Box display="flex" justifyContent="space-between" gap={12} mt={3}>
+                <Box display="flex"  justifyContent="space-between" gap={1} mt={3}>
                   <ButtonBase
                     onClick={() => handleSwipe("left")}
                     sx={buttonStyle("light")}

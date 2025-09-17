@@ -1,56 +1,6 @@
-// import { Button, Container, Typography, Box } from "@mui/material";
-// import Link from "next/link";
-
-// export default function Home() {
-//   return (
-//     <Container
-//       maxWidth="sm"
-//       sx={{
-//         height: "100vh",
-//         display: "flex",
-//         flexDirection: "column",
-//         justifyContent: "center",
-//         alignItems: "center",
-//         textAlign: "center",
-//         px: { xs: 2, sm: 3 },
-//       }}
-//     >
-//       <Box sx={{ mb: { xs: 1, sm: 2 } }}>
-//         <Typography variant="h1" component="h1" gutterBottom>
-//           Hello!
-//         </Typography>
-//         <Typography variant="h5" component="p" color="text.secondary">
-//           Have a great learning experience!
-//         </Typography>
-//       </Box>
-
-//       <Button
-//         variant="contained"
-//         size="large"
-//         component={Link}
-//         href="/categories"
-//         sx={{
-//           fontSize: "clamp(1rem, 3vw, 1.2rem)",
-//           px: { xs: 3, sm: 4 },
-//           py: 1.5,
-//         }}
-//       >
-//         Start
-//       </Button>
-//     </Container>
-//   );
-// }
-
 "use client";
 
 import { useEffect, useState } from "react";
-import {
-  Container,
-  Typography,
-  Box,
-  LinearProgress,
-  Slide,
-} from "@mui/material";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -58,8 +8,8 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    const timer1 = setTimeout(() => setAnimate(true), 300); // старт анимации
-    const timer2 = setTimeout(() => router.push("/categories"), 1000); // переход
+    const timer1 = setTimeout(() => setAnimate(true), 500);
+    const timer2 = setTimeout(() => router.push("/categories"), 500);
 
     return () => {
       clearTimeout(timer1);
@@ -68,39 +18,37 @@ export default function Home() {
   }, [router]);
 
   return (
-    <Slide
-      in={!animate}
-      direction="down"
-      timeout={{ enter: 300, exit: 400 }}
-      mountOnEnter
-      unmountOnExit
+    <div
+      className={`fixed inset-0 flex flex-col justify-center items-center text-center px-4 sm:px-6 bg-bgLight dark:bg-bgDark transition-transform duration-400 ${
+        animate ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
+      }`}
     >
-      <Container
-        maxWidth="sm"
-        sx={{
-          height: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          textAlign: "center",
-          px: { xs: 2, sm: 3 },
-          backgroundColor: "#fff",
-        }}
-      >
-        <Box sx={{ mb: { xs: 1, sm: 2 } }}>
-          <Typography variant="h2" component="h1" gutterBottom>
-            Welcome!
-          </Typography>
-          <Typography variant="h6" component="p" color="text.secondary">
-            Getting things ready for you...
-          </Typography>
-        </Box>
+      <div className="mb-4 sm:mb-6">
+        <h1 className="text-4xl sm:text-5xl font-bold mb-2 dark:text-bgLight">
+          Welcome!
+        </h1>
+        <p className="text-lg sm:text-xl text-gray-500 dark:text-bgLight">
+          Getting things ready for you...
+        </p>
+      </div>
 
-        <Box sx={{ width: "100%", mt: 4 }}>
-          <LinearProgress color="primary" />
-        </Box>
-      </Container>
-    </Slide>
+      <div className="w-full mt-8 h-2 bg-gray-200 rounded overflow-hidden">
+        <div className="h-full bg-blue-600 animate-loading"></div>
+      </div>
+
+      <style jsx>{`
+        .animate-loading {
+          animation: loading 5s linear forwards;
+        }
+        @keyframes loading {
+          0% {
+            width: 0%;
+          }
+          100% {
+            width: 100%;
+          }
+        }
+      `}</style>
+    </div>
   );
 }
