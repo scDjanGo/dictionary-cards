@@ -1,5 +1,4 @@
-import { Button, Box, Stack } from "@mui/material";
-import Link from "next/link";
+import Category_Card from "@/components/cards/Category_Card";
 
 type typePage = {
   params: Promise<{ category: string }>;
@@ -69,90 +68,16 @@ export default async function page({ params }: typePage) {
   ];
 
   return (
-    <Box
-      sx={{
-        p: 3,
-        display: "flex",
-        flexDirection: "column",
-        gap: 2,
-        maxWidth: "400px",
-        margin: "0 auto",
-      }}
+    <div
+      className={` mt-[6px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[6px_16px]`}
     >
-      {subcategories
-        .reverse()
-        .filter((item) => item.parentId === Number(category))
-        .map((item) => (
-          <Link
-            className={``}
-            href={`/categories/${category}/${item.id}`}
-            key={item.id}
-            passHref
-          >
-            <Stack
-              sx={{
-                position: "relative",
-                cursor: "pointer",
-                "&:hover > *:first-child": {
-                  transform: "translateY(-2px)",
-                  boxShadow: "0 6px 12px rgba(0,0,0,0.15)",
-                },
-                "&:active > *:first-child": {
-                  transform: "translateY(0)",
-                },
-              }}
-            >
-              <Button
-                className="line-clamp-2 flex flex-col gap-[5px]"
-                variant="contained"
-                sx={{
-                  position: "relative",
-                  zIndex: 3,
-                  py: 2,
-                  borderRadius: "8px",
-                  boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
-                  transition: "all 0.3s ease",
-                  bgcolor: "primary.main",
-                  color: "white",
-                  fontSize: "1.1rem",
-                  fontWeight: 500,
-                }}
-              >
-                <span>{item.name}</span>
-                <span>------------</span>
-                {item.intlName}
-              </Button>
-
-              <Box
-                sx={{
-                  position: "absolute",
-                  bottom: "-4px",
-                  left: "4px",
-                  right: "4px",
-                  height: "100%",
-                  bgcolor: "primary.dark",
-                  borderRadius: "8px",
-                  zIndex: 2,
-                  opacity: 0.7,
-                }}
-              />
-
-              <Box
-                sx={{
-                  position: "absolute",
-                  bottom: "-8px",
-                  left: "8px",
-                  right: "8px",
-                  height: "100%",
-                  bgcolor: "primary.dark",
-                  borderRadius: "8px",
-                  zIndex: 1,
-                  opacity: 0.4,
-                }}
-              />
-            </Stack>
-          </Link>
-        ))}
-    </Box>
+      {subcategories.map((item) => (
+        <Category_Card
+          key={item.id}
+          category={item}
+          href={`/categories/${category}/${item.id}`}
+        />
+      ))}
+    </div>
   );
 }

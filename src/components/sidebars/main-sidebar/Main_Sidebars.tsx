@@ -44,11 +44,16 @@ export default function Main_Sidebar() {
           transform: isOpen ? "translateX(0)" : `translateX(${250}px)`,
         }}
       >
-        {" "}
-        <div className="flex justify-end p-4">
-          <IconButton onClick={() => offSidebarStore()} className="text-white">
-            <CloseIcon sx={{ color: "#ffffff" }} />
-          </IconButton>
+        <div className="w-full flex items-center justify-between px-[24px] my-[24px]">
+          <Theme_Button />
+          <div className="flex justify-end ">
+            <IconButton
+              onClick={() => offSidebarStore()}
+              className="text-white"
+            >
+              <CloseIcon sx={{ color: "#ffffff" }} />
+            </IconButton>
+          </div>
         </div>
         <nav className="flex flex-col space-y-4 px-6 text-lg font-medium">
           {LINKS.map((item) => (
@@ -62,7 +67,6 @@ export default function Main_Sidebar() {
             </Link>
           ))}
         </nav>
-        <Theme_Button />
       </div>
     </>
   );

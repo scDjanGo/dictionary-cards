@@ -7,7 +7,7 @@
   --color-blueCl: #1976D2;
   --color-bgLight: #FFFFF0;
   --color-bgDark: #0A1521;
-  /* --color-bgDark: #3b3c41; */
+  --color-bgItem: #1E2939;
 
 
   --breakpoint-1400px: 1440px;
@@ -35,4 +35,9 @@
 
 button, a {
   cursor: pointer;
+}
+
+
+.my-transform {
+  transition: all 0.3s ease-in-out;
 }

@@ -29,8 +29,6 @@ export default function Theme_Button() {
         sx={{
           maxWidth: "24px",
           p: 0.5,
-          ml: 24,
-          mt: "24px",
         }}
       >
         {darkTheme ? (

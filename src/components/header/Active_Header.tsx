@@ -5,6 +5,7 @@ import { PlayArrow, Search, Quiz } from "@mui/icons-material";
 import { CardType } from "@/lib/types/types";
 import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
 import { useRouter } from "next/navigation";
+import Search_SVG from "@/UI/svgs/Search_SVG";
 
 export default function Active_Header({
   currentCards,
@@ -62,12 +63,12 @@ export default function Active_Header({
       {/* Комбинированная строка с input и кнопкой Play */}
       <div className="flex items-center w-full gap-2">
         {/* Поле ввода с иконкой поиска */}
-        <div className="flex items-center flex-1 border border-[#1976D2] rounded-md overflow-hidden shadow-sm">
+        <div className="flex items-center flex-1 border border-blueCl dark:border-bgLight rounded-md overflow-hidden shadow-sm dark:bg-bgItem">
           <button
             onClick={handleSearchIconClick}
             className="p-2 text-[#1976D2] hover:bg-[#1976D220] transition"
           >
-            <Search />
+            <Search_SVG />
           </button>
           <input
             type="text"
@@ -76,14 +77,14 @@ export default function Active_Header({
             onChange={handleInputChange}
             onKeyDown={handleKeyDown}
             placeholder="Введите запрос..."
-            className="flex-1 px-3 py-2 outline-none text-gray-800 placeholder-gray-400"
+            className="flex-1 px-3 py-2 outline-none text-gray-800 dark:text-bgLight placeholder-gray-400"
           />
         </div>
 
         {/* Кнопка Play с иконкой Quiz */}
         <button
           onClick={handlePlayClick}
-          className="flex items-center gap-2 bg-[#1976D2] hover:bg-[#155a9c] text-white font-medium px-4 py-2 rounded-md transition duration-200 shadow cursor-pointer"
+          className="flex items-center gap-2 bg-blueCl dark:bg-bgItem dark:border-bgLight dark:border-[1px] hover:bg-[#155a9c] dark:hover:bg-bgDark text-white font-medium px-4 py-2 rounded-md transition duration-200 shadow cursor-pointer"
           title="Запустить тест"
         >
           <Quiz />

@@ -6,6 +6,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import { useEffect, useState } from "react";
 import { CategoryType } from "@/lib/types/types";
 import Edit_SVG from "@/UI/svgs/Edit_SVG";
+import Link from "next/link";
 
 export default function Category_Name() {
   const [userCat, setUserCat] = useState<CategoryType | null>(null);
@@ -48,14 +49,13 @@ export default function Category_Name() {
         >
           {userCat.name} - {userCat.intlName}
         </h2>
-        <IconButton
-          href="/change-category"
-          onClick={handleChange}
+        <Link
           aria-label="Редактировать"
-          sx={{ color: "#1976D2" }}
+          href={`/change-category`}
+          onClick={handleChange}
         >
           <Edit_SVG />
-        </IconButton>
+        </Link>
       </div>
     )
   );

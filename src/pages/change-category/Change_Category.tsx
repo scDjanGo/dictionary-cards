@@ -1,14 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { TextField, Button, Snackbar, Alert } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { CategoryType } from "@/lib/types/types";
+import Floating_Input from "@/UI/input/Floating_Input";
 
 export default function Change_Category_Main() {
-  const [formData, setFormData] = useState({ name: "", email: "" });
+  const [formData, setFormData] = useState({ name: "", intlName: "" });
   const [currentCat, setCurrentCat] = useState<null | CategoryType>(null);
-  const [errors, setErrors] = useState({ name: false, email: false });
+  const [errors, setErrors] = useState({ name: false, intlName: false });
   const [open, setOpen] = useState(false);
   const router = useRouter();
 
@@ -20,7 +20,7 @@ export default function Change_Category_Main() {
       return;
     }
 
-    setFormData(() => ({ name: current.name, email: current.intlName }));
+    setFormData(() => ({ name: current.name, intlName: current.intlName }));
     setCurrentCat(current);
   }, []);
 
@@ -43,12 +43,12 @@ export default function Change_Category_Main() {
 
     const newErrors = {
       name: formData.name.trim() === "",
-      email: formData.email.trim() === "",
+      intlName: formData.intlName.trim() === "",
     };
 
     setErrors(newErrors);
 
-    if (newErrors.name || newErrors.email) return;
+    if (newErrors.name || newErrors.intlName) return;
 
     const myCategories: any[] = JSON.parse(
       localStorage.getItem("my-categories") || "[]"
@@ -61,7 +61,7 @@ export default function Change_Category_Main() {
     newCategories.unshift({
       ...currentCat,
       name: formData.name,
-      intlName: formData.email,
+      intlName: formData.intlName,
     });
     localStorage.setItem("my-categories", JSON.stringify(newCategories));
     setOpen(true);
@@ -72,57 +72,42 @@ export default function Change_Category_Main() {
     <>
       <form
         onSubmit={handleSubmit}
-        className="max-w-md mx-auto mt-10 p-6 bg-white shadow-md rounded-lg space-y-6 flex flex-col gap-[16px]"
+        className="max-w-md mx-auto mt-10 p-6 bg-bgLight dark:bg-bgItem shadow-md rounded-lg flex flex-col gap-4"
       >
-        <TextField
-          fullWidth
-          label="Category name (en)"
+        <Floating_Input
+          label={"Category name (en)"}
           name="name"
           value={formData.name}
           onChange={handleChange}
-          error={errors.name}
+          error={!!errors.name}
           helperText={errors.name ? "Required field" : ""}
-          className="focus:outline-none"
         />
 
-        <TextField
-          fullWidth
-          label="Название категории (ру)"
-          name="email"
-          type="text"
-          value={formData.email}
+        <Floating_Input
+          label={"Название категории (ру)"}
+          name="intlName"
+          value={formData.intlName}
           onChange={handleChange}
-          error={errors.email}
-          helperText={errors.email ? "Обязательное поле" : ""}
+          error={!!errors.intlName}
+          helperText={errors.intlName ? "Обязательное поле" : ""}
         />
 
-        <Button
+        {/* Submit button */}
+        <button
           type="submit"
-          variant="contained"
-          sx={{
-            backgroundColor: "#1976D2",
-            "&:hover": { backgroundColor: "#125ea6" },
-          }}
-          className="w-full"
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors dark:bg-bgItem dark:border-[1px] dark:hover:bg-bgDark"
         >
           Change / Изменить
-        </Button>
-      </form>{" "}
-      <Snackbar
-        open={open}
-        autoHideDuration={3000}
-        onClose={() => setOpen(false)}
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
-      >
-        <Alert
-          onClose={() => setOpen(false)}
-          severity="success"
-          sx={{ width: "100%" }}
-        >
-          Category changed! <br />
-          Категория изменена!
-        </Alert>
-      </Snackbar>
+        </button>
+      </form>
+
+      {/* Snackbar */}
+      {open && (
+        <div className="fixed top-5 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg text-center">
+          <p>Category changed!</p>
+          <p>Категория изменена!</p>
+        </div>
+      )}
     </>
   );
 }

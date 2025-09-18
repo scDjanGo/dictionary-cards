@@ -1,8 +1,7 @@
 "use client";
 
+import Arrow_Button_SVG from "@/UI/svgs/Arrow_Button_SVG";
 import { useRouter } from "next/navigation";
-import { Button, Typography, Container, Stack } from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 export default function Empty_My_Cards_Page() {
   const router = useRouter();
@@ -12,46 +11,21 @@ export default function Empty_My_Cards_Page() {
   };
 
   return (
-    <Container
-      maxWidth="sm"
-      sx={{
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <Stack spacing={4} alignItems="center">
-        <Typography
-          variant="h5"
-          color="#1976D2"
-          fontWeight={600}
-          textAlign="center"
-        >
+    <div className="min-h-screen flex items-center justify-center px-4">
+      <div className="flex flex-col items-center space-y-6">
+        <h2 className="text-2xl font-semibold text-blueCl dark:text-bgLight text-center">
           Пусто
-        </Typography>
+        </h2>
 
-        <Button
-          variant="outlined"
+        <button
           onClick={handleBack}
-          endIcon={
-            <ArrowBackIcon
-              sx={{ transform: "rotate(180deg)" }}
-            />
-          }
-          sx={{
-            borderColor: "#1976D2",
-            color: "#1976D2",
-            "&:hover": {
-              backgroundColor: "#1976D2",
-              color: "#fff",
-              borderColor: "#1976D2",
-            },
-          }}
+          className="flex items-center space-x-2 border bg-blueCl dark:bg-bgItem text-bgLight border-blueCl dark:border-bgLight  px-4 py-2 rounded-md transition-colors duration-200  "
         >
-          Добавить карточку
-        </Button>
-      </Stack>
-    </Container>
+          <span>Добавить карточку</span>
+          {/* Стрелка (развёрнутая) */}
+          <Arrow_Button_SVG classColor="!stroke-bgLight" className="rotate-180" />
+        </button>
+      </div>
+    </div>
   );
 }

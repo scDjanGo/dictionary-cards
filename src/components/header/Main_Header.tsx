@@ -72,7 +72,7 @@ export default function Main_Header() {
 
   return (
     <header
-      className={`bg-bgLight dark:bg-bgDark shadow-md fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
+      className={`bg-bgLight dark:bg-bgDark shadow-md  border-b-[1px] border-blueCl dark:border-bgLight fixed top-0 left-0 w-full z-50 transition-transform duration-300 pt-[3px] ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -84,13 +84,13 @@ export default function Main_Header() {
               (pathname === "/" || pathname === "/categories") && "opacity-0"
             }`}
           >
-            <Arrow_Button_SVG />
+            <Arrow_Button_SVG className="min-w-[38px] min-h-[38px]" />
           </button>
           <Category_Name />
         </div>
 
         {/* Mobile menu icon */}
-        <div className={`flex items-center gap-[12px]`}>
+        <div className={`flex items-center gap-[18px]`}>
           <button
             onClick={() => handleTurnModal("save-cards")}
             className="dark:bg-bgDark"
