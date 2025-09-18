@@ -1,4 +1,4 @@
-import Create_Card_Form from "@/pages/create-card/Create_Card_Main";
+import Create_Card_Form from "@/pages-components/create-card/Create_Card_Main";
 
 export default function page() {
   return (

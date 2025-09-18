@@ -1,5 +1,5 @@
-import My_Cards_Component from "@/pages/my-cards/My_Cards_Component";
-import My_Categories_Accordion from "@/pages/my-cards/My_Categories_Accordion";
+import My_Cards_Component from "@/pages-components/my-cards/My_Cards_Component";
+import My_Categories_Accordion from "@/pages-components/my-cards/My_Categories_Accordion";
 
 export default function page() {
   return (
