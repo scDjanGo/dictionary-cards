@@ -1,14 +1,13 @@
 "use client";
 
-import { Card } from "@mui/material";
-import Box from "@mui/material/Box";
 import DefaultDictionary_Words from "@/lib/data/dictionary-words.json";
 import Default_Card from "../cards/Default_Card";
 import Active_Header from "../header/Active_Header";
 import { useEffect } from "react";
 import { useToggle } from "@/features/hooks/useToggle";
 import { usePathname } from "next/navigation";
-import { useCurrentCardsStore } from "@/lib/zustand";
+import { useBlockedCardsStore, useCurrentCardsStore } from "@/lib/zustand";
+import Container_Cards from "./Container_Cards";
 
 export default function Subcategory_Cards_Container({
   subcategory,
@@ -16,6 +15,7 @@ export default function Subcategory_Cards_Container({
   subcategory?: string;
 }) {
   const pathname = usePathname();
+  const blockedCards = useBlockedCardsStore(state => state.data)
   const currentCards = useCurrentCardsStore((state) => state.currentCards);
   const setCurrentCards = useCurrentCardsStore(
     (state) => state.setCurrentCards
@@ -38,36 +38,13 @@ export default function Subcategory_Cards_Container({
   return (
     <>
       <Active_Header currentCards={currentCards} />
-      <Box display="flex" flexWrap="wrap" justifyContent="center" gap={2}>
-        {currentCards.map((word) => (
-          <Default_Card key={word.id} data={word as any} />
-        ))}
-      </Box>
+      <Container_Cards>
+        {currentCards
+          .filter((elem) => !blockedCards.some((item) => item.id === elem.id))
+          .map((card) => (
+            <Default_Card key={card.id} data={card} />
+          ))}
+      </Container_Cards>
     </>
   );
 }
-
-// <CardContent>
-//   <Typography
-//     variant="h6"
-//     sx={{
-//       color: "#0d47a1",
-//       fontWeight: "bold",
-//       textAlign: "center",
-//     }}
-//   >
-//     {word.name}
-//   </Typography>
-//   <Typography
-//     variant="subtitle2"
-//     sx={{ color: "#0d47a1", mb: 1, textAlign: "center" }}
-//   >
-//     {word.intlName}
-//   </Typography>
-//   <Typography variant="body2" sx={{ mb: 1 }}>
-//     {word.description}
-//   </Typography>
-//   <Typography variant="body2" color="text.secondary">
-//     {word.intlDescription}
-//   </Typography>
-// </CardContent>

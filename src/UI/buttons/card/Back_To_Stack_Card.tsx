@@ -1,7 +1,7 @@
 "use client";
 
 import { CardType } from "@/lib/types/types";
-import { useCurrentCardsStore } from "@/lib/zustand";
+import { useBlockedCardsStore, useCurrentCardsStore } from "@/lib/zustand";
 import { useState } from "react";
 
 type ButtonProps = {
@@ -10,9 +10,8 @@ type ButtonProps = {
 
 export default function Back_To_Stack_Card({ card }: ButtonProps) {
   const [open, setOpen] = useState(false);
-  const removeCardFromState = useCurrentCardsStore(
-    (state) => state.removeCardFromState
-  );
+  const backToStack = useBlockedCardsStore(state => state.removeBlockCard)
+
 
   const handleOpen = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -26,16 +25,9 @@ export default function Back_To_Stack_Card({ card }: ButtonProps) {
 
   const handleBack = (e: React.MouseEvent) => {
     e.stopPropagation();
-    const cardsFromBasket: CardType[] = JSON.parse(
-      localStorage.getItem("basket-cards") || "[]"
-    );
 
-    localStorage.setItem(
-      "basket-cards",
-      JSON.stringify([...cardsFromBasket.filter((item) => item.id !== card.id)])
-    );
 
-    removeCardFromState(card.id);
+    backToStack(card)
     setOpen(false);
   };
 

@@ -28,7 +28,7 @@ const Default_Card: React.FC<Props> = ({ data }) => {
 
   return (
     <div
-      className="w-80 h-52 cursor-pointer perspective"
+      className="w-full h-52 cursor-pointer perspective"
       onClick={(e) => {
         e.stopPropagation();
         handleToggle();
@@ -40,18 +40,22 @@ const Default_Card: React.FC<Props> = ({ data }) => {
         }`}
       >
         {/* Front Side */}
-        <div className="absolute w-full h-full backface-hidden rounded-2xl shadow-xl bg-gradient-to-br from-sky-100 via-blue-200 to-sky-300 p-6 flex flex-col justify-between border border-blue-200/50">
-          <div>
-            <h2 className="text-xl font-bold text-gray-800 drop-shadow-sm">
+        <div className="absolute w-full h-full backface-hidden rounded-2xl shadow-xl   p-6 flex flex-col gap-[12px] justify-between bg-blueCl ">
+          <div className="flex flex-col gap-[12px]">
+            <h2 className="text-center text-xl font-bold text-bgLight drop-shadow-sm border-b-[1px] border-dashed ">
               {data.name}
             </h2>
-            <p className="text-sm text-gray-600 italic">{data.intlName}</p>
+            <p className="text-center text-sm text-bgLight italic">
+              {data.intlName}
+            </p>
           </div>
           <div className="mt-2">
-            <p className="text-gray-700 text-sm leading-snug line-clamp-2">
+            <p className="text-bgLight text-sm leading-snug line-clamp-2 border-b-[1px] border-dashed ">
               {data.description}
             </p>
-            <p className="text-gray-500 text-xs mt-1">{data.intlDescription}</p>
+            <p className="text-bgLight/80 text-xs mt-1">
+              {data.intlDescription}
+            </p>
           </div>
           <div className="mt-3 text-xs text-gray-400 italic">
             Нажмите, чтобы перевернуть
