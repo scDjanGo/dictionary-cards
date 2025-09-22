@@ -2,11 +2,11 @@
 
 import Active_Header from "@/components/header/Active_Header";
 import { CardType } from "@/lib/types/types";
-import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect } from "react";
 import My_Cards_Component from "@/pages-components/my-cards/My_Cards_Component";
 import { useToggle } from "@/features/hooks/useToggle";
+import { useCurrentCardsStore } from "@/lib/zustand";
 
 export default function My_Category_Cards() {
   const router = useRouter();
@@ -26,7 +26,9 @@ export default function My_Category_Cards() {
       router.push("/my-cards");
     }
 
-    setCurrentCards(my_cards.filter((item) => item.catId === Number(params.category)));
+    setCurrentCards(
+      my_cards.filter((item) => item.catId === Number(params.category))
+    );
 
     setRender(true);
   }, [params]);

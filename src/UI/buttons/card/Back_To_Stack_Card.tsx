@@ -1,8 +1,8 @@
 "use client";
 
 import { CardType } from "@/lib/types/types";
+import { useCurrentCardsStore } from "@/lib/zustand";
 import { useState } from "react";
-import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
 
 type ButtonProps = {
   card: CardType;
@@ -41,12 +41,12 @@ export default function Back_To_Stack_Card({ card }: ButtonProps) {
 
   return (
     <>
-      <span
+      <button
         onClick={handleOpen}
-        className="text-center duration-300 ease-in-out transition-all w-full p-[4px] text-[12px] font-bold text-blueCl bg-white/30 cursor-pointer hover:bg-blueCl hover:text-white"
+        className="text-center duration-300 ease-in-out transition-all w-full p-[4px] text-[12px] font-bold text-blueCl bg-white/30 cursor-pointer hover:bg-blueCl hover:text-white rounded-[6px]"
       >
-        Вернуть
-      </span>
+        Разблокировать
+      </button>
 
       {open && (
         <div

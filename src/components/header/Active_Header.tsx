@@ -3,9 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import { PlayArrow, Search, Quiz } from "@mui/icons-material";
 import { CardType } from "@/lib/types/types";
-import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
 import { useRouter } from "next/navigation";
 import Search_SVG from "@/UI/svgs/Search_SVG";
+import { useCurrentCardsStore } from "@/lib/zustand";
 
 export default function Active_Header({
   currentCards,

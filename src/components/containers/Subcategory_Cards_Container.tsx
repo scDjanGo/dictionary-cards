@@ -5,10 +5,10 @@ import Box from "@mui/material/Box";
 import DefaultDictionary_Words from "@/lib/data/dictionary-words.json";
 import Default_Card from "../cards/Default_Card";
 import Active_Header from "../header/Active_Header";
-import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
 import { useEffect } from "react";
 import { useToggle } from "@/features/hooks/useToggle";
 import { usePathname } from "next/navigation";
+import { useCurrentCardsStore } from "@/lib/zustand";
 
 export default function Subcategory_Cards_Container({
   subcategory,
@@ -40,30 +40,7 @@ export default function Subcategory_Cards_Container({
       <Active_Header currentCards={currentCards} />
       <Box display="flex" flexWrap="wrap" justifyContent="center" gap={2}>
         {currentCards.map((word) => (
-          <Box
-            key={word.id}
-            width={{ xs: "100%", sm: "48%", md: "31%", lg: "23%" }}
-          >
-            <Card
-              sx={{
-                background:
-                  "linear-gradient(to bottom right, #e3f2fd, #bbdefb)",
-                borderRadius: "16px",
-                boxShadow: 3,
-                height: "100%",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                transition: "transform 0.2s ease-in-out",
-                ":hover": {
-                  transform: "scale(1.02)",
-                  boxShadow: 6,
-                },
-              }}
-            >
-              <Default_Card data={word as any} />
-            </Card>
-          </Box>
+          <Default_Card key={word.id} data={word as any} />
         ))}
       </Box>
     </>

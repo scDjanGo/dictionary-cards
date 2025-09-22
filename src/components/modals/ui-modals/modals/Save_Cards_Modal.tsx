@@ -5,12 +5,11 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import DataObjectIcon from "@mui/icons-material/DataObject";
-import CloudUploadIcon from "@mui/icons-material/CloudUpload";
-import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 import SaveIcon from "@mui/icons-material/Save";
 import { useUiModalsStore } from "@/lib/zustand/uiModals/useUiModals";
+import { useCurrentCardsStore } from "@/lib/zustand";
 
 const style = {
   position: "absolute" as const,

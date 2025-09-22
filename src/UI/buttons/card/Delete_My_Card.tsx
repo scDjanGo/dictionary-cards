@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { CardType } from "@/lib/types/types";
-import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
+import { useCurrentCardsStore } from "@/lib/zustand";
 
 type ButtonProps = {
   id: number;
@@ -47,12 +47,12 @@ export default function Delete_My_Card({ id }: ButtonProps) {
 
   return (
     <>
-      <span
+      <button
         onClick={handleOpen}
-        className="text-center duration-300 ease-in-out transition-all w-full p-[4px] text-[12px] font-bold text-red-600 bg-white/30 cursor-pointer hover:bg-red-600 hover:text-white"
+        className="text-center duration-300 ease-in-out transition-all w-full p-[4px] text-[12px] font-bold text-red-600 bg-white/30 cursor-pointer hover:bg-red-600 hover:text-white rounded-[6px]"
       >
         Удалить
-      </span>
+      </button>
 
       {open && (
         <div

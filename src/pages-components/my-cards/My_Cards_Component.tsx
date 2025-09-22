@@ -8,7 +8,7 @@ import { CardType } from "@/lib/types/types";
 import Empty_My_Cards_Page from "@/components/empty-pages/Empty_My_Cards_Page";
 import Active_Header from "@/components/header/Active_Header";
 import { useToggle } from "@/features/hooks/useToggle";
-import { useCurrentCardsStore } from "@/lib/zustand/useCurrentCardsStore";
+import { useCurrentCardsStore } from "@/lib/zustand";
 
 export default function My_Cards_Component({
   currentCardsProps,

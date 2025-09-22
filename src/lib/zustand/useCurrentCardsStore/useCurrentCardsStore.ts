@@ -1,5 +1,5 @@
+import { CardType } from "@/lib/types/types";
 import { create } from "zustand";
-import { CardType } from "../types/types";
 
 interface CurrentCardsStore {
   currentCards: CardType[];
