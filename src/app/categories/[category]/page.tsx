@@ -71,7 +71,7 @@ export default async function page({ params }: typePage) {
     <div
       className={` mt-[6px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[6px_16px]`}
     >
-      {subcategories.filter(cat => cat.parentId === Number(category).map((item) => (
+      {subcategories.filter(cat => cat.parentId === Number(category)).map((item) => (
         <Category_Card
           key={item.id}
           category={item}
