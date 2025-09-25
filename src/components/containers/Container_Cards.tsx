@@ -3,5 +3,5 @@ export default function Container_Cards({
 }: {
   children?: React.ReactNode;
 }) {
-  return <div className="grid gap-[12px] grid-cols-1">{children}</div>;
+  return <div className="grid gap-[12px] grid-cols-[repeat(auto-fit,_minmax(220px,_1fr))]">{children}</div>;
 }

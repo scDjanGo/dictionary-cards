@@ -25,7 +25,7 @@ export type QuizSettingsType = {
 };
 
 export type typeUiModals = {
-  value: "save-cards";
+  value: "save-cards" | "create-another-card";
   state: boolean;
 };
 

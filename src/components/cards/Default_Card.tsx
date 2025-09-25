@@ -28,7 +28,7 @@ const Default_Card: React.FC<Props> = ({ data }) => {
 
   return (
     <div
-      className="w-full h-52 cursor-pointer perspective"
+      className="w-full min-h-52 cursor-pointer"
       onClick={(e) => {
         e.stopPropagation();
         handleToggle();
@@ -40,14 +40,12 @@ const Default_Card: React.FC<Props> = ({ data }) => {
         }`}
       >
         {/* Front Side */}
-        <div className="absolute w-full h-full backface-hidden rounded-2xl shadow-xl   p-6 flex flex-col gap-[12px] justify-between bg-blueCl ">
+        <div className="relative w-full h-full backface-hidden rounded-2xl shadow-xl   p-6 flex flex-col gap-[12px] justify-between bg-blueCl dark:bg-bgItem ">
           <div className="flex flex-col gap-[12px]">
             <h2 className="text-center text-xl font-bold text-bgLight drop-shadow-sm border-b-[1px] border-dashed ">
               {data.name}
             </h2>
-            <p className="text-center text-sm text-bgLight italic">
-              {data.intlName}
-            </p>
+            <p className="text-center text-sm text-bgLight">{data.intlName}</p>
           </div>
           <div className="mt-2">
             <p className="text-bgLight text-sm leading-snug line-clamp-2 border-b-[1px] border-dashed ">
@@ -57,7 +55,7 @@ const Default_Card: React.FC<Props> = ({ data }) => {
               {data.intlDescription}
             </p>
           </div>
-          <div className="mt-3 text-xs text-gray-400 italic">
+          <div className=" text-xs text-gray-400">
             Нажмите, чтобы перевернуть
           </div>
         </div>
@@ -79,7 +77,7 @@ const BackSided_Card = ({
   handleToggle: () => void;
 }) => {
   return (
-    <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl shadow-xl bg-gradient-to-br from-violet-200 via-purple-300 to-fuchsia-300 p-6 flex flex-col justify-center items-center border border-purple-200/50">
+    <div className="absolute top-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl shadow-xl bg-gradient-to-br dark:bg-gradient-none from-violet-200 dark:from-0% via-purple-300 dark:via-0% to-fuchsia-300 dark:to-0% p-6 flex flex-col justify-center items-center border border-purple-200/50 dark:!bg-bgItem dark:!border-none">
       <p className="text-gray-800 font-semibold mb-5 text-lg drop-shadow-sm">
         Что сделать?
       </p>

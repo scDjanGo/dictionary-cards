@@ -1,24 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {
-  TextField,
-  Button,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-  MenuItem,
-  Typography,
-} from "@mui/material";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-import { useRouter } from "next/navigation";
+import { Typography } from "@mui/material";
 import Link from "next/link";
 import Floating_Input from "@/UI/input/Floating_Input";
 import Floating_Select from "@/UI/input/Floating_Select";
+import { useUiModalsStore } from "@/lib/zustand";
 
 export default function CreateCardForm() {
+  const uiModal = useUiModalsStore((state) => state.uiModalsStore);
+  const onModal = useUiModalsStore((state) => state.setUiModalsStore);
+  const [userCategories, setUserCategories] = useState<any[]>([]);
   const [formData, setFormData] = useState({
     name: "",
     intlName: "",
@@ -26,7 +18,6 @@ export default function CreateCardForm() {
     intlDescription: "",
     catId: "",
   });
-
   const [errors, setErrors] = useState({
     name: false,
     intlName: false,
@@ -35,17 +26,12 @@ export default function CreateCardForm() {
     catId: false,
   });
 
-  const [userCategories, setUserCategories] = useState<any[]>([]);
-  const [openDialog, setOpenDialog] = useState(false);
-  const router = useRouter();
-
   useEffect(() => {
     const storedCategories = JSON.parse(
       localStorage.getItem("my-categories") || "[]"
     );
     setUserCategories(storedCategories);
 
-    // Устанавливаем последнюю категорию по умолчанию, если они есть
     if (storedCategories.length > 0) {
       setFormData((prev) => ({
         ...prev,
@@ -53,6 +39,17 @@ export default function CreateCardForm() {
       }));
     }
   }, []);
+
+  useEffect(() => {
+    if (!uiModal) return;
+    setFormData((prev) => ({
+      ...prev,
+      name: "",
+      intlName: "",
+      description: "",
+      intlDescription: "",
+    }));
+  }, [uiModal]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -72,8 +69,8 @@ export default function CreateCardForm() {
     const newErrors = {
       name: formData.name.trim() === "",
       intlName: formData.intlName.trim() === "",
-      description: false, // Необязательное поле
-      intlDescription: false, // Необязательное поле
+      description: false,
+      intlDescription: false,
       catId: formData.catId === "",
     };
 
@@ -101,25 +98,7 @@ export default function CreateCardForm() {
     myCards.unshift(newCard);
     localStorage.setItem("my-cards", JSON.stringify(myCards));
 
-    setOpenDialog(true);
-  };
-
-  const handleCreateAnother = () => {
-    setFormData({
-      name: "",
-      intlName: "",
-      description: "",
-      intlDescription: "",
-      catId:
-        userCategories.length > 0
-          ? userCategories[userCategories.length - 1].id.toString()
-          : "",
-    });
-    setOpenDialog(false);
-  };
-
-  const handleGoBack = () => {
-    router.back();
+    onModal("create-another-card");
   };
 
   return (
@@ -194,42 +173,6 @@ export default function CreateCardForm() {
       >
         Create category / Создать категорию
       </Link>
-
-      <Dialog open={openDialog} onClose={() => setOpenDialog(false)}>
-        <DialogTitle sx={{ textAlign: "center", pt: 4 }}>
-          <CheckCircleOutlineIcon
-            color="success"
-            sx={{ fontSize: 50, mb: 1 }}
-          />
-          <Typography variant="h6" component="div">
-            Карточка создана!
-          </Typography>
-        </DialogTitle>
-
-        <DialogContent>
-          <DialogContentText sx={{ textAlign: "center" }}>
-            Создать ещё одну карточку?
-          </DialogContentText>
-        </DialogContent>
-
-        <DialogActions sx={{ justifyContent: "center", pb: 2 }}>
-          <Button onClick={handleCreateAnother} variant="outlined">
-            Да
-          </Button>
-          <Button
-            onClick={handleGoBack}
-            variant="contained"
-            sx={{
-              backgroundColor: "#1976D2",
-              "&:hover": {
-                backgroundColor: "#1565c0",
-              },
-            }}
-          >
-            Нет
-          </Button>
-        </DialogActions>
-      </Dialog>
     </>
   );
 }

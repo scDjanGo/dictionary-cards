@@ -19,7 +19,7 @@ import {
 
 import TranslateIcon from "@mui/icons-material/Translate";
 import TimerIcon from "@mui/icons-material/Timer";
-import HearingIcon from '@mui/icons-material/Hearing';
+import HearingIcon from "@mui/icons-material/Hearing";
 import TouchAppIcon from "@mui/icons-material/TouchApp";
 import EditIcon from "@mui/icons-material/Edit";
 import MicIcon from "@mui/icons-material/Mic";
@@ -27,6 +27,7 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import { useRouter } from "next/navigation";
 import { QuizSettingsType } from "@/lib/types/types";
 import { useQuizSettingsStore } from "@/lib/zustand/quizSettings/useQuizSettings";
+import { Hand, Languages, Pencil, Play, Shuffle, Volume2 } from "lucide-react";
 
 export default function Quiz_Main_Page() {
   const router = useRouter();
@@ -70,159 +71,127 @@ export default function Quiz_Main_Page() {
   };
 
   return (
-    <Container maxWidth="sm" sx={{ mt: 4 }}>
-      <Paper
-        elevation={4}
-        sx={{
-          p: isSmallScreen ? 2 : 4,
-          borderRadius: 3,
-          background: "linear-gradient(to right, #E3F2FD, #FFFFFF)",
-        }}
-      >
-        <Typography
-          variant={isSmallScreen ? "h5" : "h4"}
-          gutterBottom
-          textAlign="center"
-          fontWeight="bold"
-          color="primary"
+    <div className="max-w-md mx-auto mt-6">
+      <div className="rounded-2xl shadow-lg p-6 sm:p-8 bg-gradient-to-r from-[#E3F2FD] to-white">
+        {/* Заголовок */}
+        <h2
+          className={`text-center font-bold text-blueCl ${
+            isSmallScreen ? "text-xl" : "text-2xl"
+          }`}
         >
           Настройки квиза
-        </Typography>
+        </h2>
 
-        {/* Language Selection */}
-        <Box mt={4}>
-          <FormControl fullWidth>
-            <FormLabel sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-              <TranslateIcon sx={{ mr: 1 }} />
-              Язык
-            </FormLabel>
-            <RadioGroup
-              row
-              value={quizSettings.language}
-              onChange={(e) =>
-                handleChange("language", e.target.value as "ru" | "en")
-              }
-            >
-              <FormControlLabel
+        {/* Язык */}
+        <div className="mt-6">
+          <label className="flex text-xl items-center font-semibold text-gray-700 mb-2">
+            <Languages className="w-7 h-7 mr-2 text-blueCl" />
+            Язык
+          </label>
+          <div className="flex gap-4">
+            <label className="flex items-center gap-1 text-xl">
+              <input
+                type="radio"
+                name="language"
                 value="en"
-                control={<Radio />}
-                label="Английский"
+                checked={quizSettings.language === "en"}
+                onChange={(e) => handleChange("language", "en")}
+                className="accent-blueCl w-[20px] h-[20px]"
               />
-              <FormControlLabel
+              Английский
+            </label>
+            <label className="flex items-center gap-1 text-xl">
+              <input
+                type="radio"
+                name="language"
                 value="ru"
-                control={<Radio />}
-                label="Русский"
+                checked={quizSettings.language === "ru"}
+                onChange={(e) => handleChange("language", "ru")}
+                className="accent-blueCl  w-[20px] h-[20px]"
               />
-            </RadioGroup>
-          </FormControl>
-        </Box>
+              Русский
+            </label>
+          </div>
+        </div>
 
-        {/* Timer */}
-        {/* <Box mt={4}>
-          <FormControlLabel
-            control={
-              <Switch
-                checked={quizSettings.time}
-                onChange={(e) => handleChange("time", e.target.checked)}
-              />
-            }
-            label={
-              <Box display="flex" alignItems="center">
-                <TimerIcon sx={{ mr: 1 }} />
-                Использовать таймер
-              </Box>
-            }
-          />
-        </Box> */}
-        <Box mt={4}>
-          <FormControlLabel
-            control={
-              <Switch
-                checked={quizSettings.random}
-                onChange={(e) => handleChange("random", e.target.checked)}
-              />
-            }
-            label={
-              <Box display="flex" alignItems="center">
-                <TouchAppIcon sx={{ mr: 1 }} />
-                Случайный порядок карточек
-              </Box>
-            }
-          />
-        </Box>
+        {/* Рандом */}
+        <div className="mt-6">
+          <label className="flex items-center gap-2 font-semibold text-gray-700">
+            <input
+              type="checkbox"
+              checked={quizSettings.random}
+              onChange={(e) => handleChange("random", e.target.checked)}
+              className="accent-blueCl w-[20px] h-[20px]"
+            />
+            <Shuffle className="w-5 h-5 text-blueCl" />
+            Случайный порядок карточек
+          </label>
+        </div>
 
-        {/* Type Selection */}
-        <Box mt={4}>
-          <FormControl fullWidth>
-            <FormLabel sx={{ mb: 1 }}>Тип квиза</FormLabel>
-            <RadioGroup
-              row={!isSmallScreen}
-              value={quizSettings.type}
-              onChange={(e) =>
-                handleChange(
-                  "type",
-                  e.target.value as "swipe" | "write" | "speech"
-                )
-              }
-            >
-              <FormControlLabel
+        {/* Тип квиза */}
+        <div className="mt-6">
+          <label className="block font-semibold text-gray-700 mb-2">
+            Тип квиза
+          </label>
+          <div
+            className={`flex ${
+              isSmallScreen ? "flex-col gap-2" : "flex-row gap-6"
+            }`}
+          >
+            <label className="flex items-center gap-2">
+              <input
+                type="radio"
+                name="quizType"
                 value="swipe"
-                control={<Radio />}
-                label={
-                  <Box display="flex" alignItems="center">
-                    <TouchAppIcon sx={{ mr: 0.5 }} />
-                    Swipe
-                  </Box>
-                }
+                checked={quizSettings.type === "swipe"}
+                onChange={(e) => handleChange("type", "swipe")}
+                className="accent-blueCl"
               />
-              <FormControlLabel
-                value="write"
-                control={<Radio />}
-                label={
-                  <Box display="flex" alignItems="center">
-                    <EditIcon sx={{ mr: 0.5 }} />
-                    Write
-                  </Box>
-                }
-              />
-              <FormControlLabel
-                value="speech"
-                control={<Radio />}
-                label={
-                  <Box display="flex" alignItems="center">
-                    <HearingIcon sx={{ mr: 0.5 }} />
-                    Listen
-                  </Box>
-                }
-              />
-            </RadioGroup>
-          </FormControl>
-        </Box>
+              <Hand className="w-5 h-5 text-blueCl" />
+              Swipe
+            </label>
 
-        {/* Start Button */}
-        <Box mt={5} textAlign="center">
-          <Button
-            variant="contained"
-            size={isSmallScreen ? "medium" : "large"}
-            endIcon={<PlayArrowIcon />}
+            <label className="flex items-center gap-2">
+              <input
+                type="radio"
+                name="quizType"
+                value="write"
+                checked={quizSettings.type === "write"}
+                onChange={(e) => handleChange("type", "write")}
+                className="accent-blueCl"
+              />
+              <Pencil className="w-5 h-5 text-blueCl" />
+              Write
+            </label>
+
+            <label className="flex items-center gap-2">
+              <input
+                type="radio"
+                name="quizType"
+                value="speech"
+                checked={quizSettings.type === "speech"}
+                onChange={(e) => handleChange("type", "speech")}
+                className="accent-blueCl"
+              />
+              <Volume2 className="w-5 h-5 text-blueCl" />
+              Listen
+            </label>
+          </div>
+        </div>
+
+        {/* Кнопка старта */}
+        <div className="mt-8 text-center">
+          <button
             onClick={handleStartQuiz}
-            sx={{
-              px: 5,
-              py: 1.5,
-              fontWeight: "bold",
-              fontSize: isSmallScreen ? "1rem" : "1.1rem",
-              borderRadius: 2,
-              background: "linear-gradient(to right, #1976D2, #2196F3)",
-              color: "#fff",
-              "&:hover": {
-                background: "linear-gradient(to right, #1565C0, #1E88E5)",
-              },
-            }}
+            className={`inline-flex items-center justify-center gap-2 rounded-lg font-bold shadow-md transition px-6 py-3 text-white ${
+              isSmallScreen ? "text-base" : "text-lg"
+            } bg-gradient-to-r from-blueCl to-blue-500 hover:from-blueCl hover:to-blueCl`}
           >
             Начать квиз
-          </Button>
-        </Box>
-      </Paper>
-    </Container>
+            <Play className="w-5 h-5" />
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }

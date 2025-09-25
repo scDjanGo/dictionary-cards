@@ -1,32 +1,16 @@
 "use client";
 
-import Modal from "@mui/material/Modal";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
-import DataObjectIcon from "@mui/icons-material/DataObject";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
-import SaveIcon from "@mui/icons-material/Save";
 import { useUiModalsStore } from "@/lib/zustand/uiModals/useUiModals";
 import { useCurrentCardsStore } from "@/lib/zustand";
+import Container_Modals from "@/components/containers/Container_Modals";
+import { FileDown, FileJson, FileText } from "lucide-react";
 
-const style = {
-  position: "absolute" as const,
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  backgroundColor: "white",
-  border: "2px solid #1976D2",
-  boxShadow: 24,
-  borderRadius: "12px",
-  padding: "24px",
-  width: "300px",
-};
+
 
 const Save_Cards_Modal: React.FC = () => {
   const offUiModalsStore = useUiModalsStore((state) => state.offUiModalsStore);
-  const isOpen = useUiModalsStore((state) => state.uiModalsStore.state);
   const currentCards = useCurrentCardsStore((state) => state.currentCards);
 
   const handleSaveAsPDF = async () => {
@@ -266,44 +250,44 @@ const Save_Cards_Modal: React.FC = () => {
   };
 
   return (
-    <Modal open={isOpen} onClose={handleOffModal}>
-      <Box sx={style}>
-        <h2 className="text-[#1976D2] text-center text-lg font-bold">
+    <Container_Modals>
+      <div className="bg-bgLight dark:bg-bgItem rounded-2xl shadow-lg p-6 w-full max-w-sm mx-auto">
+        {/* Заголовки */}
+        <h2 className="text-blueCl dark:text-bgLight text-center text-lg font-bold">
           Выберите вариант
-        </h2>{" "}
-        <h3 className="text-[#1976D2] text-[8px] text-center leading-[1.1] font-bold mb-4">
+        </h2>
+        <h3 className="text-blueCl dark:text-bgLight text-[14px] text-center leading-tight font-bold mb-4 mt-2">
           При сохранении все карточки на этой странице будут сохранены
         </h3>
+
+        {/* Кнопки */}
         <div className="flex flex-col gap-2">
-          <Button
-            variant="outlined"
+          <button
             onClick={handleSaveAsPDF}
-            style={{ borderColor: "#1976D2", color: "#1976D2" }}
-            startIcon={<PictureAsPdfIcon sx={{ color: "#1976D2" }} />}
+            className="flex justify-center items-center gap-2 border border-blueCl dark:border-bgLight text-blueCl dark:text-bgLight px-4 py-2 rounded-lg hover:bg-blueCl/10 transition"
           >
+            <FileText className="w-5 h-5 text-blueCl  dark:text-bgLight" />
             Сохранить PDF
-          </Button>
+          </button>
 
-          <Button
-            variant="outlined"
+          <button
             onClick={handleSaveJSON}
-            style={{ borderColor: "#1976D2", color: "#1976D2" }}
-            startIcon={<DataObjectIcon sx={{ color: "#1976D2" }} />}
+            className="flex justify-center items-center gap-2 border border-blueCl dark:border-bgLight text-blueCl dark:text-bgLight px-4 py-2 rounded-lg hover:bg-blueCl/10 transition"
           >
+            <FileJson className="w-5 h-5 text-blueCl  dark:text-bgLight" />
             Сохранить JSON
-          </Button>
+          </button>
 
-          <Button
-            variant="outlined"
+          <button
             onClick={handleDownload}
-            style={{ borderColor: "#1976D2", color: "#1976D2" }}
-            startIcon={<SaveIcon sx={{ color: "#1976D2" }} />}
+            className="flex justify-center items-center gap-2 border border-blueCl dark:border-bgLight text-blueCl dark:text-bgLight px-4 py-2 rounded-lg hover:bg-blueCl/10 transition"
           >
+            <FileDown className="w-5 h-5 text-blueCl  dark:text-bgLight" />
             Загрузить
-          </Button>
+          </button>
         </div>
-      </Box>
-    </Modal>
+      </div>
+    </Container_Modals>
   );
 };
 
