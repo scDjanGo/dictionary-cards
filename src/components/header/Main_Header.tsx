@@ -8,7 +8,7 @@ import Category_Name from "@/UI/buttons/header/Category_Name";
 import Burger_Menu from "./Burger_Menu";
 import Cloud_Upload_SVG from "@/UI/svgs/Cloud_Upload_SVG";
 import Arrow_Button_SVG from "@/UI/svgs/Arrow_Button_SVG";
-import { useBlockedCardsStore } from "@/lib/zustand";
+import { useBlockedCardsStore, useCurrentCardsStore } from "@/lib/zustand";
 
 export default function Main_Header() {
   const router = useRouter();
@@ -107,7 +107,7 @@ export default function Main_Header() {
             className="dark:bg-bgDark"
             style={{
               backgroundColor: "white",
-              display: pathname?.includes("my-cards") ? "block" : "none",
+              display: GetCurrentPage(pathname) ? "block" : "none",
             }}
           >
             <Cloud_Upload_SVG />
@@ -118,4 +118,13 @@ export default function Main_Header() {
       </div>
     </header>
   );
+}
+
+function GetCurrentPage(pathname: string): boolean {
+  let res =
+    pathname.includes("my-cards") ||
+    (pathname.includes("categories") &&
+      (pathname.match(/\//g)?.length ?? 0) === 3);
+
+  return res;
 }

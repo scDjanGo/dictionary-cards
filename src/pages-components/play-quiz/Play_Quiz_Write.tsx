@@ -2,23 +2,9 @@
 
 import { useState, useEffect, useRef } from "react";
 import { CardType } from "@/lib/types/types";
-import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { Trophy, ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
-import {
-  Box,
-  Card,
-  CardContent,
-  Typography,
-  Grow,
-  TextField,
-  Button,
-} from "@mui/material";
 import { useQuizSettingsStore } from "@/lib/zustand/quizSettings/useQuizSettings";
-
-const PRIMARY_COLOR = "#1976D2";
-const PRIMARY_LIGHT = "#E3F2FD";
-const PRIMARY_BACK = "#E0ECF9";
 
 function shuffleArray<T>(array: T[]): T[] {
   return [...array].sort(() => Math.random() - 0.5);
@@ -53,7 +39,6 @@ export default function Play_Quiz_Write_Type({
   }, [cards, random]);
 
   useEffect(() => {
-    // Фокус на input при показе новой карточки
     if (!flipped) {
       inputRef.current?.focus();
     } else {
@@ -89,6 +74,7 @@ export default function Play_Quiz_Write_Type({
         count: prev.count + 1,
         cards: isWas ? prev.cards : [...prev.cards, currentCard],
       }));
+
       if (random) newDeck = shuffleArray(newDeck);
     }
 
@@ -107,143 +93,93 @@ export default function Play_Quiz_Write_Type({
 
   if (!currentCard) {
     return (
-      <Box
-        mt={6}
-        p={4}
-        bgcolor="#E3F2FD"
-        borderRadius={4}
-        textAlign="center"
-        boxShadow={3}
-      >
-        <EmojiEventsIcon sx={{ fontSize: 60, color: "#1976D2", mb: 1 }} />
-        <Typography variant="h5" fontWeight="bold" mb={1}>
+      <div className=" p-6 bg-blue-50 dark:bg-bgItem rounded-2xl shadow text-center mt-[20%]">
+        <Trophy className="w-14 h-14 text-blue-600 dark:text-bgLight mx-auto mb-2" />
+        <h2 className="text-xl font-bold mb-2 dark:text-bgLight">
           Все карточки просмотрены!
-        </Typography>
+        </h2>
+
         {errors?.count ? (
-          <Typography variant="body1" color="text.secondary" mb={3}>
-            Количество ошибок {errors?.count} <br />
-            <span className={``}>
-              Нужно повторить слова:{" "}
-              {errors?.cards
-                .map((item) =>
-                  quizSettings.language === "en" ? item.name : item.intlName
-                )
-                .join(", ")}
-            </span>
-          </Typography>
+          <p className="text-gray-600 mb-4  dark:text-bgLight">
+            Количество ошибок: {errors?.count} <br />
+            Нужно повторить слова:{" "}
+            {errors?.cards
+              .map((item) =>
+                quizSettings.language === "en" ? item.name : item.intlName
+              )
+              .join(", ")}
+          </p>
         ) : (
-          <Typography variant="body1" color="text.secondary" mb={3}>
+          <p className="text-gray-600 mb-4  dark:text-bgLight">
             Отличная работа — ты справился!
-          </Typography>
+          </p>
         )}
-        <Button
-          variant="contained"
-          endIcon={<ArrowForwardIcon />}
-          sx={{
-            bgcolor: "#1976D2",
-            "&:hover": { bgcolor: "#115293" },
-            textTransform: "none",
-            px: 3,
-            py: 1,
-            fontWeight: 500,
-          }}
+
+        <button
           onClick={() => router.push("/my-cards")}
+          className="inline-flex items-center gap-2 px-5 py-2 bg-blue-600 dark:bg-bgItem  text-bgLight dark:border-[1px] dark:border-bgLight rounded-lg font-medium hover:bg-blue-700 dark:hover:bg-bgLight dark:hover:text-bgItem  transition"
         >
           Перейти к моим карточкам
-        </Button>
-      </Box>
+          <ArrowRight className="w-5 h-5" />
+        </button>
+      </div>
     );
   }
 
   return (
-    <Box
-      mt={4}
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      flexDirection="column"
-      minHeight="300px"
+    <div
+      className="mt-[50%] flex flex-col items-center min-h-[300px] "
       onKeyDown={handleKeyDown}
     >
-      <Grow in>
-        <Card
-          sx={{
-            width: "100%",
-            maxWidth: 400,
-            p: 2,
-            bgcolor: flipped ? PRIMARY_BACK : PRIMARY_LIGHT,
-            userSelect: "none",
-            boxShadow: 3,
-            borderRadius: 2,
-            transition: "background-color 0.3s ease",
-          }}
-        >
-          <CardContent>
-            {!flipped ? (
-              <form onSubmit={handleAnswerSubmit}>
-                <Typography
-                  variant="h5"
-                  fontWeight="bold"
-                  gutterBottom
-                  sx={{ textAlign: "center", color: PRIMARY_COLOR }}
-                >
-                  {quizSettings.language === "en"
-                    ? currentCard.name
-                    : currentCard.intlName}
-                </Typography>
-                <TextField
-                  fullWidth
-                  variant="outlined"
-                  placeholder="Введите ответ..."
-                  value={input}
-                  inputRef={inputRef}
-                  onChange={(e) => setInput(e.target.value)}
-                  sx={{ mt: 2 }}
-                />
-              </form>
-            ) : (
-              <>
-                <Typography
-                  variant="h6"
-                  fontWeight="bold"
-                  gutterBottom
-                  sx={{ textAlign: "center", color: PRIMARY_COLOR }}
-                >
-                  {currentCard.name} / {currentCard.intlName}
-                </Typography>
+      <div
+        className={`w-full max-w-sm rounded-xl shadow-lg p-4 transition-colors duration-300 bg-bgLight border-bgItem dark:bg-bgItem border-[1px] dark:border-bgLight`}
+      >
+        {!flipped ? (
+          <form onSubmit={handleAnswerSubmit}>
+            <h3
+              className={`text-center font-bold text-xl mb-8 text-blueCl dark:text-bgLight`}
+            >
+              {quizSettings.language === "en"
+                ? currentCard.name
+                : currentCard.intlName}
+            </h3>
+            <input
+              type="text"
+              placeholder="Введите ответ..."
+              value={input}
+              ref={inputRef}
+              onChange={(e) => setInput(e.target.value)}
+              className="w-full border rounded-lg px-3 py-2 text-base dark:border-[1px] dark:border-bgLight dark:text-bgLight dark:placeholder-bgLight outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-bgLight"
+            />
+          </form>
+        ) : (
+          <>
+            <h4
+              className={`text-center font-bold text-lg mb-3 text-blueCl dark:text-bgLight`}
+            >
+              {currentCard.name} / {currentCard.intlName}
+            </h4>
 
-                <Typography
-                  variant="body2"
-                  color={wasCorrect ? "success.main" : "error.main"}
-                  textAlign="center"
-                  sx={{ my: 2 }}
-                >
-                  {wasCorrect ? "Правильно!" : "Неправильно, попробуй снова."}
-                </Typography>
+            <p
+              className={`text-center my-2 ${
+                wasCorrect ? "text-green-600" : "text-red-600"
+              }`}
+            >
+              {wasCorrect ? "Правильно!" : "Неправильно, попробуй снова."}
+            </p>
 
-                <Box textAlign="center">
-                  <Button
-                    variant="contained"
-                    onClick={handleContinue}
-                    ref={continueButtonRef}
-                    sx={{
-                      mt: 2,
-                      textTransform: "none",
-                      bgcolor: PRIMARY_COLOR,
-                      "&:hover": { bgcolor: "#115293" },
-                      px: 4,
-                      py: 1,
-                      fontWeight: 500,
-                    }}
-                  >
-                    Продолжить
-                  </Button>
-                </Box>
-              </>
-            )}
-          </CardContent>
-        </Card>
-      </Grow>
-    </Box>
+            <div className="text-center">
+              <button
+                ref={continueButtonRef}
+                onClick={handleContinue}
+                className="mt-3 px-5 py-2 bg-blueCl  dark:bg-bgItem dark:border-[1px]  text-bgLight rounded-lg font-medium hover:bg-blue-700 dark:hover:bg-bgLight dark:hover:text-bgItem transition"
+              >
+                Продолжить
+              </button>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
   );
 }

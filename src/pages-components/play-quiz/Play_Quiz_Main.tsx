@@ -59,7 +59,7 @@ export default function Play_Quiz_Main() {
   }, []);
 
   return (
-    <div>
+    <div className={``}>
       <Loading_Component
         open={!quizCards || !quizSettings}
         message="Подгружаем контент"
