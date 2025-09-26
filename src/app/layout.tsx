@@ -25,11 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${roboto.className} bg-bgLight dark:bg-bgDark`}>
+      <body
+        className={`${roboto.className} bg-bgLight dark:bg-bgDark min-h-[100dvh]`}
+      >
         <AppRouterCacheProvider>
           <>
             <>
-            {/* Ui elems */}
+              {/* Ui elems */}
               <Sidebars_Container />
               <Main_Modals />
             </>

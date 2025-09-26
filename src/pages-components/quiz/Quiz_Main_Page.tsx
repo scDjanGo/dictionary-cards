@@ -1,29 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {
-  Container,
-  FormControl,
-  FormLabel,
-  RadioGroup,
-  FormControlLabel,
-  Radio,
-  Switch,
-  Typography,
-  Box,
-  Paper,
-  Button,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
-
-import TranslateIcon from "@mui/icons-material/Translate";
-import TimerIcon from "@mui/icons-material/Timer";
-import HearingIcon from "@mui/icons-material/Hearing";
-import TouchAppIcon from "@mui/icons-material/TouchApp";
-import EditIcon from "@mui/icons-material/Edit";
-import MicIcon from "@mui/icons-material/Mic";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import { useRouter } from "next/navigation";
 import { QuizSettingsType } from "@/lib/types/types";
 import { useQuizSettingsStore } from "@/lib/zustand/quizSettings/useQuizSettings";
@@ -41,8 +18,6 @@ export default function Quiz_Main_Page() {
     random: true,
   });
 
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   useEffect(() => {
     const quiz_cards = JSON.parse(sessionStorage.getItem("quiz-cards") || "[]");
@@ -72,42 +47,40 @@ export default function Quiz_Main_Page() {
 
   return (
     <div className="max-w-md mx-auto mt-6">
-      <div className="rounded-2xl shadow-lg p-6 sm:p-8 bg-gradient-to-r from-[#E3F2FD] to-white">
+      <div className="rounded-2xl shadow-lg p-6 sm:p-8 bg-bgLight  dark:bg-bgItem">
         {/* Заголовок */}
         <h2
-          className={`text-center font-bold text-blueCl ${
-            isSmallScreen ? "text-xl" : "text-2xl"
-          }`}
+          className={`text-center font-bold text-xl text-blueCl dark:text-bgLight`}
         >
           Настройки квиза
         </h2>
 
         {/* Язык */}
         <div className="mt-6">
-          <label className="flex text-xl items-center font-semibold text-gray-700 mb-2">
-            <Languages className="w-7 h-7 mr-2 text-blueCl" />
+          <label className="flex text-xl items-center font-semibold text-gray-700 mb-2  dark:text-bgLight">
+            <Languages className="w-7 h-7 mr-2 text-blueCl  dark:text-bgLight" />
             Язык
           </label>
           <div className="flex gap-4">
-            <label className="flex items-center gap-1 text-xl">
+            <label className="flex items-center gap-1 text-xl  dark:text-bgLight">
               <input
                 type="radio"
                 name="language"
                 value="en"
                 checked={quizSettings.language === "en"}
                 onChange={(e) => handleChange("language", "en")}
-                className="accent-blueCl w-[20px] h-[20px]"
+                className="accent-blueCl  dark:accent-bgLight w-[20px] h-[20px]"
               />
               Английский
             </label>
-            <label className="flex items-center gap-1 text-xl">
+            <label className="flex items-center gap-1 text-xl  dark:text-bgLight">
               <input
                 type="radio"
                 name="language"
                 value="ru"
                 checked={quizSettings.language === "ru"}
                 onChange={(e) => handleChange("language", "ru")}
-                className="accent-blueCl  w-[20px] h-[20px]"
+                className="accent-blueCl dark:accent-bgLight  w-[20px] h-[20px]"
               />
               Русский
             </label>
@@ -116,64 +89,60 @@ export default function Quiz_Main_Page() {
 
         {/* Рандом */}
         <div className="mt-6">
-          <label className="flex items-center gap-2 font-semibold text-gray-700">
+          <label className="flex items-center gap-2 font-semibold text-gray-700 dark:text-bgLight text-xl leading-[1.1]">
             <input
               type="checkbox"
               checked={quizSettings.random}
               onChange={(e) => handleChange("random", e.target.checked)}
-              className="accent-blueCl w-[20px] h-[20px]"
+              className="accent-blueCl dark:accent-bgLight w-[20px] h-[20px]"
             />
-            <Shuffle className="w-5 h-5 text-blueCl" />
+            <Shuffle className="w-7 h-7 text-blueCl dark:text-bgLight" />
             Случайный порядок карточек
           </label>
         </div>
 
         {/* Тип квиза */}
         <div className="mt-6">
-          <label className="block font-semibold text-gray-700 mb-2">
+          <label className="block font-semibold text-gray-700 dark:text-bgLight mb-2">
             Тип квиза
           </label>
-          <div
-            className={`flex ${
-              isSmallScreen ? "flex-col gap-2" : "flex-row gap-6"
-            }`}
-          >
-            <label className="flex items-center gap-2">
+          <div className={`flex flex-col gap-2 `}>
+            <label className="flex items-center gap-2 text-xl dark:text-bgLight">
               <input
                 type="radio"
                 name="quizType"
                 value="swipe"
                 checked={quizSettings.type === "swipe"}
                 onChange={(e) => handleChange("type", "swipe")}
-                className="accent-blueCl"
+                className="accent-blueCl dark:accent-bgLight w-[20px] h-[20px]"
               />
-              <Hand className="w-5 h-5 text-blueCl" />
+              <Hand className="w-7 h-7 text-blueCl dark:text-bgLight  text-xl" />
               Swipe
             </label>
 
-            <label className="flex items-center gap-2">
+            <label className="flex items-center gap-2 text-xl dark:text-bgLight">
               <input
                 type="radio"
                 name="quizType"
                 value="write"
                 checked={quizSettings.type === "write"}
                 onChange={(e) => handleChange("type", "write")}
-                className="accent-blueCl"
+                className="accent-blueCl dark:accent-bgLight w-[20px] h-[20px]"
               />
-              <Pencil className="w-5 h-5 text-blueCl" />
+              <Pencil className="w-7 h-7 text-blueCl dark:text-bgLight" />
               Write
             </label>
 
-            <label className="flex items-center gap-2">
+            <label className="flex items-center gap-2 text-xl dark:text-bgLight">
               <input
                 type="radio"
                 name="quizType"
                 value="speech"
                 checked={quizSettings.type === "speech"}
                 onChange={(e) => handleChange("type", "speech")}
-                className="accent-blueCl"
+                className="accent-blueCl dark:accent-bgLight w-[20px] h-[20px]"
               />
-              <Volume2 className="w-5 h-5 text-blueCl" />
+              <Volume2 className="w-7 h-7 text-blueCl dark:text-bgLight" />
               Listen
             </label>
           </div>
@@ -183,9 +152,7 @@ export default function Quiz_Main_Page() {
         <div className="mt-8 text-center">
           <button
             onClick={handleStartQuiz}
-            className={`inline-flex items-center justify-center gap-2 rounded-lg font-bold shadow-md transition px-6 py-3 text-white ${
-              isSmallScreen ? "text-base" : "text-lg"
-            } bg-gradient-to-r from-blueCl to-blue-500 hover:from-blueCl hover:to-blueCl`}
+            className={`inline-flex items-center text-lg justify-center gap-2 rounded-lg font-bold shadow-md transition px-6 py-3 text-bgLight  bg-blueCl dark:bg-bgItem dark:border-[1px] dark:hover:bg-bgLight dark:hover:text-bgItem dark:border-bgLight  `}
           >
             Начать квиз
             <Play className="w-5 h-5" />
