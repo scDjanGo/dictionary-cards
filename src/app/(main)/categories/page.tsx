@@ -1,5 +1,5 @@
 import Category_Card from "@/components/cards/Category_Card";
-import { Button, Box, Stack } from "@mui/material";
+import Container_Categories from "@/components/containers/Container_Categories";
 
 export default function CategoriesPage() {
   const categories = [
@@ -57,7 +57,7 @@ export default function CategoriesPage() {
   ];
 
   return (
-    <div className={`mt-[6px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[6px_16px]`}>
+    <Container_Categories>
       <Category_Card category={other_categories[0]} href="/my-cards" />
 
       {categories.map((item) => (
@@ -69,6 +69,6 @@ export default function CategoriesPage() {
       ))}
 
       <Category_Card category={other_categories[1]} href="/blocked-cards" />
-    </div>
+    </Container_Categories>
   );
 }

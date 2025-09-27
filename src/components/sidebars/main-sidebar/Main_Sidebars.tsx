@@ -6,6 +6,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useSidebarsStore } from "@/lib/zustand/sidebarsStore/useSidebarsStore";
 import Theme_Button from "./Theme_Button";
 import { useEffect } from "react";
+import Type_Of_Cards_Button from "./Type_Of_Cards_Button";
 
 const LINKS = [
   { id: 1, link: "/categories", name: "Главная" },
@@ -67,6 +68,8 @@ export default function Main_Sidebar() {
             </Link>
           ))}
         </nav>
+
+        <Type_Of_Cards_Button />
       </div>
     </>
   );

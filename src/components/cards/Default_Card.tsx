@@ -1,19 +1,9 @@
 import Back_To_Stack_Card from "@/UI/buttons/card/Back_To_Stack_Card";
 import Delete_My_Card from "@/UI/buttons/card/Delete_My_Card";
-import Three_Dots_Button from "@/UI/buttons/card/Three_Dots_Button";
 import To_Basket_Cards from "@/UI/buttons/card/To_Basket_Cards";
 import { useState } from "react";
+import { CardType } from "@/lib/types/types";
 
-export type CardType = {
-  id: number;
-  catId: number;
-  name: string;
-  intlName: string;
-  description: string;
-  intlDescription: string;
-  inBasket: boolean;
-  isUserCard: boolean;
-};
 
 type Props = {
   data: CardType;

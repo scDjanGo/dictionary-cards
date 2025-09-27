@@ -2,13 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { CardType, typeUiModals } from "@/lib/types/types";
+import { typeUiModals } from "@/lib/types/types";
 import { useUiModalsStore } from "@/lib/zustand/uiModals/useUiModals";
 import Category_Name from "@/UI/buttons/header/Category_Name";
 import Burger_Menu from "./Burger_Menu";
 import Cloud_Upload_SVG from "@/UI/svgs/Cloud_Upload_SVG";
 import Arrow_Button_SVG from "@/UI/svgs/Arrow_Button_SVG";
-import { useBlockedCardsStore, useCurrentCardsStore } from "@/lib/zustand";
 
 export default function Main_Header() {
   const router = useRouter();
@@ -17,36 +16,6 @@ export default function Main_Header() {
   const [canGoBack, setCanGoBack] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const setBlockedCards = useBlockedCardsStore((state) => state.setBlockCards);
-
-  useEffect(() => {
-    const my_categories: any[] = JSON.parse(
-      localStorage.getItem(`my-categories`) || "[]"
-    );
-
-    if (!my_categories || !my_categories.length) {
-      const newCategory = {
-        id: 0,
-        name: "Others",
-        intlName: "Другие",
-        createDate: Date.now(),
-      };
-      console.log("ok");
-
-      localStorage.setItem("my-categories", JSON.stringify([newCategory]));
-      return;
-    }
-  }, []);
-
-  useEffect(() => {
-    const basket_card: CardType[] = JSON.parse(
-      localStorage.getItem("basket-cards") || "[]"
-    );
-
-    if (basket_card.length) {
-      setBlockedCards(basket_card);
-    }
-  }, []);
 
   useEffect(() => {
     setCanGoBack(window.history.length > 1);

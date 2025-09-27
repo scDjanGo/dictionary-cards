@@ -52,17 +52,7 @@ export default function My_Cards_Component({
   return (
     <>
       <Active_Header currentCards={currentCards} />
-      {currentCards.length ? (
-        <Container_Cards>
-          {currentCards
-            .filter((elem) => !blockedCards.some((item) => item.id === elem.id))
-            .map((card) => (
-              <Default_Card key={card.id} data={card} />
-            ))}
-        </Container_Cards>
-      ) : (
-        <Empty_My_Cards_Page />
-      )}
+      {currentCards.length ? <Container_Cards /> : <Empty_My_Cards_Page />}
     </>
   );
 }

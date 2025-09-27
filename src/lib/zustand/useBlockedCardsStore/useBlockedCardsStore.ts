@@ -22,7 +22,7 @@ const useBlockedCardsStore = create<StoreType>((set) => ({
       "basket-cards",
       JSON.stringify([{ ...card, inBasket: true }, ...cardsFromBasket])
     );
-    set((prev) => ({ data: [...prev.data, card] }));
+    set((prev) => ({ data: [...prev.data, { ...card, inBasket: true }] }));
   },
   removeBlockCard(card) {
     const cardsFromBasket: CardType[] = JSON.parse(

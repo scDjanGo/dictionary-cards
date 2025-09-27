@@ -1,7 +1,7 @@
 "use client";
 
 import { CardType } from "@/lib/types/types";
-import { useBlockedCardsStore, useCurrentCardsStore } from "@/lib/zustand";
+import { useBlockedCardsStore, useCurrentCardsStore, useUiModalsStore } from "@/lib/zustand";
 import { useState } from "react";
 
 type ButtonProps = {
@@ -10,6 +10,7 @@ type ButtonProps = {
 
 export default function Back_To_Stack_Card({ card }: ButtonProps) {
   const [open, setOpen] = useState(false);
+  const setModalOff = useUiModalsStore(state => state.offUiModalsStore)
   const backToStack = useBlockedCardsStore(state => state.removeBlockCard)
 
 
@@ -29,6 +30,7 @@ export default function Back_To_Stack_Card({ card }: ButtonProps) {
 
     backToStack(card)
     setOpen(false);
+    setModalOff()
   };
 
   return (

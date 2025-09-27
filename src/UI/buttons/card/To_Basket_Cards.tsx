@@ -1,7 +1,7 @@
 "use client";
 
 import { CardType } from "@/lib/types/types";
-import { useBlockedCardsStore, useCurrentCardsStore } from "@/lib/zustand";
+import { useBlockedCardsStore, useCurrentCardsStore, useUiModalsStore } from "@/lib/zustand";
 import { useState } from "react";
 
 type ButtonProps = {
@@ -10,6 +10,7 @@ type ButtonProps = {
 
 export default function To_Basket_Cards({ card }: ButtonProps) {
   const [open, setOpen] = useState(false);
+    const setModalOff = useUiModalsStore(state => state.offUiModalsStore)
   const addBlock = useBlockedCardsStore((state) => state.addBlockCard);
   const removeCardFromState = useCurrentCardsStore(
     (state) => state.removeCardFromState
@@ -31,6 +32,7 @@ export default function To_Basket_Cards({ card }: ButtonProps) {
     removeCardFromState(card.id);
     addBlock(card);
     setOpen(false);
+    setModalOff()
   };
 
   return (

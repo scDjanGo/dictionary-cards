@@ -6,6 +6,7 @@ import "./globals.css";
 import Main_Header from "@/components/header/Main_Header";
 import Main_Modals from "@/components/modals/Main_Modals";
 import Sidebars_Container from "@/components/sidebars/Sidebars_Container";
+import Main_Features from "@/features/features/Main_Features";
 
 export const metadata: Metadata = {
   title: "Cards",
@@ -30,13 +31,15 @@ export default function RootLayout({
       >
         <AppRouterCacheProvider>
           <>
+          {/* Features */}
+          <Main_Features />
             <>
               {/* Ui elems */}
               <Sidebars_Container />
               <Main_Modals />
             </>
             <Main_Header />
-            <div className="!p-[60px_16px_16px_16px]">{children}</div>
+            <div className="max-w-7xl mx-auto !p-[60px_16px_16px_16px]">{children}</div>
           </>
         </AppRouterCacheProvider>
       </body>

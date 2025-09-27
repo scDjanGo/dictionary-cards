@@ -11,11 +11,7 @@ export default function Basket_Main_Cards() {
   const blockedCards = useBlockedCardsStore((state) => state.data);
 
   return blockedCards.length ? (
-    <Container_Cards>
-      {blockedCards.map((word) => (
-        <Default_Card key={word.id} data={word} />
-      ))}
-    </Container_Cards>
+    <Container_Cards />
   ) : (
     <Empty_Page />
   );

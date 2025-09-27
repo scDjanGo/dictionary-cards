@@ -20,6 +20,7 @@ export type CardType = {
 
 
 // type of card
+export type typeViewCards = "card" | "table"
 
 
 
@@ -34,7 +35,7 @@ export type QuizSettingsType = {
 
 // ui modal
 export type typeUiModals = {
-  value: "save-cards" | "create-another-card";
+  value: "save-cards" | "create-another-card" | "current-card"
   state: boolean;
 };
 
