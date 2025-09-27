@@ -388,7 +388,7 @@ export default function Play_Quiz_Speech_Type({
 
   if (!currentCard) {
     return (
-      <div className="mt-[20%] p-6 bg-blue-50 dark:bg-bgItem rounded-2xl shadow text-center">
+      <div className="mt-[10%] p-6 bg-blue-50 dark:bg-bgItem rounded-2xl shadow text-center">
         <Trophy className="w-14 h-14 text-blue-600 dark:text-bgLight mx-auto mb-2" />
         <h2 className="text-xl font-bold mb-2 dark:text-bgLight">Все карточки просмотрены!</h2>
 
@@ -422,7 +422,7 @@ export default function Play_Quiz_Speech_Type({
     quizSettings.language === "en" ? currentCard.name : currentCard.intlName;
 
   return (
-    <div className="mt-[40%] flex flex-col items-center min-h-[300px]">
+    <div className="mt-[10%] flex flex-col items-center min-h-[300px]">
       <div
         className={`w-full max-w-sm rounded-xl shadow-lg p-4 transition-colors duration-300 bg-blue-50 dark:bg-bgItem`}
       >

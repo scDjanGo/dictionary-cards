@@ -17,6 +17,13 @@ export type CardType = {
   isUserCard: boolean;
 };
 
+
+
+// type of card
+
+
+
+// Quiz types
 export type QuizSettingsType = {
   language: "ru" | "en";
   time: boolean;
@@ -24,11 +31,17 @@ export type QuizSettingsType = {
   random: boolean;
 };
 
+
+// ui modal
 export type typeUiModals = {
   value: "save-cards" | "create-another-card";
   state: boolean;
 };
 
+
+
+
+// sidebar
 export type typeSidebars = {
   value: "main-sidebar";
   state: boolean;
