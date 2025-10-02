@@ -48,19 +48,19 @@ export default function Play_Quiz_Connect({
   const [endQuiz, setEndQuiz] = useState(false);
 
   // Hidden vertical scroll
-  useEffect(() => {
-    const main_container = document.getElementById("main-container");
+  // useEffect(() => {
+  //   const main_container = document.getElementById("main-container");
 
-    document.body.classList.add("overflow-hidden");
-    if (main_container) main_container.classList.add("overflow-hidden");
+  //   document.body.classList.add("overflow-hidden");
+  //   if (main_container) main_container.classList.add("overflow-hidden");
 
-    return () => {
-      document.body.classList.remove("overflow-hidden");
-      const main_container_cleanup = document.getElementById("main-container");
-      if (main_container_cleanup)
-        main_container_cleanup.classList.remove("overflow-hidden");
-    };
-  }, []);
+  //   return () => {
+  //     document.body.classList.remove("overflow-hidden");
+  //     const main_container_cleanup = document.getElementById("main-container");
+  //     if (main_container_cleanup)
+  //       main_container_cleanup.classList.remove("overflow-hidden");
+  //   };
+  // }, []);
 
   useEffect(() => {
     if (step === 0) return;
@@ -162,7 +162,7 @@ export default function Play_Quiz_Connect({
 
   return !endQuiz ? (
     <div
-      className={`${styles.app__container} overflow-hidden mt-[20%]`}
+      className={`${styles.app__container} overflow-hidden mt-[10%]`}
       ref={containerRef}
       onMouseMove={(e) => handleMove(e.clientX, e.clientY)}
       onMouseUp={(e) => handleEnd(e.clientX, e.clientY)}
