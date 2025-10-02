@@ -26,7 +26,7 @@ export default function Block_Button({
       <p className=" text-center text-blueCl dark:text-bgLight break-all  ">
         {item.name}
       </p>
-      <p className="text-[8px] text-center  text-blueCl dark:text-bgLight " >{item.description}</p>
+      <p className="text-[10px] text-center  text-blueCl dark:text-bgLight " >{item.description}</p>
     </button>
   );
 }
