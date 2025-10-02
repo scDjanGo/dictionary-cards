@@ -1,0 +1,19 @@
+.block__button {
+  padding: 12px;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 12px;
+  text-align: start;
+  transition: all 0.3s ease-in-out;
+  color: "#000000";
+}
+
+
+@media(max-width: 895px) {
+
+  .block__button {
+    padding: 6px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+}

@@ -39,7 +39,7 @@ export default function RootLayout({
               <Main_Modals />
             </>
             <Main_Header />
-            <div className="max-w-7xl mx-auto !p-[60px_16px_16px_16px]">{children}</div>
+            <div id="main-container" className="max-w-7xl mx-auto !p-[60px_16px_16px_16px]">{children}</div>
           </>
         </AppRouterCacheProvider>
       </body>

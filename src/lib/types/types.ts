@@ -3,7 +3,7 @@ export type CategoryType = {
   name: string;
   intlName: string;
   createData?: string;
-  childCategories?: any[]
+  childCategories?: any[];
 };
 
 export type CardType = {
@@ -17,33 +17,39 @@ export type CardType = {
   isUserCard: boolean;
 };
 
-
-
 // type of card
-export type typeViewCards = "card" | "table"
-
-
+export type typeViewCards = "card" | "table";
 
 // Quiz types
 export type QuizSettingsType = {
   language: "ru" | "en";
   time: boolean;
-  type: "swipe" | "write" | "speech";
+  type: "swipe" | "write" | "speech" | "connect";
   random: boolean;
 };
 
-
 // ui modal
 export type typeUiModals = {
-  value: "save-cards" | "create-another-card" | "current-card"
+  value: "save-cards" | "create-another-card" | "current-card";
   state: boolean;
 };
-
-
-
 
 // sidebar
 export type typeSidebars = {
   value: "main-sidebar";
   state: boolean;
 };
+
+
+
+export interface typeItem {
+  id: number;
+  text: string;
+  side: "left" | "right";
+}
+
+export interface typeLine {
+  id: number;
+  fromId: number;
+  toId: number;
+}

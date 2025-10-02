@@ -3,7 +3,7 @@ import Delete_My_Card from "@/UI/buttons/card/Delete_My_Card";
 import To_Basket_Cards from "@/UI/buttons/card/To_Basket_Cards";
 import { useState } from "react";
 import { CardType } from "@/lib/types/types";
-
+import Speak_Button from "@/UI/buttons/card/Speak_Button";
 
 type Props = {
   data: CardType;
@@ -15,6 +15,7 @@ const Default_Card: React.FC<Props> = ({ data }) => {
   const handleToggle = () => {
     setFlipped((prev) => !prev);
   };
+
 
   return (
     <div
@@ -45,8 +46,13 @@ const Default_Card: React.FC<Props> = ({ data }) => {
               {data.intlDescription}
             </p>
           </div>
-          <div className=" text-xs text-gray-400">
-            Нажмите, чтобы перевернуть
+
+          <div className="flex items-center justify-between gap-[12px]">
+            <div className=" text-xs text-gray-400">
+              Нажмите, чтобы перевернуть
+            </div>
+
+           <Speak_Button data={data} />
           </div>
         </div>
 
@@ -67,8 +73,8 @@ const BackSided_Card = ({
   handleToggle: () => void;
 }) => {
   return (
-    <div className="absolute top-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl shadow-xl bg-gradient-to-br dark:bg-gradient-none from-violet-200 dark:from-0% via-purple-300 dark:via-0% to-fuchsia-300 dark:to-0% p-6 flex flex-col justify-center items-center border border-purple-200/50 dark:!bg-bgItem dark:!border-none">
-      <p className="text-gray-800 font-semibold mb-5 text-lg drop-shadow-sm">
+    <div className="absolute bg-blueCl top-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl shadow-xl bg-gradient-to-br dark:bg-gradient-none   p-6 flex flex-col justify-center items-center border border-purple-200/50 dark:!bg-bgItem dark:!border-none">
+      <p className="text-bgLight font-semibold mb-5 text-lg drop-shadow-sm">
         Что сделать?
       </p>
 
@@ -86,7 +92,7 @@ const BackSided_Card = ({
             e.stopPropagation();
             handleToggle();
           }}
-          className="text-center duration-300 ease-in-out transition-all w-full p-[4px] text-[12px] font-bold text-blueCl bg-white/30 cursor-pointer hover:bg-blueCl hover:text-white rounded-[6px]"
+          className="text-center duration-300 ease-in-out transition-all w-full p-[4px] text-[12px] font-bold text-bgLight bg-white/30 cursor-pointer hover:bg-blueCl hover:text-white rounded-[6px]"
         >
           Перевернуть
         </button>

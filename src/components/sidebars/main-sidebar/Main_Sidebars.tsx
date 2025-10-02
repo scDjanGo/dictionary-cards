@@ -30,7 +30,7 @@ export default function Main_Sidebar() {
   return (
     <>
       <div
-        className={`fixed z-[99] inset-0 bg-black/50 transition-opacity ${
+        className={`fixed z-[1000] inset-0 bg-black/50 transition-opacity ${
           isOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -39,7 +39,7 @@ export default function Main_Sidebar() {
       ></div>
 
       <div
-        className={`fixed z-[100] top-0 right-0 h-full bg-blueCl dark:bg-bgDark text-white shadow-lg transition-transform duration-300`}
+        className={`fixed z-[1001] top-0 right-0 h-full bg-blueCl dark:bg-bgDark text-white shadow-lg transition-transform duration-300`}
         style={{
           width: 250,
           transform: isOpen ? "translateX(0)" : `translateX(${250}px)`,

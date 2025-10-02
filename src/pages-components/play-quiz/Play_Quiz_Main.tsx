@@ -8,6 +8,7 @@ import Play_Quiz_Swipe_Type from "./Play_Quiz_Swipe_Type";
 import { useQuizSettingsStore } from "@/lib/zustand/quizSettings/useQuizSettings";
 import Play_Quiz_Write_Type from "./Play_Quiz_Write";
 import Play_Quiz_Speech_Type from "./Play_Quiz_Speech";
+import Play_Quiz_Connect from "./Play_Quiz_Connect";
 
 export default function Play_Quiz_Main() {
   const router = useRouter();
@@ -72,6 +73,10 @@ export default function Play_Quiz_Main() {
       )}
        {quizCards && quizSettings && quizSettings.type === "speech" && (
         <Play_Quiz_Speech_Type cards={quizCards} random={quizSettings.random} errors={errors} setErrors={setErrors} />
+      )}
+      
+       {quizCards && quizSettings && quizSettings.type === "connect" && (
+        <Play_Quiz_Connect cards={quizCards} random={quizSettings.random} errors={errors} setErrors={setErrors} />
       )}
     </div>
   );

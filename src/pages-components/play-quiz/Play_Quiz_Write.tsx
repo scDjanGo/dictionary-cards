@@ -93,7 +93,7 @@ export default function Play_Quiz_Write_Type({
 
   if (!currentCard) {
     return (
-      <div className=" p-6 bg-blue-50 dark:bg-bgItem rounded-2xl shadow text-center mt-[10%]">
+      <div className=" p-6 bg-blue-50 dark:bg-bgItem rounded-2xl shadow text-center mt-[20%]">
         <Trophy className="w-14 h-14 text-blue-600 dark:text-bgLight mx-auto mb-2" />
         <h2 className="text-xl font-bold mb-2 dark:text-bgLight">
           Все карточки просмотрены!
@@ -128,7 +128,7 @@ export default function Play_Quiz_Write_Type({
 
   return (
     <div
-      className="mt-[10%] flex flex-col items-center min-h-[300px] "
+      className="mt-[20%] flex flex-col items-center min-h-[300px] "
       onKeyDown={handleKeyDown}
     >
       <div
