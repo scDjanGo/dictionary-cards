@@ -70,6 +70,13 @@ export default function Main_Sidebar() {
         </nav>
 
         <Type_Of_Cards_Button />
+
+        <Link
+          href={`https://t.me/scDjanG0?text=У меня есть предложение насчёт U-Card`}
+          className={`absolute bottom-[10px] right-[10px]`}
+        >
+          Оставить отзыв
+        </Link>
       </div>
     </>
   );
