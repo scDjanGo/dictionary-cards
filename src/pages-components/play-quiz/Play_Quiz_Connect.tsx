@@ -47,29 +47,12 @@ export default function Play_Quiz_Connect({
   const [currentGroup, setCurrentGroup] = useState(groups[step] || []);
   const [endQuiz, setEndQuiz] = useState(false);
 
-  // Hidden vertical scroll
-  // useEffect(() => {
-  //   const main_container = document.getElementById("main-container");
-
-  //   document.body.classList.add("overflow-hidden");
-  //   if (main_container) main_container.classList.add("overflow-hidden");
-
-  //   return () => {
-  //     document.body.classList.remove("overflow-hidden");
-  //     const main_container_cleanup = document.getElementById("main-container");
-  //     if (main_container_cleanup)
-  //       main_container_cleanup.classList.remove("overflow-hidden");
-  //   };
-  // }, []);
-
   useEffect(() => {
     if (step === 0) return;
     setCurrentGroup(groups[step] || []);
   }, [step]);
 
   useEffect(() => {
-    console.log(groups[step]);
-
     if (groups[step]) return;
     setEndQuiz(true);
   }, [step]);
@@ -117,10 +100,13 @@ export default function Play_Quiz_Connect({
     if (targetId) {
       const fromItem = BLOCK_ITEMS.find((i) => i.id === currentFrom);
       const toItem = BLOCK_ITEMS.find((i) => i.id === Number(targetId[0]));
+
       if (fromItem && toItem && fromItem.side !== toItem.side) {
         if (
           lines.some(
-            (line) => line.fromId === fromItem.id || line.toId === toItem.id
+            (line) =>
+              (line.fromId === fromItem.id && line.toId === toItem.id) ||
+              (line.fromId === toItem.id && line.toId === fromItem.id)
           )
         ) {
           setCurrentFrom(null);
@@ -138,27 +124,31 @@ export default function Play_Quiz_Connect({
     setMousePos(null);
   };
 
-  const handleNextGroup = () => {
-    if (lines.some((item) => item.fromId !== item.toId - OFFSET)) {
-      setCurrentGroup((prev) => [
-        ...prev.filter(
-          (item) =>
-            !lines.some(
-              (elem) =>
-                elem.fromId === item.id && elem.toId - OFFSET === item.id
-            )
-        ),
-      ]);
-      // setLines((prev) => [
-      //   ...prev.filter((item) => item.fromId !== item.toId - OFFSET),
-      // ]);
-      setLines([]);
-      return;
-    }
+const handleNextGroup = () => {
+  const normalizeId = (id: number) => (id >= OFFSET ? id - OFFSET : id);
 
-    setStep((s) => s + 1);
+  // проверяем правильность соединений
+  if (
+    lines.some((item) => normalizeId(item.fromId) !== normalizeId(item.toId))
+  ) {
+    setCurrentGroup((prev) => [
+      ...prev.filter(
+        (item) =>
+          !lines.some(
+            (elem) =>
+              normalizeId(elem.fromId) === item.id &&
+              normalizeId(elem.toId) === item.id
+          )
+      ),
+    ]);
     setLines([]);
-  };
+    return;
+  }
+
+  setStep((s) => s + 1);
+  setLines([]);
+};
+
 
   return !endQuiz ? (
     <div
