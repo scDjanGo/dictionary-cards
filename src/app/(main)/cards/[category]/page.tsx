@@ -79,7 +79,7 @@ export default async function page({ params }: typePage) {
         <Category_Card
           key={item.id}
           category={item}
-          href={`/categories/${category}/${item.id}`}
+          href={`/cards/${category}/${item.id}`}
         />
       ))}
     </div>

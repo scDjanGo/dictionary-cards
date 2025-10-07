@@ -7,13 +7,32 @@ import { useSidebarsStore } from "@/lib/zustand/sidebarsStore/useSidebarsStore";
 import Theme_Button from "./Theme_Button";
 import { useEffect } from "react";
 import Type_Of_Cards_Button from "./Type_Of_Cards_Button";
+import Sidebar_Nav_Button from "./Sidebar_Nav_Button";
+import { typeSidebarLink } from "@/lib/types/types";
 
-const LINKS = [
-  { id: 1, link: "/categories", name: "Главная" },
-  { id: 2, link: "/my-cards", name: "Мои карточки" },
-  { id: 3, link: "/create-card", name: "Создать карточку" },
-  { id: 4, link: "/create-category", name: "Создать категорию" },
-  { id: 5, link: "/blocked-cards", name: "Заблокированные" },
+const LINKS: typeSidebarLink[] = [
+  { id: 1, link: "/", name: "Главная", childItems: [] },
+  {
+    id: 2,
+    link: "/cards",
+    name: "Карточки",
+    childItems: [
+      { id: 1, link: "/my-cards", name: "Мои карточки", childItems: [] },
+      { id: 2, link: "/create-card", name: "Создать карточку", childItems: [] },
+      {
+        id: 3,
+        link: "/create-category",
+        name: "Создать категорию",
+        childItems: [],
+      },
+      {
+        id: 4,
+        link: "/blocked-cards",
+        name: "Заблокированные",
+        childItems: [],
+      },
+    ],
+  },
 ];
 
 export default function Main_Sidebar() {
@@ -57,15 +76,8 @@ export default function Main_Sidebar() {
           </div>
         </div>
         <nav className="flex flex-col space-y-4 px-6 text-lg font-medium">
-          {LINKS.map((item) => (
-            <Link
-              key={item.id}
-              href={item.link}
-              className="text-white hover:underline"
-              onClick={() => offSidebarStore()}
-            >
-              {item.name}
-            </Link>
+          {LINKS.map((item, index) => (
+            <Sidebar_Nav_Button key={item.id + index} navItem={item} />
           ))}
         </nav>
 

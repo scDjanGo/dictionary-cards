@@ -26,7 +26,7 @@ export default function Quiz_Main_Page() {
 
     if (Array.isArray(quiz_cards) && !quiz_cards.length) {
       if (window.history.length <= 1) {
-        router.push("/categories");
+        router.push("/cards");
       } else {
         router.back();
       }

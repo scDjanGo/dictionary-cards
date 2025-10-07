@@ -42,7 +42,7 @@ export default function Main_Header() {
     if (canGoBack) {
       router.back();
     } else {
-      router.push("/categories");
+      router.push("/cards");
     }
   };
 
@@ -61,13 +61,17 @@ export default function Main_Header() {
           <button
             onClick={handleBack}
             className={`flex items-center space-x-2 text-2xl font-bold text-[#1976D2] hover:underline cursor-pointer ${
-              (pathname === "/" || pathname === "/categories") && "opacity-0"
+              (pathname === "/" || pathname === "/cards") && "opacity-0"
             }`}
           >
             <Arrow_Button_SVG className="min-w-[38px] min-h-[38px]" />
           </button>
           <Category_Name />
         </div>
+
+        <h1 className={`text-2xl font-bold text-blueCl dark:text-bgLight ${pathname !== "/" ? "hidden" :  ""}`}>
+          Главная страница
+        </h1>
 
         {/* Mobile menu icon */}
         <div className={`flex items-center gap-[18px]`}>

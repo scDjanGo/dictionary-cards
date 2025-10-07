@@ -1,54 +1,29 @@
-"use client";
+import Link from "next/link";
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
-
-export default function Home() {
-  const [animate, setAnimate] = useState(false);
-  const router = useRouter();
-
-  useEffect(() => {
-    const timer1 = setTimeout(() => setAnimate(true), 500);
-    const timer2 = setTimeout(() => router.push("/categories"), 500);
-
-    return () => {
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-    };
-  }, [router]);
+export default function HomePage() {
+  const LINKS = [
+    { id: 1, name: "Cards", intlName: "Категория", link: "cards" },
+  ];
 
   return (
-    <div
-      className={`fixed inset-0 flex flex-col justify-center items-center text-center px-4 sm:px-6 bg-bgLight dark:bg-bgDark transition-transform duration-400 ${
-        animate ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
-      }`}
-    >
-      <div className="mb-4 sm:mb-6">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-2 dark:text-bgLight">
-          Welcome!
-        </h1>
-        <p className="text-lg sm:text-xl text-gray-500 dark:text-bgLight">
-          Getting things ready for you...
-        </p>
+    <main className="flex flex-col items-center justify-center  gap-6 ">
+      <div className="flex flex-col gap-4 w-full">
+        {LINKS.map((item) => (
+          <Link key={item.id} href={item.link} className="block w-full">
+            <span
+              className="relative flex justify-center items-center gap-2 w-full px-6 py-4 text-lg font-bold text-white 
+                   bg-blueCl dark:bg-bgItem rounded-2xl shadow-md cursor-pointer overflow-hidden group
+                   transition-all duration-300 ease-in-out hover:scale-[1.02]"
+            >
+              <span className="relative z-10 flex flex-col items-center ">
+                <span className="text-center">{item.name}</span>
+                <span className="max-w-">------------</span>
+                <span className="text-center">{item.intlName}</span>
+              </span>
+            </span>
+          </Link>
+        ))}
       </div>
-
-      <div className="w-full mt-8 h-2 bg-gray-200 rounded overflow-hidden">
-        <div className="h-full bg-blue-600 animate-loading"></div>
-      </div>
-
-      <style jsx>{`
-        .animate-loading {
-          animation: loading 5s linear forwards;
-        }
-        @keyframes loading {
-          0% {
-            width: 0%;
-          }
-          100% {
-            width: 100%;
-          }
-        }
-      `}</style>
-    </div>
+    </main>
   );
 }

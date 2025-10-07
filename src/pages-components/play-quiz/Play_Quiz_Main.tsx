@@ -36,7 +36,7 @@ export default function Play_Quiz_Main() {
     }
 
     if (window.history.length <= 1) {
-      router.push("/categories");
+      router.push("/cards");
     } else {
       router.back();
     }
@@ -53,7 +53,7 @@ export default function Play_Quiz_Main() {
     }
 
     if (window.history.length <= 1) {
-      router.push("/categories");
+      router.push("/cards");
     } else {
       router.back();
     }

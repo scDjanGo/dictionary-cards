@@ -64,7 +64,7 @@ export default function CategoriesPage() {
         <Category_Card
           key={item.id}
           category={item}
-          href={`/categories/${item.id}`}
+          href={`/cards/${item.id}`}
         />
       ))}
 

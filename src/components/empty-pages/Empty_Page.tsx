@@ -23,7 +23,7 @@
 //     if (canGoBack) {
 //       router.back();
 //     } else {
-//       router.push("/categories");
+//       router.push("/cards");
 //     }
 //   };
 
@@ -86,7 +86,7 @@ export default function Empty_Page() {
     if (canGoBack) {
       router.back();
     } else {
-      router.push("/categories");
+      router.push("/cards");
     }
   };
 

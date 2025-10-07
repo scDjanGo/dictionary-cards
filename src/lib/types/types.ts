@@ -40,8 +40,6 @@ export type typeSidebars = {
   state: boolean;
 };
 
-
-
 export interface typeItem {
   id: number;
   text: string;
@@ -53,3 +51,11 @@ export interface typeLine {
   fromId: number;
   toId: number;
 }
+
+// Sidebar Elems
+export type typeSidebarLink = {
+  id: number;
+  name: string;
+  link: string;
+  childItems: typeSidebarLink[];
+};
