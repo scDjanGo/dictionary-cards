@@ -1,15 +1,20 @@
 "use client";
 
-import { Button, IconButton } from "@mui/material";
 import { useParams, usePathname } from "next/navigation";
-import EditIcon from "@mui/icons-material/Edit";
 import { useEffect, useState } from "react";
 import { CategoryType } from "@/lib/types/types";
 import Edit_SVG from "@/UI/svgs/Edit_SVG";
+import Delete_SVG from "@/UI/svgs/Delete_SVG";
 import Link from "next/link";
+import { useCurrentCategory, useUiModalsStore } from "@/lib/zustand";
 
 export default function Category_Name() {
+  const currentCategory = useCurrentCategory(state => state.currentCategory)
   const [userCat, setUserCat] = useState<CategoryType | null>(null);
+  const setModal = useUiModalsStore((state) => state.setUiModalsStore);
+  const setCurrentCategory = useCurrentCategory(
+    (state) => state.setCurrentCategory
+  );
   const pathname = usePathname();
   const params = useParams();
 
@@ -41,6 +46,11 @@ export default function Category_Name() {
     sessionStorage.setItem("change-category", JSON.stringify(userCat));
   };
 
+  const handleDelete = () => {
+    setCurrentCategory(userCat);
+    setModal("delete-category");
+  };
+
   return (
     userCat && (
       <div className={`flex items-center gap-[12px] max-w-[206px]`}>
@@ -56,6 +66,10 @@ export default function Category_Name() {
         >
           <Edit_SVG />
         </Link>
+
+        <button  onClick={handleDelete} aria-label="Удалить" className={`${!currentCategory?.id && "hidden"}`}>
+          <Delete_SVG />
+        </button>
       </div>
     )
   );

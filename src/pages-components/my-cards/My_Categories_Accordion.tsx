@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { useCurrentCategory } from "@/lib/zustand";
 
 interface Category {
   id: number;
@@ -10,6 +11,9 @@ interface Category {
 }
 
 export default function CategoryAccordion() {
+  const setCurrentCategory = useCurrentCategory(
+    (state) => state.setCurrentCategory
+  );
   const [categories, setCategories] = useState<Category[]>([]);
   const [expanded, setExpanded] = useState(false);
   const accordionRef = useRef<HTMLDivElement>(null);
@@ -87,9 +91,9 @@ export default function CategoryAccordion() {
 
         {/* Details */}
         <div
-        style={{
-          scrollbarWidth: "none"
-        }}
+          style={{
+            scrollbarWidth: "none",
+          }}
           className={`transition-all duration-300 overflow-hidden ${
             expanded ? "max-h-96 p-2 overflow-y-auto" : "max-h-0 p-0"
           } bg-bgLight dark:bg-bgItem`}
@@ -111,6 +115,7 @@ export default function CategoryAccordion() {
                 <li key={cat.id}>
                   <Link
                     href={`/my-cards/${cat.id}`}
+                    onClick={() => setCurrentCategory(cat)}
                     className="flex items-center px-2 py-2 text-blueCl dark:text-bgLight  hover:bg-blue-50 dark:hover:bg-gray-600 rounded"
                   >
                     {/* Folder Icon */}
@@ -140,4 +145,3 @@ export default function CategoryAccordion() {
     </div>
   );
 }
-

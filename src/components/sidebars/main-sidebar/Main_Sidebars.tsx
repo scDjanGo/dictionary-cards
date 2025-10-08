@@ -76,8 +76,8 @@ export default function Main_Sidebar() {
           </div>
         </div>
         <nav className="flex flex-col space-y-4 px-6 text-lg font-medium">
-          {LINKS.map((item, index) => (
-            <Sidebar_Nav_Button key={item.id + index} navItem={item} />
+          {LINKS.map((item) => (
+            <Sidebar_Nav_Button key={item.id} navItem={item} />
           ))}
         </nav>
 

@@ -30,7 +30,12 @@ export type QuizSettingsType = {
 
 // ui modal
 export type typeUiModals = {
-  value: "save-cards" | "create-another-card" | "current-card";
+  value:
+    | "save-cards"
+    | "create-another-card"
+    | "current-card"
+    | "change-card-successfully"
+    | "delete-category";
   state: boolean;
 };
 

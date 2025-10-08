@@ -6,7 +6,7 @@ import { useParams, useRouter } from "next/navigation";
 import { useEffect } from "react";
 import My_Cards_Component from "@/pages-components/my-cards/My_Cards_Component";
 import { useToggle } from "@/features/hooks/useToggle";
-import { useCurrentCardsStore } from "@/lib/zustand";
+import { useCurrentCardsStore, useCurrentCategory } from "@/lib/zustand";
 
 export default function My_Category_Cards() {
   const router = useRouter();

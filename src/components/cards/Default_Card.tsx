@@ -4,6 +4,7 @@ import To_Basket_Cards from "@/UI/buttons/card/To_Basket_Cards";
 import { useState } from "react";
 import { CardType } from "@/lib/types/types";
 import Speak_Button from "@/UI/buttons/card/Speak_Button";
+import Change_My_Card from "@/UI/buttons/card/Change_Card_Button";
 
 type Props = {
   data: CardType;
@@ -85,6 +86,7 @@ const BackSided_Card = ({
           <To_Basket_Cards card={data} />
         )}
 
+        {data.isUserCard && <Change_My_Card id={data.id} />}
         {data.isUserCard && <Delete_My_Card id={data.id} />}
 
         <button

@@ -6,6 +6,7 @@ import { useCurrentCard } from "./useCurrentCard/useCurrentCard";
 
 import { useCurrentCardsStore } from "./useCurrentCardsStore/useCurrentCardsStore";
 import { useTypeOfCards } from "./useTypeOfCard/useTypeOfCard";
+import { useCurrentCategory } from './useCurrentCategory/useCurrentCategory';
 
 export {
   useBlockedCardsStore,
@@ -15,4 +16,5 @@ export {
   useCurrentCard,
   useUiModalsStore,
   useTypeOfCards,
+  useCurrentCategory,
 };

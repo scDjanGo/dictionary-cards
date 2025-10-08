@@ -22,11 +22,11 @@ const Floating_Select: React.FC<Props> = ({
   useEffect(() => {
     if (!formData.catId && items.length > 0) {
       const fakeEvent = {
-        target: { name: "catId", value: String(items[0].id) },
+        target: { name: "catId", value: String(formData.catId) },
       } as React.ChangeEvent<HTMLInputElement>;
       handleChange(fakeEvent);
     }
-  }, []);
+  }, [items]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
