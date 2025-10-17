@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export default function HomePage() {
   const LINKS = [
-    { id: 1, name: "Cards", intlName: "Категория", link: "cards" },
+    { id: 1, name: "Cards", intlName: "Карточки", link: "/cards" },
+    { id: 2, name: "Tense", intlName: "Времена", link: "/tense" },
   ];
 
   return (
