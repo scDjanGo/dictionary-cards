@@ -4,13 +4,14 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { QuizSettingsType } from "@/lib/types/types";
 import { useQuizSettingsStore } from "@/lib/zustand/quizSettings/useQuizSettings";
-import { ArrowLeftIcon, CornerDownLeftIcon, Hand, Languages, LinkIcon, Pencil, Play, Volume2 } from "lucide-react";
+import { Hand, Languages, LinkIcon, Pencil, Play, Volume2 } from "lucide-react";
 import Custom_Radio from "@/UI/buttons/quiz/Custom_Radio";
 import Custom_Checkbox from "@/UI/buttons/quiz/Custom_Checkbox";
 import Custom_Button from "@/UI/buttons/quiz/Custom_Button";
 
 export default function Quiz_Main_Page() {
   const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
   const setQuizSettingsStore = useQuizSettingsStore(
     (state) => state.setQuizSettingsStore
   );
@@ -22,6 +23,14 @@ export default function Quiz_Main_Page() {
   });
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Проверка userAgent
+      const userAgent = navigator.userAgent.toLowerCase();
+      const mobileDevices = ["iphone", "android", "ipad", "ipod"];
+      const isMobileDevice = mobileDevices.some((d) => userAgent.includes(d));
+      setIsMobile(isMobileDevice);
+    }
+
     const quiz_cards = JSON.parse(sessionStorage.getItem("quiz-cards") || "[]");
 
     if (Array.isArray(quiz_cards) && !quiz_cards.length) {
@@ -130,19 +139,21 @@ export default function Quiz_Main_Page() {
                 />
               }
             />
-            <Custom_Radio
-              label="Connect"
-              value="connect"
-              checked={quizSettings.type === "connect"}
-              onChange={() => handleChange("type", "connect")}
-              icon={
-                <LinkIcon
-                  className={`w-7 h-7 text-blueCl dark:text-bgLight ${
-                    quizSettings.type === "connect" ? "!text-bgLight" : ""
-                  }`}
-                />
-              }
-            />
+            {!isMobile && (
+              <Custom_Radio
+                label="Connect"
+                value="connect"
+                checked={quizSettings.type === "connect"}
+                onChange={() => handleChange("type", "connect")}
+                icon={
+                  <LinkIcon
+                    className={`w-7 h-7 text-blueCl dark:text-bgLight ${
+                      quizSettings.type === "connect" ? "!text-bgLight" : ""
+                    }`}
+                  />
+                }
+              />
+            )}
           </div>
         </div>
 
