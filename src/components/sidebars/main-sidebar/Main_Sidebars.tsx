@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import Type_Of_Cards_Button from "./Type_Of_Cards_Button";
 import Sidebar_Nav_Button from "./Sidebar_Nav_Button";
 import { typeSidebarLink } from "@/lib/types/types";
+import { TENSE } from "@/data/tense";
 
 const LINKS: typeSidebarLink[] = [
   { id: 1, link: "/", name: "Главная", childItems: [] },
@@ -32,6 +33,12 @@ const LINKS: typeSidebarLink[] = [
         childItems: [],
       },
     ],
+  },
+  {
+    id: 3,
+    link: "/tense",
+    name: "Времена",
+    childItems: TENSE,
   },
 ];
 

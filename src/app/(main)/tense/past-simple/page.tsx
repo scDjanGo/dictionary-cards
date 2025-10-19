@@ -1,228 +1,667 @@
-import Practice_PS from "@/pages-components/tense/past-simple/Practice_PS";
+import Back_To_Tense from "@/pages-components/tense/components/Back_To_Tense";
+import Practice_Past_Simple from "@/pages-components/tense/past-simple/Practice_Past_Simple";
 
-export default function PastSimplePage() {
+export default function Past_Simple_Page() {
   return (
-    <div className="min-h-screen rounded-[36px] bg-white dark:bg-bgItem px-6 py-10 text-bgDark dark:text-bgLight transition-colors duration-300">
-      <div className="px-[36px]  mx-auto space-y-10">
-        {/* Заголовок */}
-        <section className="text-center space-y-4">
-          <h1 className="text-4xl font-bold text-color-blueCl">
-            Past Simple (Простое прошедшее время)
+    <div className="min-h-screen rounded-[36px]  dark:bg-bgItem px-6 py-10 text-bgDark dark:text-bgLight transition-colors duration-300">
+      <div className="px-[36px] max-1040px:px-0 mx-auto space-y-12">
+        {/* Заголовок с введением */}
+        <header className="text-center space-y-6">
+          <h1 className="text-5xl max-1040px:text-[28px] font-bold  text-blueCl ">
+            Past Simple: Полное руководство по простому прошедшему времени
           </h1>
-          <p className="text-lg dark:text-bgLight/70">
-            Это одно из самых часто используемых времён английского языка. Мы
-            используем <strong>Past Simple</strong>, когда говорим о действиях,
-            которые произошли в прошлом и <strong>уже закончились</strong>.
+          <div className="w-24 h-1 bg-color-blueCl mx-auto"></div>
+          <p className="text-xl  dark:text-bgLight/80 max-w-3xl mx-auto leading-relaxed">
+            <strong>Past Simple</strong> — это фундаментальное время английского
+            языка, которое используется для описания завершённых действий в
+            прошлом. Освоив его, вы сможете рассказывать о событиях, которые уже
+            произошли.
           </p>
-        </section>
+        </header>
 
-        {/* Основной смысл */}
-        <section>
-          <h2 className="text-2xl font-semibold text-color-blueCl">
-            🎯 Основная идея
+        {/* Основной смысл с расширенными примерами */}
+        <section className="space-y-6">
+          <h2 className="text-3xl font-bold text-color-blueCl border-l-4 border-color-blueCl pl-4">
+            🎯 Основное значение и использование
           </h2>
-          <p className="dark:text-bgLight/70 mt-2">
-            Past Simple используется для описания:
-          </p>
-          <ul className="list-disc list-inside dark:text-bgLight/70 space-y-1 mt-2">
-            <li>Действий, которые произошли и закончились в прошлом.</li>
-            <li>Последовательности событий (одно за другим).</li>
-            <li>
-              Прошлых привычек или состояний (в сочетании с <em>used to</em>).
-            </li>
-          </ul>
-          <p className="dark:text-bgLight/70 mt-3 italic">
-            🔹 <strong>I watched</strong> a movie yesterday. — Я посмотрел фильм
-            вчера.
-            <br />
-            🔹 <strong>They lived</strong> in London when they were kids. — Они
-            жили в Лондоне, когда были детьми.
-          </p>
-        </section>
 
-        {/* Формулы */}
-        <section>
-          <h2 className="text-2xl font-semibold text-color-blueCl">
-            🧱 Формулы образования
-          </h2>
-          <div className="space-y-4 mt-4">
-            <div className="border-l-4 border-color-blueCl pl-4">
-              <p>
-                <strong>✅ Утверждение:</strong> Subject + Verb (V2)
-              </p>
-              <p className="dark:text-bgLight/70">
-                I played football yesterday.
-              </p>
+          <div className="grid md:grid-cols-2 gap-6 mt-6">
+            <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-2xl">
+              <h3 className="font-semibold text-color-blueCl mb-3">
+                Когда использовать Past Simple?
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>
+                    <strong>Завершённые действия</strong> в определённое время в
+                    прошлом
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>
+                    <strong>Последовательность событий</strong> в рассказе
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>
+                    <strong>Прошлые привычки</strong> и регулярные действия
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>
+                    <strong>Факты и состояния</strong>, которые были верны в
+                    прошлом
+                  </span>
+                </li>
+              </ul>
             </div>
-            <div className="border-l-4 border-red-500 pl-4">
-              <p>
-                <strong>❌ Отрицание:</strong> Subject + did not + Verb (V1)
-              </p>
-              <p className="dark:text-bgLight/70">
-                I did not (didn’t) play football yesterday.
-              </p>
-            </div>
-            <div className="border-l-4 border-green-500 pl-4">
-              <p>
-                <strong>❓ Вопрос:</strong> Did + Subject + Verb (V1)?
-              </p>
-              <p className="dark:text-bgLight/70">
-                Did you play football yesterday?
-              </p>
+
+            <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-2xl">
+              <h3 className="font-semibold text-color-blueCl mb-3">
+                Примеры использования
+              </h3>
+              <div className="space-y-3">
+                <div className="border-l-4 border-green-500 pl-3">
+                  <p className="font-medium">Завершённое действие:</p>
+                  <p className="text-sm dark:text-bgLight/70">
+                    I <strong>finished</strong> work at 6 PM yesterday.
+                  </p>
+                </div>
+                <div className="border-l-4 border-green-500 pl-3">
+                  <p className="font-medium">Последовательность событий:</p>
+                  <p className="text-sm dark:text-bgLight/70">
+                    I <strong>woke up</strong>, <strong>brushed</strong> my
+                    teeth, and <strong>went</strong> to work.
+                  </p>
+                </div>
+                <div className="border-l-4 border-green-500 pl-3">
+                  <p className="font-medium">Прошлая привычка:</p>
+                  <p className="text-sm dark:text-bgLight/70">
+                    She <strong>always</strong> <strong>walked</strong> to
+                    school when she was young.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Правильные и неправильные глаголы */}
-        <section>
-          <h2 className="text-2xl font-semibold text-color-blueCl">
+        {/* Детальные формулы с пояснениями */}
+        <section className="space-y-6">
+          <h2 className="text-3xl font-bold text-color-blueCl border-l-4 border-color-blueCl pl-4">
+            🧱 Формулы образования Past Simple
+          </h2>
+
+          <div className="grid lg:grid-cols-3 gap-6 mt-6">
+            {/* Утверждение */}
+            <div className="bg-white dark:bg-gray-800 border-2 border-green-200 dark:border-green-800 rounded-2xl p-6 shadow-lg">
+              <div className="flex items-center mb-4">
+                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                  ✓
+                </div>
+                <h3 className="text-xl font-bold text-green-600">
+                  Утверждение
+                </h3>
+              </div>
+              <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg mb-3">
+                <code className="text-sm font-mono">Subject + Verb (V2)</code>
+              </div>
+              <p className="text-sm dark:text-bgLight/70 mb-2">Примеры:</p>
+              <ul className="text-sm space-y-2 dark:text-bgLight/70">
+                <li>
+                  I <strong>worked</strong> yesterday.
+                </li>
+                <li>
+                  She <strong>went</strong> to the store.
+                </li>
+                <li>
+                  They <strong>played</strong> football.
+                </li>
+              </ul>
+            </div>
+
+            {/* Отрицание */}
+            <div className="bg-white dark:bg-gray-800 border-2 border-red-200 dark:border-red-800 rounded-2xl p-6 shadow-lg">
+              <div className="flex items-center mb-4">
+                <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                  ✗
+                </div>
+                <h3 className="text-xl font-bold text-red-600">Отрицание</h3>
+              </div>
+              <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg mb-3">
+                <code className="text-sm font-mono">
+                  Subject + did not (didn't) + Verb (V1)
+                </code>
+              </div>
+              <p className="text-sm dark:text-bgLight/70 mb-2">Примеры:</p>
+              <ul className="text-sm space-y-2 dark:text-bgLight/70">
+                <li>
+                  I <strong>didn't work</strong> yesterday.
+                </li>
+                <li>
+                  She <strong>didn't go</strong> to the store.
+                </li>
+                <li>
+                  They <strong>didn't play</strong> football.
+                </li>
+              </ul>
+            </div>
+
+            {/* Вопрос */}
+            <div className="bg-white dark:bg-gray-800 border-2 border-blue-200 dark:border-blue-800 rounded-2xl p-6 shadow-lg">
+              <div className="flex items-center mb-4">
+                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                  ?
+                </div>
+                <h3 className="text-xl font-bold text-blue-600">Вопрос</h3>
+              </div>
+              <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg mb-3">
+                <code className="text-sm font-mono">
+                  Did + Subject + Verb (V1)?
+                </code>
+              </div>
+              <p className="text-sm dark:text-bgLight/70 mb-2">Примеры:</p>
+              <ul className="text-sm space-y-2 dark:text-bgLight/70">
+                <li>
+                  <strong>Did</strong> you <strong>work</strong> yesterday?
+                </li>
+                <li>
+                  <strong>Did</strong> she <strong>go</strong> to the store?
+                </li>
+                <li>
+                  <strong>Did</strong> they <strong>play</strong> football?
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Подробно о глаголах с таблицей */}
+        <section className="space-y-6">
+          <h2 className="text-3xl font-bold text-color-blueCl border-l-4 border-color-blueCl pl-4">
             📘 Правильные и неправильные глаголы
           </h2>
-          <p className="dark:text-bgLight/70 mt-2">
-            В Past Simple глаголы бывают <strong>правильные</strong> и{" "}
-            <strong>неправильные</strong>.
-          </p>
-          <div className="mt-4 grid sm:grid-cols-2 gap-4">
-            <div className="p-4 rounded-xl border border-color-blueCl/30">
-              <h3 className="font-semibold text-color-blueCl mb-2">
+
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-2xl mb-6">
+            <p className="dark:text-bgLight/70">
+              <strong>Важно:</strong> В Past Simple все глаголы (кроме{" "}
+              <strong>be</strong>) не изменяются по лицам. Форма глагола
+              одинакова для всех подлежащих: I worked, you worked, he worked, we
+              worked, they worked.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Правильные глаголы */}
+            <div className="space-y-4">
+              <h3 className="text-2xl font-semibold text-green-600">
                 Правильные глаголы
               </h3>
-              <p className="dark:text-bgLight/70 text-sm">
-                Добавляем окончание <code>-ed</code>:
-                <br /> play → played, work → worked
+              <p className="dark:text-bgLight/70">
+                Образуются путём добавления окончания{" "}
+                <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">
+                  -ed
+                </code>{" "}
+                к основе глагола.
               </p>
+
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="bg-green-500 text-white">
+                      <th className="p-3 text-left">Infinitive (V1)</th>
+                      <th className="p-3 text-left">Past Simple (V2)</th>
+                      <th className="p-3 text-left">Translation</th>
+                    </tr>
+                  </thead>
+                  <tbody className="dark:text-bgLight/70">
+                    <tr className="border-b border-gray-300 dark:border-gray-600">
+                      <td className="p-3">work</td>
+                      <td className="p-3">worked</td>
+                      <td className="p-3">работать</td>
+                    </tr>
+                    <tr className="border-b border-gray-300 dark:border-gray-600">
+                      <td className="p-3">play</td>
+                      <td className="p-3">played</td>
+                      <td className="p-3">играть</td>
+                    </tr>
+                    <tr className="border-b border-gray-300 dark:border-gray-600">
+                      <td className="p-3">live</td>
+                      <td className="p-3">lived</td>
+                      <td className="p-3">жить</td>
+                    </tr>
+                    <tr>
+                      <td className="p-3">study</td>
+                      <td className="p-3">studied</td>
+                      <td className="p-3">учиться</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div className="p-4 rounded-xl border border-color-blueCl/30">
-              <h3 className="font-semibold text-color-blueCl mb-2">
+
+            {/* Неправильные глаголы */}
+            <div className="space-y-4">
+              <h3 className="text-2xl font-semibold text-red-600">
                 Неправильные глаголы
               </h3>
-              <p className="dark:text-bgLight/70 text-sm">
-                Нужно запомнить вторую форму:
-                <br /> go → went, see → saw, have → had
+              <p className="dark:text-bgLight/70">
+                Имеют уникальные формы, которые нужно запомнить. В английском
+                языке около 200+ неправильных глаголов.
               </p>
+
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="bg-red-500 text-white">
+                      <th className="p-3 text-left">Infinitive (V1)</th>
+                      <th className="p-3 text-left">Past Simple (V2)</th>
+                      <th className="p-3 text-left">Translation</th>
+                    </tr>
+                  </thead>
+                  <tbody className="dark:text-bgLight/70">
+                    <tr className="border-b border-gray-300 dark:border-gray-600">
+                      <td className="p-3">go</td>
+                      <td className="p-3">went</td>
+                      <td className="p-3">идти</td>
+                    </tr>
+                    <tr className="border-b border-gray-300 dark:border-gray-600">
+                      <td className="p-3">see</td>
+                      <td className="p-3">saw</td>
+                      <td className="p-3">видеть</td>
+                    </tr>
+                    <tr className="border-b border-gray-300 dark:border-gray-600">
+                      <td className="p-3">take</td>
+                      <td className="p-3">took</td>
+                      <td className="p-3">брать</td>
+                    </tr>
+                    <tr>
+                      <td className="p-3">write</td>
+                      <td className="p-3">wrote</td>
+                      <td className="p-3">писать</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Исключения */}
-        <section>
-          <h2 className="text-2xl font-semibold text-color-blueCl">
-            ⚠️ Исключения и орфография
+        {/* Глагол BE отдельно */}
+        <section className="space-y-6">
+          <h2 className="text-3xl font-bold text-color-blueCl border-l-4 border-color-blueCl pl-4">
+            ⭐ Особый случай: глагол BE
           </h2>
-          <ul className="list-disc list-inside dark:text-bgLight/70 space-y-2 mt-2">
-            <li>
-              Если глагол заканчивается на <code>e</code> → добавляем только{" "}
-              <code>d</code>: love → loved.
-            </li>
-            <li>
-              Если оканчивается на согласную + <code>y</code> → меняем{" "}
-              <code>y</code> на <code>i</code> и добавляем <code>ed</code>:
-              study → studied.
-            </li>
-            <li>
-              Если ударение на последнем слоге — последнюю согласную удваиваем:
-              stop → stopped.
-            </li>
-          </ul>
+
+          <div className="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-2xl">
+            <p className="dark:text-bgLight/70 mb-4">
+              Глагол <strong>be</strong> (быть) — единственный глагол, который
+              имеет разные формы для разных лиц в Past Simple:
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="text-center p-4 bg-white dark:bg-gray-800 rounded-xl">
+                <div className="font-mono text-lg mb-2">I, he, she, it</div>
+                <div className="text-2xl font-bold text-purple-600">was</div>
+                <div className="text-sm dark:text-bgLight/70 mt-2">
+                  I was happy
+                </div>
+              </div>
+              <div className="text-center p-4 bg-white dark:bg-gray-800 rounded-xl">
+                <div className="font-mono text-lg mb-2">you, we, they</div>
+                <div className="text-2xl font-bold text-purple-600">were</div>
+                <div className="text-sm dark:text-bgLight/70 mt-2">
+                  They were here
+                </div>
+              </div>
+              <div className="text-center p-4 bg-white dark:bg-gray-800 rounded-xl">
+                <div className="font-mono text-lg mb-2">Отрицание</div>
+                <div className="text-lg font-bold text-purple-600">
+                  wasn't / weren't
+                </div>
+                <div className="text-sm dark:text-bgLight/70 mt-2">
+                  She wasn't late
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        {/* Сигнальные слова */}
-        <section>
-          <h2 className="text-2xl font-semibold text-color-blueCl">
-            🔑 Сигнальные слова (ключевые слова)
+        {/* Орфографические правила с примерами */}
+        <section className="space-y-6">
+          <h2 className="text-3xl font-bold text-color-blueCl border-l-4 border-color-blueCl pl-4">
+            📝 Правила орфографии для правильных глаголов
           </h2>
-          <p className="dark:text-bgLight/70 mt-2">
-            Эти слова помогают распознать Past Simple:
-          </p>
-          <p className="mt-2 italic dark:text-bgLight/70">
-            yesterday, last (week, month, year), ago, in 2010, the other day,
-            when, then, once upon a time
-          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+            <div className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+              <h4 className="font-semibold text-color-blueCl mb-2">
+                Обычные глаголы
+              </h4>
+              <p className="text-sm dark:text-bgLight/70 mb-2">
+                Просто добавляем -ed
+              </p>
+              <div className="font-mono text-sm space-y-1">
+                <div>work → worked</div>
+                <div>play → played</div>
+                <div>look → looked</div>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+              <h4 className="font-semibold text-color-blueCl mb-2">
+                Глаголы на -e
+              </h4>
+              <p className="text-sm dark:text-bgLight/70 mb-2">
+                Добавляем только -d
+              </p>
+              <div className="font-mono text-sm space-y-1">
+                <div>live → lived</div>
+                <div>like → liked</div>
+                <div>dance → danced</div>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+              <h4 className="font-semibold text-color-blueCl mb-2">
+                Глаголы на согласную + y
+              </h4>
+              <p className="text-sm dark:text-bgLight/70 mb-2">y → i + ed</p>
+              <div className="font-mono text-sm space-y-1">
+                <div>study → studied</div>
+                <div>carry → carried</div>
+                <div>try → tried</div>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+              <h4 className="font-semibold text-color-blueCl mb-2">
+                Удвоение согласной
+              </h4>
+              <p className="text-sm dark:text-bgLight/70 mb-2">CVC правило</p>
+              <div className="font-mono text-sm space-y-1">
+                <div>stop → stopped</div>
+                <div>plan → planned</div>
+                <div>refer → referred</div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        {/* Когда не использовать */}
-        <section>
-          <h2 className="text-2xl font-semibold text-color-blueCl">
-            🚫 Когда <u>не</u> используется Past Simple
+        {/* Сигнальные слова с категориями */}
+        <section className="space-y-6">
+          <h2 className="text-3xl font-bold text-color-blueCl border-l-4 border-color-blueCl pl-4">
+            🔑 Сигнальные слова и выражения
           </h2>
-          <ul className="list-disc list-inside dark:text-bgLight/70 space-y-2 mt-2">
-            <li>
-              Когда действие связано с настоящим временем → используем{" "}
-              <strong>Present Perfect</strong>.
-            </li>
-            <li>
-              Когда действие происходило в процессе → используем{" "}
-              <strong>Past Continuous</strong>.
-            </li>
-            <li>
-              Когда действие завершилось до другого прошлого действия →{" "}
-              <strong>Past Perfect</strong>.
-            </li>
-          </ul>
-          <p className="mt-3 italic dark:text-bgLight/70">
-            ❌ I have seen this movie yesterday.
-            <br />✅ I saw this movie yesterday.
-          </p>
+
+          <div className="bg-white dark:from-blue-900/20 dark:to-green-900/20 p-6 rounded-2xl">
+            <p className="dark:text-bgLight/70 mb-4">
+              Эти слова и фразы часто указывают на необходимость использования
+              Past Simple:
+            </p>
+
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+              <div>
+                <h4 className="font-semibold text-color-blueCl mb-2">Время</h4>
+                <ul className="space-y-1 text-sm dark:text-bgLight/70">
+                  <li>yesterday</li>
+                  <li>last night</li>
+                  <li>this morning</li>
+                  <li>the day before yesterday</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-color-blueCl mb-2">
+                  Периоды
+                </h4>
+                <ul className="space-y-1 text-sm dark:text-bgLight/70">
+                  <li>last week/month/year</li>
+                  <li>a week/month/year ago</li>
+                  <li>in 1999, in 2020</li>
+                  <li>during the summer</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-color-blueCl mb-2">
+                  Наречия
+                </h4>
+                <ul className="space-y-1 text-sm dark:text-bgLight/70">
+                  <li>then</li>
+                  <li>when</li>
+                  <li>just now</li>
+                  <li>already</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-color-blueCl mb-2">Другие</h4>
+                <ul className="space-y-1 text-sm dark:text-bgLight/70">
+                  <li>the other day</li>
+                  <li>once upon a time</li>
+                  <li>in those days</li>
+                  <li>back then</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </section>
 
-        {/* Сравнение */}
-        <section>
-          <h2 className="text-2xl font-semibold text-color-blueCl">
-            ⚖️ Сравнение с другими временами
+        {/* Сравнение времен с деталями */}
+        <section className="space-y-6">
+          <h2 className="text-3xl font-bold text-color-blueCl border-l-4 border-color-blueCl pl-4">
+            ⚖️ Сравнение с другими прошедшими временами
           </h2>
-          <div className="overflow-x-auto">
-            <table className="w-full mt-3 border-collapse text-sm">
-              <thead className="bg-color-blueCl text-bgLight">
+
+          <div className="overflow-x-auto mt-6">
+            <table className="w-full border-collapse text-sm shadow-lg">
+              <thead className="bg-blueCl text-bgLight">
                 <tr>
-                  <th className="p-2 text-left">Время</th>
-                  <th className="p-2 text-left">Когда используется</th>
-                  <th className="p-2 text-left">Пример</th>
+                  <th className="p-4 text-left">Время</th>
+                  <th className="p-4 text-left">Основное значение</th>
+                  <th className="p-4 text-left">Формула</th>
+                  <th className="p-4 text-left">Пример</th>
+                  <th className="p-4 text-left">Когда использовать</th>
                 </tr>
               </thead>
               <tbody className="dark:text-bgLight/70">
-                <tr className="border-b border-gray-500/30">
-                  <td className="p-2">Past Simple</td>
-                  <td className="p-2">Завершённое действие в прошлом</td>
-                  <td className="p-2">I visited Paris in 2019.</td>
+                <tr className="border-b border-gray-300 dark:border-gray-600 bg-blue-50/50 dark:bg-blue-900/20">
+                  <td className="p-4 font-semibold">Past Simple</td>
+                  <td className="p-4">Завершённое действие в прошлом</td>
+                  <td className="p-4 font-mono">V2 / did + V1</td>
+                  <td className="p-4">I visited Paris last year.</td>
+                  <td className="p-4">Факт, последовательность событий</td>
                 </tr>
-                <tr className="border-b border-gray-500/30">
-                  <td className="p-2">Past Continuous</td>
-                  <td className="p-2">Действие происходило в процессе</td>
-                  <td className="p-2">I was watching TV at 8 p.m.</td>
+                <tr className="border-b border-gray-300 dark:border-gray-600">
+                  <td className="p-4 font-semibold">Past Continuous</td>
+                  <td className="p-4">Действие в процессе</td>
+                  <td className="p-4 font-mono">was/were + Ving</td>
+                  <td className="p-4">I was watching TV at 8 PM.</td>
+                  <td className="p-4">
+                    Длительное действие, прерванное действие
+                  </td>
+                </tr>
+                <tr className="border-b border-gray-300 dark:border-gray-600 bg-green-50/50 dark:bg-green-900/20">
+                  <td className="p-4 font-semibold">Past Perfect</td>
+                  <td className="p-4">Действие до другого прошлого действия</td>
+                  <td className="p-4 font-mono">had + V3</td>
+                  <td className="p-4">I had finished when he arrived.</td>
+                  <td className="p-4">
+                    Предшествование, завершённость до момента
+                  </td>
                 </tr>
                 <tr>
-                  <td className="p-2">Past Perfect</td>
-                  <td className="p-2">Действие завершилось до другого</td>
-                  <td className="p-2">
-                    I had finished work before he arrived.
-                  </td>
+                  <td className="p-4 font-semibold">Present Perfect</td>
+                  <td className="p-4">Связь прошлого с настоящим</td>
+                  <td className="p-4 font-mono">have/has + V3</td>
+                  <td className="p-4">I have visited Paris.</td>
+                  <td className="p-4">Опыт, результат, неопределённое время</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </section>
 
-        {/* Интерактивная практика */}
-
-        <Practice_PS />
-
-        {/* Итоги */}
-        <section className="bg-color-blueCl/10 dark:bg-white/10 rounded-2xl p-6">
-          <h2 className="text-2xl font-semibold text-color-blueCl mb-3">
-            📌 Итоги
+        {/* Частые ошибки */}
+        <section className="space-y-6">
+          <h2 className="text-3xl font-bold text-color-blueCl border-l-4 border-color-blueCl pl-4">
+            🚫 Распространённые ошибки
           </h2>
-          <ul className="list-disc list-inside dark:text-bgLight/70 space-y-2">
-            <li>Past Simple — для действий, завершённых в прошлом.</li>
-            <li>
-              Используется со словами: <em>yesterday, ago, last week...</em>
-            </li>
-            <li>
-              Отрицания и вопросы — с <strong>did / didn’t</strong>.
-            </li>
-            <li>Помни разницу между правильными и неправильными глаголами.</li>
-            <li>Не путай с Present Perfect или Past Continuous.</li>
-          </ul>
+
+          <div className="grid md:grid-cols-2 gap-6 mt-6">
+            <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-2xl">
+              <h3 className="font-semibold text-red-600 mb-4">
+                ❌ Неправильно
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-2">✗</span>
+                  <span>
+                    I <strong>have seen</strong> him yesterday.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-2">✗</span>
+                  <span>
+                    She <strong>didn't went</strong> to school.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-2">✗</span>
+                  <span>
+                    We <strong>was</strong> at home.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-2">✗</span>
+                  <span>
+                    Did you <strong>played</strong> football?
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-2xl">
+              <h3 className="font-semibold text-green-600 mb-4">
+                ✅ Правильно
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>
+                    I <strong>saw</strong> him yesterday.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>
+                    She <strong>didn't go</strong> to school.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>
+                    We <strong>were</strong> at home.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>
+                    Did you <strong>play</strong> football?
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
+
+        {/* Практика */}
+        <Practice_Past_Simple />
+
+        {/* Итоги с чеклистом */}
+        <section className="bg-gradient-to-br from-color-blueCl/10 to-purple-500/10 dark:from-white/10 dark:to-white/5 rounded-2xl p-8">
+          <h2 className="text-3xl font-bold text-color-blueCl mb-6 text-center">
+            📌 Ключевые моменты для запоминания
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="font-semibold text-color-blueCl mb-3">
+                Что нужно помнить:
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="text-color-blueCl mr-2">•</span>
+                  <span>
+                    Past Simple описывает <strong>завершённые</strong> действия
+                    в прошлом
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-color-blueCl mr-2">•</span>
+                  <span>
+                    Используйте <strong>did/didn't</strong> для вопросов и
+                    отрицаний
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-color-blueCl mr-2">•</span>
+                  <span>
+                    После <strong>did/didn't</strong> глагол всегда в{" "}
+                    <strong>первой форме</strong>
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-color-blueCl mr-2">•</span>
+                  <span>
+                    Глагол <strong>be</strong> имеет формы{" "}
+                    <strong>was/were</strong>
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-color-blueCl mb-3">
+                Проверьте себя:
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>
+                    Знаю разницу между правильными и неправильными глаголами
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>Могу образовать утверждения, отрицания и вопросы</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>
+                    Понимаю, когда использовать Past Simple вместо других времён
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>Знаю основные сигнальные слова</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-6 p-4 bg-white dark:bg-gray-800 rounded-xl text-center">
+            <p className="dark:text-bgLight/70 italic">
+              💡 <strong>Совет:</strong> Практикуйтесь ежедневно! Составляйте
+              предложения о том, что вы делали вчера, на прошлой неделе или в
+              прошлом году. Регулярная практика — ключ к успеху!
+            </p>
+          </div>
+        </section>
+
+        <Back_To_Tense />
       </div>
     </div>
   );

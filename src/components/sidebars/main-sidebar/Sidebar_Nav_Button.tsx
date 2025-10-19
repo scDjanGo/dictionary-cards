@@ -40,8 +40,9 @@ export default function Sidebar_Nav_Button({
       </div>
 
       <div
+      style={{scrollbarWidth: "none"}}
         className={`my-transform flex flex-col gap-[12px] pl-[6px] transition-all duration-500 ease-in-out overflow-hidden
-          ${isOpen ? "max-h-[500px] mt-[12px]" : "max-h-0 mt-0"}
+          ${isOpen ? "max-h-[350px] mt-[12px] !overflow-y-auto" : "max-h-0 mt-0"}
         `}
       >
         {[navItem, ...navItem.childItems]?.map((item, index) => (

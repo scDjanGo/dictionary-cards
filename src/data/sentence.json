@@ -1,0 +1,3873 @@
+[
+  {
+    "id": 1,
+    "sentence": "I am at home now",
+    "intlSentence": "Я сейчас дома",
+    "tense": 1,
+    "to-be": "am",
+    "subject": "I",
+    "verb": "at home"
+  },
+  {
+    "id": 2,
+    "sentence": "She is a teacher",
+    "intlSentence": "Она учитель",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "She",
+    "verb": "teacher"
+  },
+  {
+    "id": 3,
+    "sentence": "He is very funny",
+    "intlSentence": "Он очень забавный",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "He",
+    "verb": "funny"
+  },
+  {
+    "id": 4,
+    "sentence": "They are my friends",
+    "intlSentence": "Они мои друзья",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "They",
+    "verb": "friends"
+  },
+  {
+    "id": 5,
+    "sentence": "We are in the park",
+    "intlSentence": "Мы в парке",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "We",
+    "verb": "in the park"
+  },
+  {
+    "id": 6,
+    "sentence": "It is a sunny day",
+    "intlSentence": "Сегодня солнечный день",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "It",
+    "verb": "sunny"
+  },
+  {
+    "id": 7,
+    "sentence": "You are very kind",
+    "intlSentence": "Ты очень добрый",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "You",
+    "verb": "kind"
+  },
+  {
+    "id": 8,
+    "sentence": "My father is a doctor",
+    "intlSentence": "Мой отец врач",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "My father",
+    "verb": "doctor"
+  },
+  {
+    "id": 9,
+    "sentence": "The shop is open",
+    "intlSentence": "Магазин открыт",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "The shop",
+    "verb": "open"
+  },
+  {
+    "id": 10,
+    "sentence": "I am happy today",
+    "intlSentence": "Я сегодня счастлив",
+    "tense": 1,
+    "to-be": "am",
+    "subject": "I",
+    "verb": "happy"
+  },
+  {
+    "id": 11,
+    "sentence": "They are students",
+    "intlSentence": "Они студенты",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "They",
+    "verb": "students"
+  },
+  {
+    "id": 12,
+    "sentence": "She is from London",
+    "intlSentence": "Она из Лондона",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "She",
+    "verb": "from London"
+  },
+  {
+    "id": 13,
+    "sentence": "We are ready for dinner",
+    "intlSentence": "Мы готовы к ужину",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "We",
+    "verb": "ready"
+  },
+  {
+    "id": 14,
+    "sentence": "I am not tired",
+    "intlSentence": "Я не устал",
+    "tense": 1,
+    "to-be": "am",
+    "subject": "I",
+    "verb": "tired"
+  },
+  {
+    "id": 15,
+    "sentence": "He is not at home",
+    "intlSentence": "Он не дома",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "He",
+    "verb": "at home"
+  },
+  {
+    "id": 16,
+    "sentence": "She is not hungry",
+    "intlSentence": "Она не голодна",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "She",
+    "verb": "hungry"
+  },
+  {
+    "id": 17,
+    "sentence": "We are not late",
+    "intlSentence": "Мы не опоздали",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "We",
+    "verb": "late"
+  },
+  {
+    "id": 18,
+    "sentence": "They are not ready yet",
+    "intlSentence": "Они ещё не готовы",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "They",
+    "verb": "ready"
+  },
+  {
+    "id": 19,
+    "sentence": "It is not cold today",
+    "intlSentence": "Сегодня не холодно",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "It",
+    "verb": "cold"
+  },
+  {
+    "id": 20,
+    "sentence": "You are not right",
+    "intlSentence": "Ты не прав",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "You",
+    "verb": "right"
+  },
+  {
+    "id": 21,
+    "sentence": "My phone is not expensive",
+    "intlSentence": "Мой телефон не дорогой",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "My phone",
+    "verb": "expensive"
+  },
+  {
+    "id": 22,
+    "sentence": "The kids are not quiet",
+    "intlSentence": "Дети не тихие",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "The kids",
+    "verb": "quiet"
+  },
+  {
+    "id": 23,
+    "sentence": "My car is not new",
+    "intlSentence": "Моя машина не новая",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "My car",
+    "verb": "new"
+  },
+  {
+    "id": 24,
+    "sentence": "I am not at school today",
+    "intlSentence": "Я не в школе сегодня",
+    "tense": 1,
+    "to-be": "am",
+    "subject": "I",
+    "verb": "at school"
+  },
+  {
+    "id": 25,
+    "sentence": "She is not busy now",
+    "intlSentence": "Она не занята сейчас",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "She",
+    "verb": "busy"
+  },
+  {
+    "id": 26,
+    "sentence": "We are not in a hurry",
+    "intlSentence": "Мы не спешим",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "We",
+    "verb": "in a hurry"
+  },
+  {
+    "id": 27,
+    "sentence": "Are you a student?",
+    "intlSentence": "Ты студент?",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "you",
+    "verb": "student"
+  },
+  {
+    "id": 28,
+    "sentence": "Is he at work?",
+    "intlSentence": "Он на работе?",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "he",
+    "verb": "at work"
+  },
+  {
+    "id": 29,
+    "sentence": "Is she your sister?",
+    "intlSentence": "Она твоя сестра?",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "she",
+    "verb": "sister"
+  },
+  {
+    "id": 30,
+    "sentence": "Are they here?",
+    "intlSentence": "Они здесь?",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "they",
+    "verb": "here"
+  },
+  {
+    "id": 31,
+    "sentence": "Is it cold outside?",
+    "intlSentence": "На улице холодно?",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "it",
+    "verb": "cold"
+  },
+  {
+    "id": 32,
+    "sentence": "Are we late?",
+    "intlSentence": "Мы опоздали?",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "we",
+    "verb": "late"
+  },
+  {
+    "id": 33,
+    "sentence": "Are you okay?",
+    "intlSentence": "Ты в порядке?",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "you",
+    "verb": "okay"
+  },
+  {
+    "id": 34,
+    "sentence": "Is he from Canada?",
+    "intlSentence": "Он из Канады?",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "he",
+    "verb": "from Canada"
+  },
+  {
+    "id": 35,
+    "sentence": "Are they your parents?",
+    "intlSentence": "Они твои родители?",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "they",
+    "verb": "parents"
+  },
+  {
+    "id": 36,
+    "sentence": "Is your brother busy?",
+    "intlSentence": "Твой брат занят?",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "your brother",
+    "verb": "busy"
+  },
+  {
+    "id": 37,
+    "sentence": "Are we in the right place?",
+    "intlSentence": "Мы в правильном месте?",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "we",
+    "verb": "in the right place"
+  },
+  {
+    "id": 38,
+    "sentence": "Is it your pen?",
+    "intlSentence": "Это твоя ручка?",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "it",
+    "verb": "your pen"
+  },
+  {
+    "id": 39,
+    "sentence": "Where are you from?",
+    "intlSentence": "Откуда ты?",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "you",
+    "verb": "from"
+  },
+  {
+    "id": 40,
+    "sentence": "What is your name?",
+    "intlSentence": "Как тебя зовут?",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "your name",
+    "verb": "what"
+  },
+  {
+    "id": 41,
+    "sentence": "Where is he now?",
+    "intlSentence": "Где он сейчас?",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "he",
+    "verb": "now"
+  },
+  {
+    "id": 42,
+    "sentence": "Why are they late?",
+    "intlSentence": "Почему они опоздали?",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "they",
+    "verb": "late"
+  },
+  {
+    "id": 43,
+    "sentence": "Who is your teacher?",
+    "intlSentence": "Кто твой учитель?",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "your teacher",
+    "verb": "who"
+  },
+  {
+    "id": 44,
+    "sentence": "When are we free?",
+    "intlSentence": "Когда мы свободны?",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "we",
+    "verb": "free"
+  },
+  {
+    "id": 45,
+    "sentence": "How is your family?",
+    "intlSentence": "Как твоя семья?",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "your family",
+    "verb": "how"
+  },
+  {
+    "id": 46,
+    "sentence": "Where is my phone?",
+    "intlSentence": "Где мой телефон?",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "my phone",
+    "verb": "where"
+  },
+  {
+    "id": 47,
+    "sentence": "Why are you sad?",
+    "intlSentence": "Почему ты грустный?",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "you",
+    "verb": "sad"
+  },
+  {
+    "id": 48,
+    "sentence": "Who is in the kitchen?",
+    "intlSentence": "Кто на кухне?",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "who",
+    "verb": "in the kitchen"
+  },
+  {
+    "id": 49,
+    "sentence": "When is the meeting?",
+    "intlSentence": "Когда собрание?",
+    "tense": 1,
+    "to-be": "is",
+    "subject": "the meeting",
+    "verb": "when"
+  },
+  {
+    "id": 50,
+    "sentence": "How are your parents?",
+    "intlSentence": "Как твои родители?",
+    "tense": 1,
+    "to-be": "are",
+    "subject": "your parents",
+    "verb": "how"
+  },
+  {
+    "id": 51,
+    "sentence": "I read books every evening",
+    "intlSentence": "Я читаю книги каждый вечер",
+    "tense": 1,
+    "aux": "do",
+    "subject": "I",
+    "verb": "read"
+  },
+  {
+    "id": 52,
+    "sentence": "She cooks dinner for her family",
+    "intlSentence": "Она готовит ужин для своей семьи",
+    "tense": 1,
+    "aux": "does",
+    "subject": "She",
+    "verb": "cooks"
+  },
+  {
+    "id": 53,
+    "sentence": "He drives to work every day",
+    "intlSentence": "Он ездит на работу каждый день",
+    "tense": 1,
+    "aux": "does",
+    "subject": "He",
+    "verb": "drives"
+  },
+  {
+    "id": 54,
+    "sentence": "We go to the gym twice a week",
+    "intlSentence": "Мы ходим в спортзал дважды в неделю",
+    "tense": 1,
+    "aux": "do",
+    "subject": "We",
+    "verb": "go"
+  },
+  {
+    "id": 55,
+    "sentence": "They visit their grandparents on Sundays",
+    "intlSentence": "Они навещают своих бабушку и дедушку по воскресеньям",
+    "tense": 1,
+    "aux": "do",
+    "subject": "They",
+    "verb": "visit"
+  },
+  {
+    "id": 56,
+    "sentence": "My brother plays computer games",
+    "intlSentence": "Мой брат играет в компьютерные игры",
+    "tense": 1,
+    "aux": "does",
+    "subject": "My brother",
+    "verb": "plays"
+  },
+  {
+    "id": 57,
+    "sentence": "You drink tea every morning",
+    "intlSentence": "Ты пьёшь чай каждое утро",
+    "tense": 1,
+    "aux": "do",
+    "subject": "You",
+    "verb": "drink"
+  },
+  {
+    "id": 58,
+    "sentence": "My dad watches TV after work",
+    "intlSentence": "Мой папа смотрит телевизор после работы",
+    "tense": 1,
+    "aux": "does",
+    "subject": "My dad",
+    "verb": "watches"
+  },
+  {
+    "id": 59,
+    "sentence": "I listen to music in the car",
+    "intlSentence": "Я слушаю музыку в машине",
+    "tense": 1,
+    "aux": "do",
+    "subject": "I",
+    "verb": "listen"
+  },
+  {
+    "id": 60,
+    "sentence": "She reads the news online",
+    "intlSentence": "Она читает новости онлайн",
+    "tense": 1,
+    "aux": "does",
+    "subject": "She",
+    "verb": "reads"
+  },
+  {
+    "id": 61,
+    "sentence": "I don’t like spicy food",
+    "intlSentence": "Я не люблю острую еду",
+    "tense": 1,
+    "aux": "do",
+    "subject": "I",
+    "verb": "like"
+  },
+  {
+    "id": 62,
+    "sentence": "She doesn’t eat meat",
+    "intlSentence": "Она не ест мясо",
+    "tense": 1,
+    "aux": "does",
+    "subject": "She",
+    "verb": "eat"
+  },
+  {
+    "id": 63,
+    "sentence": "He doesn’t work on weekends",
+    "intlSentence": "Он не работает по выходным",
+    "tense": 1,
+    "aux": "does",
+    "subject": "He",
+    "verb": "work"
+  },
+  {
+    "id": 64,
+    "sentence": "They don’t watch TV in the morning",
+    "intlSentence": "Они не смотрят телевизор утром",
+    "tense": 1,
+    "aux": "do",
+    "subject": "They",
+    "verb": "watch"
+  },
+  {
+    "id": 65,
+    "sentence": "We don’t drink coffee at night",
+    "intlSentence": "Мы не пьём кофе ночью",
+    "tense": 1,
+    "aux": "do",
+    "subject": "We",
+    "verb": "drink"
+  },
+  {
+    "id": 66,
+    "sentence": "My brother doesn’t play football",
+    "intlSentence": "Мой брат не играет в футбол",
+    "tense": 1,
+    "aux": "does",
+    "subject": "My brother",
+    "verb": "play"
+  },
+  {
+    "id": 67,
+    "sentence": "I don’t go to bed late",
+    "intlSentence": "Я не ложусь спать поздно",
+    "tense": 1,
+    "aux": "do",
+    "subject": "I",
+    "verb": "go"
+  },
+  {
+    "id": 68,
+    "sentence": "He doesn’t drive to work",
+    "intlSentence": "Он не ездит на работу",
+    "tense": 1,
+    "aux": "does",
+    "subject": "He",
+    "verb": "drive"
+  },
+  {
+    "id": 69,
+    "sentence": "You don’t use social media much",
+    "intlSentence": "Ты не часто пользуешься социальными сетями",
+    "tense": 1,
+    "aux": "do",
+    "subject": "You",
+    "verb": "use"
+  },
+  {
+    "id": 70,
+    "sentence": "She doesn’t study on Fridays",
+    "intlSentence": "Она не учится по пятницам",
+    "tense": 1,
+    "aux": "does",
+    "subject": "She",
+    "verb": "study"
+  },
+  {
+    "id": 71,
+    "sentence": "Do you play any instruments?",
+    "intlSentence": "Ты играешь на каких-нибудь инструментах?",
+    "tense": 1,
+    "aux": "do",
+    "subject": "You",
+    "verb": "play"
+  },
+  {
+    "id": 72,
+    "sentence": "Does he live near here?",
+    "intlSentence": "Он живёт рядом?",
+    "tense": 1,
+    "aux": "does",
+    "subject": "He",
+    "verb": "live"
+  },
+  {
+    "id": 73,
+    "sentence": "Do they work together?",
+    "intlSentence": "Они работают вместе?",
+    "tense": 1,
+    "aux": "do",
+    "subject": "They",
+    "verb": "work"
+  },
+  {
+    "id": 74,
+    "sentence": "Does she drive a car?",
+    "intlSentence": "Она водит машину?",
+    "tense": 1,
+    "aux": "does",
+    "subject": "She",
+    "verb": "drive"
+  },
+  {
+    "id": 75,
+    "sentence": "Do you study English every day?",
+    "intlSentence": "Ты учишь английский каждый день?",
+    "tense": 1,
+    "aux": "do",
+    "subject": "You",
+    "verb": "study"
+  },
+  {
+    "id": 76,
+    "sentence": "Does it rain often here?",
+    "intlSentence": "Здесь часто идёт дождь?",
+    "tense": 1,
+    "aux": "does",
+    "subject": "It",
+    "verb": "rain"
+  },
+  {
+    "id": 77,
+    "sentence": "Do we have class today?",
+    "intlSentence": "У нас сегодня есть занятие?",
+    "tense": 1,
+    "aux": "do",
+    "subject": "We",
+    "verb": "have"
+  },
+  {
+    "id": 78,
+    "sentence": "Does your sister like reading?",
+    "intlSentence": "Твоя сестра любит читать?",
+    "tense": 1,
+    "aux": "does",
+    "subject": "Your sister",
+    "verb": "like"
+  },
+  {
+    "id": 79,
+    "sentence": "Do they eat breakfast together?",
+    "intlSentence": "Они завтракают вместе?",
+    "tense": 1,
+    "aux": "do",
+    "subject": "They",
+    "verb": "eat"
+  },
+  {
+    "id": 80,
+    "sentence": "Does your mom work from home?",
+    "intlSentence": "Твоя мама работает из дома?",
+    "tense": 1,
+    "aux": "does",
+    "subject": "Your mom",
+    "verb": "work"
+  },
+  {
+    "id": 81,
+    "sentence": "What do you do for a living?",
+    "intlSentence": "Кем ты работаешь?",
+    "tense": 1,
+    "aux": "do",
+    "subject": "You",
+    "verb": "do"
+  },
+  {
+    "id": 82,
+    "sentence": "Where does he live?",
+    "intlSentence": "Где он живёт?",
+    "tense": 1,
+    "aux": "does",
+    "subject": "He",
+    "verb": "live"
+  },
+  {
+    "id": 83,
+    "sentence": "When do they go to school?",
+    "intlSentence": "Когда они ходят в школу?",
+    "tense": 1,
+    "aux": "do",
+    "subject": "They",
+    "verb": "go"
+  },
+  {
+    "id": 84,
+    "sentence": "Why does she study so hard?",
+    "intlSentence": "Почему она так усердно учится?",
+    "tense": 1,
+    "aux": "does",
+    "subject": "She",
+    "verb": "study"
+  },
+  {
+    "id": 85,
+    "sentence": "What time do you wake up?",
+    "intlSentence": "Во сколько ты просыпаешься?",
+    "tense": 1,
+    "aux": "do",
+    "subject": "You",
+    "verb": "wake up"
+  },
+  {
+    "id": 86,
+    "sentence": "Who does he meet after work?",
+    "intlSentence": "С кем он встречается после работы?",
+    "tense": 1,
+    "aux": "does",
+    "subject": "He",
+    "verb": "meet"
+  },
+  {
+    "id": 87,
+    "sentence": "Where do they have lunch?",
+    "intlSentence": "Где они обедают?",
+    "tense": 1,
+    "aux": "do",
+    "subject": "They",
+    "verb": "have"
+  },
+  {
+    "id": 88,
+    "sentence": "Why does it rain so often here?",
+    "intlSentence": "Почему здесь так часто идёт дождь?",
+    "tense": 1,
+    "aux": "does",
+    "subject": "It",
+    "verb": "rain"
+  },
+  {
+    "id": 89,
+    "sentence": "When do we finish the project?",
+    "intlSentence": "Когда мы закончим проект?",
+    "tense": 1,
+    "aux": "do",
+    "subject": "We",
+    "verb": "finish"
+  },
+  {
+    "id": 90,
+    "sentence": "What does your brother like to eat?",
+    "intlSentence": "Что любит есть твой брат?",
+    "tense": 1,
+    "aux": "does",
+    "subject": "Your brother",
+    "verb": "like"
+  },
+  {
+    "id": 91,
+    "sentence": "I was at home yesterday",
+    "intlSentence": "Я вчера был дома",
+    "tense": 2,
+    "to-be": "was",
+    "subject": "I",
+    "verb": "at home"
+  },
+  {
+    "id": 92,
+    "sentence": "She was very happy last week",
+    "intlSentence": "Она была очень счастлива на прошлой неделе",
+    "tense": 2,
+    "to-be": "was",
+    "subject": "She",
+    "verb": "happy"
+  },
+  {
+    "id": 93,
+    "sentence": "He was at school in the morning",
+    "intlSentence": "Он был в школе утром",
+    "tense": 2,
+    "to-be": "was",
+    "subject": "He",
+    "verb": "at school"
+  },
+  {
+    "id": 94,
+    "sentence": "We were in the park yesterday",
+    "intlSentence": "Мы вчера были в парке",
+    "tense": 2,
+    "to-be": "were",
+    "subject": "We",
+    "verb": "in the park"
+  },
+  {
+    "id": 95,
+    "sentence": "They were very tired after work",
+    "intlSentence": "Они были очень уставшие после работы",
+    "tense": 2,
+    "to-be": "were",
+    "subject": "They",
+    "verb": "tired"
+  },
+  {
+    "id": 96,
+    "sentence": "I was not late yesterday",
+    "intlSentence": "Я не опоздал вчера",
+    "tense": 2,
+    "to-be": "was",
+    "subject": "I",
+    "verb": "late"
+  },
+  {
+    "id": 97,
+    "sentence": "She was not at home last night",
+    "intlSentence": "Она не была дома прошлой ночью",
+    "tense": 2,
+    "to-be": "was",
+    "subject": "She",
+    "verb": "at home"
+  },
+  {
+    "id": 98,
+    "sentence": "He was not happy yesterday",
+    "intlSentence": "Он не был счастлив вчера",
+    "tense": 2,
+    "to-be": "was",
+    "subject": "He",
+    "verb": "happy"
+  },
+  {
+    "id": 99,
+    "sentence": "We were not at school last Monday",
+    "intlSentence": "Мы не были в школе в прошлый понедельник",
+    "tense": 2,
+    "to-be": "were",
+    "subject": "We",
+    "verb": "at school"
+  },
+  {
+    "id": 100,
+    "sentence": "They were not ready for the trip",
+    "intlSentence": "Они не были готовы к поездке",
+    "tense": 2,
+    "to-be": "were",
+    "subject": "They",
+    "verb": "ready"
+  },
+  {
+    "id": 101,
+    "sentence": "Was I at home yesterday?",
+    "intlSentence": "Я был дома вчера?",
+    "tense": 2,
+    "to-be": "was",
+    "subject": "I",
+    "verb": "at home"
+  },
+  {
+    "id": 102,
+    "sentence": "Was she happy last week?",
+    "intlSentence": "Она была счастлива на прошлой неделе?",
+    "tense": 2,
+    "to-be": "was",
+    "subject": "She",
+    "verb": "happy"
+  },
+  {
+    "id": 103,
+    "sentence": "Was he at school yesterday?",
+    "intlSentence": "Он был в школе вчера?",
+    "tense": 2,
+    "to-be": "was",
+    "subject": "He",
+    "verb": "at school"
+  },
+  {
+    "id": 104,
+    "sentence": "Were we in the park yesterday?",
+    "intlSentence": "Мы были в парке вчера?",
+    "tense": 2,
+    "to-be": "were",
+    "subject": "We",
+    "verb": "in the park"
+  },
+  {
+    "id": 105,
+    "sentence": "Were they tired after work?",
+    "intlSentence": "Они были уставшие после работы?",
+    "tense": 2,
+    "to-be": "were",
+    "subject": "They",
+    "verb": "tired"
+  },
+  {
+    "id": 106,
+    "sentence": "Where was I yesterday?",
+    "intlSentence": "Где я был вчера?",
+    "tense": 2,
+    "to-be": "was",
+    "subject": "I",
+    "verb": "where"
+  },
+  {
+    "id": 107,
+    "sentence": "Why was she sad last night?",
+    "intlSentence": "Почему она была грустная прошлой ночью?",
+    "tense": 2,
+    "to-be": "was",
+    "subject": "She",
+    "verb": "sad"
+  },
+  {
+    "id": 108,
+    "sentence": "When was he at school?",
+    "intlSentence": "Когда он был в школе?",
+    "tense": 2,
+    "to-be": "was",
+    "subject": "He",
+    "verb": "at school"
+  },
+  {
+    "id": 109,
+    "sentence": "Where were we yesterday?",
+    "intlSentence": "Где мы были вчера?",
+    "tense": 2,
+    "to-be": "were",
+    "subject": "We",
+    "verb": "where"
+  },
+  {
+    "id": 110,
+    "sentence": "Who were they with after work?",
+    "intlSentence": "С кем они были после работы?",
+    "tense": 2,
+    "to-be": "were",
+    "subject": "They",
+    "verb": "with"
+  },
+  {
+    "id": 111,
+    "sentence": "I will visit my friend tomorrow",
+    "intlSentence": "Я навещу своего друга завтра",
+    "tense": 3,
+    "aux": "will",
+    "subject": "I",
+    "verb": "visit"
+  },
+  {
+    "id": 112,
+    "sentence": "She will cook dinner tonight",
+    "intlSentence": "Она приготовит ужин сегодня вечером",
+    "tense": 3,
+    "aux": "will",
+    "subject": "She",
+    "verb": "cook"
+  },
+  {
+    "id": 113,
+    "sentence": "He will go to the gym tomorrow",
+    "intlSentence": "Он пойдёт в спортзал завтра",
+    "tense": 3,
+    "aux": "will",
+    "subject": "He",
+    "verb": "go"
+  },
+  {
+    "id": 114,
+    "sentence": "We will watch a movie tonight",
+    "intlSentence": "Мы посмотрим фильм сегодня вечером",
+    "tense": 3,
+    "aux": "will",
+    "subject": "We",
+    "verb": "watch"
+  },
+  {
+    "id": 115,
+    "sentence": "They will travel to Paris next month",
+    "intlSentence": "Они поедут в Париж в следующем месяце",
+    "tense": 3,
+    "aux": "will",
+    "subject": "They",
+    "verb": "travel"
+  },
+  {
+    "id": 116,
+    "sentence": "I will not be late tomorrow",
+    "intlSentence": "Я не опоздаю завтра",
+    "tense": 3,
+    "aux": "will",
+    "subject": "I",
+    "verb": "be late"
+  },
+  {
+    "id": 117,
+    "sentence": "She will not go to the party",
+    "intlSentence": "Она не пойдёт на вечеринку",
+    "tense": 3,
+    "aux": "will",
+    "subject": "She",
+    "verb": "go"
+  },
+  {
+    "id": 118,
+    "sentence": "He will not watch TV tonight",
+    "intlSentence": "Он не будет смотреть телевизор сегодня вечером",
+    "tense": 3,
+    "aux": "will",
+    "subject": "He",
+    "verb": "watch"
+  },
+  {
+    "id": 119,
+    "sentence": "We will not travel next week",
+    "intlSentence": "Мы не поедем в путешествие на следующей неделе",
+    "tense": 3,
+    "aux": "will",
+    "subject": "We",
+    "verb": "travel"
+  },
+  {
+    "id": 120,
+    "sentence": "They will not buy a new car",
+    "intlSentence": "Они не купят новую машину",
+    "tense": 3,
+    "aux": "will",
+    "subject": "They",
+    "verb": "buy"
+  },
+  {
+    "id": 121,
+    "sentence": "Will I be at home tomorrow?",
+    "intlSentence": "Я буду дома завтра?",
+    "tense": 3,
+    "aux": "will",
+    "subject": "I",
+    "verb": "be"
+  },
+  {
+    "id": 122,
+    "sentence": "Will she cook dinner tonight?",
+    "intlSentence": "Она приготовит ужин сегодня вечером?",
+    "tense": 3,
+    "aux": "will",
+    "subject": "She",
+    "verb": "cook"
+  },
+  {
+    "id": 123,
+    "sentence": "Will he go to the gym tomorrow?",
+    "intlSentence": "Он пойдёт в спортзал завтра?",
+    "tense": 3,
+    "aux": "will",
+    "subject": "He",
+    "verb": "go"
+  },
+  {
+    "id": 124,
+    "sentence": "Will we watch a movie tonight?",
+    "intlSentence": "Мы посмотрим фильм сегодня вечером?",
+    "tense": 3,
+    "aux": "will",
+    "subject": "We",
+    "verb": "watch"
+  },
+  {
+    "id": 125,
+    "sentence": "Will they travel to Paris next month?",
+    "intlSentence": "Они поедут в Париж в следующем месяце?",
+    "tense": 3,
+    "aux": "will",
+    "subject": "They",
+    "verb": "travel"
+  },
+  {
+    "id": 126,
+    "sentence": "Where will I go tomorrow?",
+    "intlSentence": "Куда я пойду завтра?",
+    "tense": 3,
+    "aux": "will",
+    "subject": "I",
+    "verb": "go"
+  },
+  {
+    "id": 127,
+    "sentence": "What will she cook tonight?",
+    "intlSentence": "Что она приготовит сегодня вечером?",
+    "tense": 3,
+    "aux": "will",
+    "subject": "She",
+    "verb": "cook"
+  },
+  {
+    "id": 128,
+    "sentence": "When will he go to the gym?",
+    "intlSentence": "Когда он пойдёт в спортзал?",
+    "tense": 3,
+    "aux": "will",
+    "subject": "He",
+    "verb": "go"
+  },
+  {
+    "id": 129,
+    "sentence": "Why will we watch this movie?",
+    "intlSentence": "Почему мы будем смотреть этот фильм?",
+    "tense": 3,
+    "aux": "will",
+    "subject": "We",
+    "verb": "watch"
+  },
+  {
+    "id": 130,
+    "sentence": "Who will they meet next week?",
+    "intlSentence": "С кем они встретятся на следующей неделе?",
+    "tense": 3,
+    "aux": "will",
+    "subject": "They",
+    "verb": "meet"
+  },
+  {
+    "id": 131,
+    "sentence": "I am reading a book",
+    "intlSentence": "Я читаю книгу",
+    "tense": 4,
+    "to-be": "am",
+    "subject": "I",
+    "verb": "reading"
+  },
+  {
+    "id": 132,
+    "sentence": "She is cooking dinner",
+    "intlSentence": "Она готовит ужин",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "She",
+    "verb": "cooking"
+  },
+  {
+    "id": 133,
+    "sentence": "He is working on his project",
+    "intlSentence": "Он работает над проектом",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "He",
+    "verb": "working"
+  },
+  {
+    "id": 134,
+    "sentence": "We are watching TV",
+    "intlSentence": "Мы смотрим телевизор",
+    "tense": 4,
+    "to-be": "are",
+    "subject": "We",
+    "verb": "watching"
+  },
+  {
+    "id": 135,
+    "sentence": "They are playing football",
+    "intlSentence": "Они играют в футбол",
+    "tense": 4,
+    "to-be": "are",
+    "subject": "They",
+    "verb": "playing"
+  },
+  {
+    "id": 136,
+    "sentence": "My brother is listening to music",
+    "intlSentence": "Мой брат слушает музыку",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "My brother",
+    "verb": "listening"
+  },
+  {
+    "id": 137,
+    "sentence": "You are studying English",
+    "intlSentence": "Ты изучаешь английский",
+    "tense": 4,
+    "to-be": "are",
+    "subject": "You",
+    "verb": "studying"
+  },
+  {
+    "id": 138,
+    "sentence": "The cat is sleeping on the sofa",
+    "intlSentence": "Кот спит на диване",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "The cat",
+    "verb": "sleeping"
+  },
+  {
+    "id": 139,
+    "sentence": "I am drinking coffee",
+    "intlSentence": "Я пью кофе",
+    "tense": 4,
+    "to-be": "am",
+    "subject": "I",
+    "verb": "drinking"
+  },
+  {
+    "id": 140,
+    "sentence": "She is reading the newspaper",
+    "intlSentence": "Она читает газету",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "She",
+    "verb": "reading"
+  },
+  {
+    "id": 141,
+    "sentence": "I am not reading a book",
+    "intlSentence": "Я не читаю книгу",
+    "tense": 4,
+    "to-be": "am",
+    "subject": "I",
+    "verb": "reading"
+  },
+  {
+    "id": 142,
+    "sentence": "She is not cooking dinner",
+    "intlSentence": "Она не готовит ужин",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "She",
+    "verb": "cooking"
+  },
+  {
+    "id": 143,
+    "sentence": "He is not working on his project",
+    "intlSentence": "Он не работает над проектом",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "He",
+    "verb": "working"
+  },
+  {
+    "id": 144,
+    "sentence": "We are not watching TV",
+    "intlSentence": "Мы не смотрим телевизор",
+    "tense": 4,
+    "to-be": "are",
+    "subject": "We",
+    "verb": "watching"
+  },
+  {
+    "id": 145,
+    "sentence": "They are not playing football",
+    "intlSentence": "Они не играют в футбол",
+    "tense": 4,
+    "to-be": "are",
+    "subject": "They",
+    "verb": "playing"
+  },
+  {
+    "id": 146,
+    "sentence": "My brother is not listening to music",
+    "intlSentence": "Мой брат не слушает музыку",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "My brother",
+    "verb": "listening"
+  },
+  {
+    "id": 147,
+    "sentence": "You are not studying English",
+    "intlSentence": "Ты не изучаешь английский",
+    "tense": 4,
+    "to-be": "are",
+    "subject": "You",
+    "verb": "studying"
+  },
+  {
+    "id": 148,
+    "sentence": "The cat is not sleeping on the sofa",
+    "intlSentence": "Кот не спит на диване",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "The cat",
+    "verb": "sleeping"
+  },
+  {
+    "id": 149,
+    "sentence": "I am not drinking coffee",
+    "intlSentence": "Я не пью кофе",
+    "tense": 4,
+    "to-be": "am",
+    "subject": "I",
+    "verb": "drinking"
+  },
+  {
+    "id": 150,
+    "sentence": "She is not reading the newspaper",
+    "intlSentence": "Она не читает газету",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "She",
+    "verb": "reading"
+  },
+  {
+    "id": 151,
+    "sentence": "Am I reading a book?",
+    "intlSentence": "Я читаю книгу?",
+    "tense": 4,
+    "to-be": "am",
+    "subject": "I",
+    "verb": "reading"
+  },
+  {
+    "id": 152,
+    "sentence": "Is she cooking dinner?",
+    "intlSentence": "Она готовит ужин?",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "She",
+    "verb": "cooking"
+  },
+  {
+    "id": 153,
+    "sentence": "Is he working on his project?",
+    "intlSentence": "Он работает над проектом?",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "He",
+    "verb": "working"
+  },
+  {
+    "id": 154,
+    "sentence": "Are we watching TV?",
+    "intlSentence": "Мы смотрим телевизор?",
+    "tense": 4,
+    "to-be": "are",
+    "subject": "We",
+    "verb": "watching"
+  },
+  {
+    "id": 155,
+    "sentence": "Are they playing football?",
+    "intlSentence": "Они играют в футбол?",
+    "tense": 4,
+    "to-be": "are",
+    "subject": "They",
+    "verb": "playing"
+  },
+  {
+    "id": 156,
+    "sentence": "Is my brother listening to music?",
+    "intlSentence": "Мой брат слушает музыку?",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "My brother",
+    "verb": "listening"
+  },
+  {
+    "id": 157,
+    "sentence": "Are you studying English?",
+    "intlSentence": "Ты изучаешь английский?",
+    "tense": 4,
+    "to-be": "are",
+    "subject": "You",
+    "verb": "studying"
+  },
+  {
+    "id": 158,
+    "sentence": "Is the cat sleeping on the sofa?",
+    "intlSentence": "Кот спит на диване?",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "The cat",
+    "verb": "sleeping"
+  },
+  {
+    "id": 159,
+    "sentence": "Am I drinking coffee?",
+    "intlSentence": "Я пью кофе?",
+    "tense": 4,
+    "to-be": "am",
+    "subject": "I",
+    "verb": "drinking"
+  },
+  {
+    "id": 160,
+    "sentence": "Is she reading the newspaper?",
+    "intlSentence": "Она читает газету?",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "She",
+    "verb": "reading"
+  },
+  {
+    "id": 161,
+    "sentence": "What am I reading?",
+    "intlSentence": "Что я читаю?",
+    "tense": 4,
+    "to-be": "am",
+    "subject": "I",
+    "verb": "reading"
+  },
+  {
+    "id": 162,
+    "sentence": "What is she cooking?",
+    "intlSentence": "Что она готовит?",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "She",
+    "verb": "cooking"
+  },
+  {
+    "id": 163,
+    "sentence": "Why is he working?",
+    "intlSentence": "Почему он работает?",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "He",
+    "verb": "working"
+  },
+  {
+    "id": 164,
+    "sentence": "What are we watching?",
+    "intlSentence": "Что мы смотрим?",
+    "tense": 4,
+    "to-be": "are",
+    "subject": "We",
+    "verb": "watching"
+  },
+  {
+    "id": 165,
+    "sentence": "Who are they playing with?",
+    "intlSentence": "С кем они играют?",
+    "tense": 4,
+    "to-be": "are",
+    "subject": "They",
+    "verb": "playing"
+  },
+  {
+    "id": 166,
+    "sentence": "What is my brother listening to?",
+    "intlSentence": "Что мой брат слушает?",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "My brother",
+    "verb": "listening"
+  },
+  {
+    "id": 167,
+    "sentence": "What are you studying?",
+    "intlSentence": "Что ты изучаешь?",
+    "tense": 4,
+    "to-be": "are",
+    "subject": "You",
+    "verb": "studying"
+  },
+  {
+    "id": 168,
+    "sentence": "Where is the cat sleeping?",
+    "intlSentence": "Где спит кот?",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "The cat",
+    "verb": "sleeping"
+  },
+  {
+    "id": 169,
+    "sentence": "What am I drinking?",
+    "intlSentence": "Что я пью?",
+    "tense": 4,
+    "to-be": "am",
+    "subject": "I",
+    "verb": "drinking"
+  },
+  {
+    "id": 170,
+    "sentence": "What is she reading?",
+    "intlSentence": "Что она читает?",
+    "tense": 4,
+    "to-be": "is",
+    "subject": "She",
+    "verb": "reading"
+  },
+  {
+    "id": 171,
+    "sentence": "I was reading a book yesterday",
+    "intlSentence": "Я читал книгу вчера",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "I",
+    "verb": "reading"
+  },
+  {
+    "id": 172,
+    "sentence": "She was cooking dinner last night",
+    "intlSentence": "Она готовила ужин прошлой ночью",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "She",
+    "verb": "cooking"
+  },
+  {
+    "id": 173,
+    "sentence": "He was working on his project all day",
+    "intlSentence": "Он работал над проектом весь день",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "He",
+    "verb": "working"
+  },
+  {
+    "id": 174,
+    "sentence": "We were watching TV when it started raining",
+    "intlSentence": "Мы смотрели телевизор, когда начался дождь",
+    "tense": 5,
+    "to-be": "were",
+    "subject": "We",
+    "verb": "watching"
+  },
+  {
+    "id": 175,
+    "sentence": "They were playing football in the park",
+    "intlSentence": "Они играли в футбол в парке",
+    "tense": 5,
+    "to-be": "were",
+    "subject": "They",
+    "verb": "playing"
+  },
+  {
+    "id": 176,
+    "sentence": "My brother was listening to music in the evening",
+    "intlSentence": "Мой брат слушал музыку вечером",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "My brother",
+    "verb": "listening"
+  },
+  {
+    "id": 177,
+    "sentence": "You were studying for the exam yesterday",
+    "intlSentence": "Ты учился к экзамену вчера",
+    "tense": 5,
+    "to-be": "were",
+    "subject": "You",
+    "verb": "studying"
+  },
+  {
+    "id": 178,
+    "sentence": "My dad was watching a movie last night",
+    "intlSentence": "Мой папа смотрел фильм прошлой ночью",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "My dad",
+    "verb": "watching"
+  },
+  {
+    "id": 179,
+    "sentence": "I was writing an email when the phone rang",
+    "intlSentence": "Я писал письмо, когда зазвонил телефон",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "I",
+    "verb": "writing"
+  },
+  {
+    "id": 180,
+    "sentence": "She was reading the news online yesterday",
+    "intlSentence": "Она читала новости онлайн вчера",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "She",
+    "verb": "reading"
+  },
+  {
+    "id": 181,
+    "sentence": "I was not reading a book yesterday",
+    "intlSentence": "Я не читал книгу вчера",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "I",
+    "verb": "reading"
+  },
+  {
+    "id": 182,
+    "sentence": "She was not cooking dinner last night",
+    "intlSentence": "Она не готовила ужин прошлой ночью",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "She",
+    "verb": "cooking"
+  },
+  {
+    "id": 183,
+    "sentence": "He was not working on his project all day",
+    "intlSentence": "Он не работал над проектом весь день",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "He",
+    "verb": "working"
+  },
+  {
+    "id": 184,
+    "sentence": "We were not watching TV when it started raining",
+    "intlSentence": "Мы не смотрели телевизор, когда начался дождь",
+    "tense": 5,
+    "to-be": "were",
+    "subject": "We",
+    "verb": "watching"
+  },
+  {
+    "id": 185,
+    "sentence": "They were not playing football in the park",
+    "intlSentence": "Они не играли в футбол в парке",
+    "tense": 5,
+    "to-be": "were",
+    "subject": "They",
+    "verb": "playing"
+  },
+  {
+    "id": 186,
+    "sentence": "My brother was not listening to music in the evening",
+    "intlSentence": "Мой брат не слушал музыку вечером",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "My brother",
+    "verb": "listening"
+  },
+  {
+    "id": 187,
+    "sentence": "You were not studying for the exam yesterday",
+    "intlSentence": "Ты не учился к экзамену вчера",
+    "tense": 5,
+    "to-be": "were",
+    "subject": "You",
+    "verb": "studying"
+  },
+  {
+    "id": 188,
+    "sentence": "My dad was not watching a movie last night",
+    "intlSentence": "Мой папа не смотрел фильм прошлой ночью",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "My dad",
+    "verb": "watching"
+  },
+  {
+    "id": 189,
+    "sentence": "I was not writing an email when the phone rang",
+    "intlSentence": "Я не писал письмо, когда зазвонил телефон",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "I",
+    "verb": "writing"
+  },
+  {
+    "id": 190,
+    "sentence": "She was not reading the news online yesterday",
+    "intlSentence": "Она не читала новости онлайн вчера",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "She",
+    "verb": "reading"
+  },
+  {
+    "id": 191,
+    "sentence": "Was I reading a book yesterday?",
+    "intlSentence": "Я читал книгу вчера?",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "I",
+    "verb": "reading"
+  },
+  {
+    "id": 192,
+    "sentence": "Was she cooking dinner last night?",
+    "intlSentence": "Она готовила ужин прошлой ночью?",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "She",
+    "verb": "cooking"
+  },
+  {
+    "id": 193,
+    "sentence": "Was he working on his project all day?",
+    "intlSentence": "Он работал над проектом весь день?",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "He",
+    "verb": "working"
+  },
+  {
+    "id": 194,
+    "sentence": "Were we watching TV when it started raining?",
+    "intlSentence": "Мы смотрели телевизор, когда начался дождь?",
+    "tense": 5,
+    "to-be": "were",
+    "subject": "We",
+    "verb": "watching"
+  },
+  {
+    "id": 195,
+    "sentence": "Were they playing football in the park?",
+    "intlSentence": "Они играли в футбол в парке?",
+    "tense": 5,
+    "to-be": "were",
+    "subject": "They",
+    "verb": "playing"
+  },
+  {
+    "id": 196,
+    "sentence": "Was my brother listening to music in the evening?",
+    "intlSentence": "Мой брат слушал музыку вечером?",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "My brother",
+    "verb": "listening"
+  },
+  {
+    "id": 197,
+    "sentence": "Were you studying for the exam yesterday?",
+    "intlSentence": "Ты учился к экзамену вчера?",
+    "tense": 5,
+    "to-be": "were",
+    "subject": "You",
+    "verb": "studying"
+  },
+  {
+    "id": 198,
+    "sentence": "Was my dad watching a movie last night?",
+    "intlSentence": "Мой папа смотрел фильм прошлой ночью?",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "My dad",
+    "verb": "watching"
+  },
+  {
+    "id": 199,
+    "sentence": "Was I writing an email when the phone rang?",
+    "intlSentence": "Я писал письмо, когда зазвонил телефон?",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "I",
+    "verb": "writing"
+  },
+  {
+    "id": 200,
+    "sentence": "Was she reading the news online yesterday?",
+    "intlSentence": "Она читала новости онлайн вчера?",
+    "tense": 5,
+    "to-be": "was",
+    "subject": "She",
+    "verb": "reading"
+  },
+  {
+    "id": 201,
+    "sentence": "I will be reading a book tomorrow",
+    "intlSentence": "Я буду читать книгу завтра",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "I",
+    "verb": "reading"
+  },
+  {
+    "id": 202,
+    "sentence": "She will be cooking dinner at 7 PM",
+    "intlSentence": "Она будет готовить ужин в 7 вечера",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "She",
+    "verb": "cooking"
+  },
+  {
+    "id": 203,
+    "sentence": "He will be working on his project all day",
+    "intlSentence": "Он будет работать над проектом весь день",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "He",
+    "verb": "working"
+  },
+  {
+    "id": 204,
+    "sentence": "We will be watching TV tonight",
+    "intlSentence": "Мы будем смотреть телевизор сегодня вечером",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "We",
+    "verb": "watching"
+  },
+  {
+    "id": 205,
+    "sentence": "They will be playing football in the park",
+    "intlSentence": "Они будут играть в футбол в парке",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "They",
+    "verb": "playing"
+  },
+  {
+    "id": 206,
+    "sentence": "My brother will be listening to music in the evening",
+    "intlSentence": "Мой брат будет слушать музыку вечером",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "My brother",
+    "verb": "listening"
+  },
+  {
+    "id": 207,
+    "sentence": "You will be studying English tomorrow",
+    "intlSentence": "Ты будешь изучать английский завтра",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "You",
+    "verb": "studying"
+  },
+  {
+    "id": 208,
+    "sentence": "The cat will be sleeping on the sofa",
+    "intlSentence": "Кот будет спать на диване",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "The cat",
+    "verb": "sleeping"
+  },
+  {
+    "id": 209,
+    "sentence": "I will be drinking coffee in the morning",
+    "intlSentence": "Я буду пить кофе утром",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "I",
+    "verb": "drinking"
+  },
+  {
+    "id": 210,
+    "sentence": "She will be reading the newspaper tomorrow",
+    "intlSentence": "Она будет читать газету завтра",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "She",
+    "verb": "reading"
+  },
+
+  {
+    "id": 211,
+    "sentence": "I will not be reading a book tomorrow",
+    "intlSentence": "Я не буду читать книгу завтра",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "I",
+    "verb": "reading"
+  },
+  {
+    "id": 212,
+    "sentence": "She will not be cooking dinner at 7 PM",
+    "intlSentence": "Она не будет готовить ужин в 7 вечера",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "She",
+    "verb": "cooking"
+  },
+  {
+    "id": 213,
+    "sentence": "He will not be working on his project all day",
+    "intlSentence": "Он не будет работать над проектом весь день",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "He",
+    "verb": "working"
+  },
+  {
+    "id": 214,
+    "sentence": "We will not be watching TV tonight",
+    "intlSentence": "Мы не будем смотреть телевизор сегодня вечером",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "We",
+    "verb": "watching"
+  },
+  {
+    "id": 215,
+    "sentence": "They will not be playing football in the park",
+    "intlSentence": "Они не будут играть в футбол в парке",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "They",
+    "verb": "playing"
+  },
+  {
+    "id": 216,
+    "sentence": "My brother will not be listening to music in the evening",
+    "intlSentence": "Мой брат не будет слушать музыку вечером",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "My brother",
+    "verb": "listening"
+  },
+  {
+    "id": 217,
+    "sentence": "You will not be studying English tomorrow",
+    "intlSentence": "Ты не будешь изучать английский завтра",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "You",
+    "verb": "studying"
+  },
+  {
+    "id": 218,
+    "sentence": "The cat will not be sleeping on the sofa",
+    "intlSentence": "Кот не будет спать на диване",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "The cat",
+    "verb": "sleeping"
+  },
+  {
+    "id": 219,
+    "sentence": "I will not be drinking coffee in the morning",
+    "intlSentence": "Я не буду пить кофе утром",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "I",
+    "verb": "drinking"
+  },
+  {
+    "id": 220,
+    "sentence": "She will not be reading the newspaper tomorrow",
+    "intlSentence": "Она не будет читать газету завтра",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "She",
+    "verb": "reading"
+  },
+  {
+    "id": 221,
+    "sentence": "Will I be reading a book tomorrow?",
+    "intlSentence": "Я буду читать книгу завтра?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "I",
+    "verb": "reading"
+  },
+  {
+    "id": 222,
+    "sentence": "Will she be cooking dinner at 7 PM?",
+    "intlSentence": "Она будет готовить ужин в 7 вечера?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "She",
+    "verb": "cooking"
+  },
+  {
+    "id": 223,
+    "sentence": "Will he be working on his project all day?",
+    "intlSentence": "Он будет работать над проектом весь день?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "He",
+    "verb": "working"
+  },
+  {
+    "id": 224,
+    "sentence": "Will we be watching TV tonight?",
+    "intlSentence": "Мы будем смотреть телевизор сегодня вечером?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "We",
+    "verb": "watching"
+  },
+  {
+    "id": 225,
+    "sentence": "Will they be playing football in the park?",
+    "intlSentence": "Они будут играть в футбол в парке?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "They",
+    "verb": "playing"
+  },
+  {
+    "id": 226,
+    "sentence": "Will my brother be listening to music in the evening?",
+    "intlSentence": "Мой брат будет слушать музыку вечером?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "My brother",
+    "verb": "listening"
+  },
+  {
+    "id": 227,
+    "sentence": "Will you be studying English tomorrow?",
+    "intlSentence": "Ты будешь изучать английский завтра?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "You",
+    "verb": "studying"
+  },
+  {
+    "id": 228,
+    "sentence": "Will the cat be sleeping on the sofa?",
+    "intlSentence": "Кот будет спать на диване?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "The cat",
+    "verb": "sleeping"
+  },
+  {
+    "id": 229,
+    "sentence": "Will I be drinking coffee in the morning?",
+    "intlSentence": "Я буду пить кофе утром?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "I",
+    "verb": "drinking"
+  },
+  {
+    "id": 230,
+    "sentence": "Will she be reading the newspaper tomorrow?",
+    "intlSentence": "Она будет читать газету завтра?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "She",
+    "verb": "reading"
+  },
+  {
+    "id": 231,
+    "sentence": "What will I be reading tomorrow?",
+    "intlSentence": "Что я буду читать завтра?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "I",
+    "verb": "reading"
+  },
+  {
+    "id": 232,
+    "sentence": "What will she be cooking at 7 PM?",
+    "intlSentence": "Что она будет готовить в 7 вечера?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "She",
+    "verb": "cooking"
+  },
+  {
+    "id": 233,
+    "sentence": "Why will he be working all day?",
+    "intlSentence": "Почему он будет работать весь день?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "He",
+    "verb": "working"
+  },
+  {
+    "id": 234,
+    "sentence": "What will we be watching tonight?",
+    "intlSentence": "Что мы будем смотреть сегодня вечером?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "We",
+    "verb": "watching"
+  },
+  {
+    "id": 235,
+    "sentence": "Who will they be playing with in the park?",
+    "intlSentence": "С кем они будут играть в парке?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "They",
+    "verb": "playing"
+  },
+  {
+    "id": 236,
+    "sentence": "What will my brother be listening to in the evening?",
+    "intlSentence": "Что мой брат будет слушать вечером?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "My brother",
+    "verb": "listening"
+  },
+  {
+    "id": 237,
+    "sentence": "What will you be studying tomorrow?",
+    "intlSentence": "Что ты будешь изучать завтра?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "You",
+    "verb": "studying"
+  },
+  {
+    "id": 238,
+    "sentence": "Where will the cat be sleeping?",
+    "intlSentence": "Где будет спать кот?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "The cat",
+    "verb": "sleeping"
+  },
+  {
+    "id": 239,
+    "sentence": "What will I be drinking in the morning?",
+    "intlSentence": "Что я буду пить утром?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "I",
+    "verb": "drinking"
+  },
+  {
+    "id": 240,
+    "sentence": "What will she be reading tomorrow?",
+    "intlSentence": "Что она будет читать завтра?",
+    "tense": 6,
+    "to-be": "will be",
+    "subject": "She",
+    "verb": "reading"
+  },
+  {
+    "id": 241,
+    "sentence": "I have finished my homework",
+    "intlSentence": "Я закончил домашнее задание",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "I",
+    "verb": "finished"
+  },
+  {
+    "id": 242,
+    "sentence": "She has visited London twice",
+    "intlSentence": "Она дважды посетила Лондон",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "She",
+    "verb": "visited"
+  },
+  {
+    "id": 243,
+    "sentence": "He has eaten breakfast already",
+    "intlSentence": "Он уже позавтракал",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "He",
+    "verb": "eaten"
+  },
+  {
+    "id": 244,
+    "sentence": "We have seen that movie",
+    "intlSentence": "Мы видели этот фильм",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "We",
+    "verb": "seen"
+  },
+  {
+    "id": 245,
+    "sentence": "They have bought a new car",
+    "intlSentence": "Они купили новую машину",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "They",
+    "verb": "bought"
+  },
+  {
+    "id": 246,
+    "sentence": "My brother has learned Spanish",
+    "intlSentence": "Мой брат выучил испанский",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "My brother",
+    "verb": "learned"
+  },
+  {
+    "id": 247,
+    "sentence": "You have read this book before",
+    "intlSentence": "Ты читал эту книгу раньше",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "You",
+    "verb": "read"
+  },
+  {
+    "id": 248,
+    "sentence": "It has rained a lot this week",
+    "intlSentence": "На этой неделе сильно шел дождь",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "It",
+    "verb": "rained"
+  },
+  {
+    "id": 249,
+    "sentence": "I have met her before",
+    "intlSentence": "Я встречал её раньше",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "I",
+    "verb": "met"
+  },
+  {
+    "id": 250,
+    "sentence": "She has written three emails today",
+    "intlSentence": "Она написала три письма сегодня",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "She",
+    "verb": "written"
+  },
+  {
+    "id": 251,
+    "sentence": "I have not finished my homework",
+    "intlSentence": "Я не закончил домашнее задание",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "I",
+    "verb": "finished"
+  },
+  {
+    "id": 252,
+    "sentence": "She has not visited London twice",
+    "intlSentence": "Она не посещала Лондон дважды",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "She",
+    "verb": "visited"
+  },
+  {
+    "id": 253,
+    "sentence": "He has not eaten breakfast yet",
+    "intlSentence": "Он ещё не позавтракал",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "He",
+    "verb": "eaten"
+  },
+  {
+    "id": 254,
+    "sentence": "We have not seen that movie",
+    "intlSentence": "Мы не видели этот фильм",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "We",
+    "verb": "seen"
+  },
+  {
+    "id": 255,
+    "sentence": "They have not bought a new car",
+    "intlSentence": "Они не купили новую машину",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "They",
+    "verb": "bought"
+  },
+  {
+    "id": 256,
+    "sentence": "My brother has not learned Spanish",
+    "intlSentence": "Мой брат не выучил испанский",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "My brother",
+    "verb": "learned"
+  },
+  {
+    "id": 257,
+    "sentence": "You have not read this book before",
+    "intlSentence": "Ты не читал эту книгу раньше",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "You",
+    "verb": "read"
+  },
+  {
+    "id": 258,
+    "sentence": "It has not rained a lot this week",
+    "intlSentence": "На этой неделе не было сильного дождя",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "It",
+    "verb": "rained"
+  },
+  {
+    "id": 259,
+    "sentence": "I have not met her before",
+    "intlSentence": "Я не встречал её раньше",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "I",
+    "verb": "met"
+  },
+  {
+    "id": 260,
+    "sentence": "She has not written any emails today",
+    "intlSentence": "Она не писала писем сегодня",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "She",
+    "verb": "written"
+  },
+  {
+    "id": 261,
+    "sentence": "Have I finished my homework?",
+    "intlSentence": "Я закончил домашнее задание?",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "I",
+    "verb": "finished"
+  },
+  {
+    "id": 262,
+    "sentence": "Has she visited London twice?",
+    "intlSentence": "Она посетила Лондон дважды?",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "She",
+    "verb": "visited"
+  },
+  {
+    "id": 263,
+    "sentence": "Has he eaten breakfast already?",
+    "intlSentence": "Он уже позавтракал?",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "He",
+    "verb": "eaten"
+  },
+  {
+    "id": 264,
+    "sentence": "Have we seen that movie?",
+    "intlSentence": "Мы видели этот фильм?",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "We",
+    "verb": "seen"
+  },
+  {
+    "id": 265,
+    "sentence": "Have they bought a new car?",
+    "intlSentence": "Они купили новую машину?",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "They",
+    "verb": "bought"
+  },
+  {
+    "id": 266,
+    "sentence": "Has my brother learned Spanish?",
+    "intlSentence": "Мой брат выучил испанский?",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "My brother",
+    "verb": "learned"
+  },
+  {
+    "id": 267,
+    "sentence": "Have you read this book before?",
+    "intlSentence": "Ты читал эту книгу раньше?",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "You",
+    "verb": "read"
+  },
+  {
+    "id": 268,
+    "sentence": "Has it rained a lot this week?",
+    "intlSentence": "На этой неделе сильно шёл дождь?",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "It",
+    "verb": "rained"
+  },
+  {
+    "id": 269,
+    "sentence": "Have I met her before?",
+    "intlSentence": "Я встречал её раньше?",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "I",
+    "verb": "met"
+  },
+  {
+    "id": 270,
+    "sentence": "Has she written three emails today?",
+    "intlSentence": "Она написала три письма сегодня?",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "She",
+    "verb": "written"
+  },
+  {
+    "id": 271,
+    "sentence": "What have I finished?",
+    "intlSentence": "Что я закончил?",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "I",
+    "verb": "finished"
+  },
+  {
+    "id": 272,
+    "sentence": "Where has she visited?",
+    "intlSentence": "Куда она ездила?",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "She",
+    "verb": "visited"
+  },
+  {
+    "id": 273,
+    "sentence": "What has he eaten already?",
+    "intlSentence": "Что он уже съел?",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "He",
+    "verb": "eaten"
+  },
+  {
+    "id": 274,
+    "sentence": "Which movie have we seen?",
+    "intlSentence": "Какой фильм мы видели?",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "We",
+    "verb": "seen"
+  },
+  {
+    "id": 275,
+    "sentence": "What have they bought?",
+    "intlSentence": "Что они купили?",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "They",
+    "verb": "bought"
+  },
+  {
+    "id": 276,
+    "sentence": "What has my brother learned?",
+    "intlSentence": "Что мой брат выучил?",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "My brother",
+    "verb": "learned"
+  },
+  {
+    "id": 277,
+    "sentence": "Which book have you read before?",
+    "intlSentence": "Какую книгу ты читал раньше?",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "You",
+    "verb": "read"
+  },
+  {
+    "id": 278,
+    "sentence": "How much has it rained this week?",
+    "intlSentence": "Сколько дождя выпало на этой неделе?",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "It",
+    "verb": "rained"
+  },
+  {
+    "id": 279,
+    "sentence": "Who have I met before?",
+    "intlSentence": "С кем я встречался раньше?",
+    "tense": 7,
+    "to-be": "have",
+    "subject": "I",
+    "verb": "met"
+  },
+  {
+    "id": 280,
+    "sentence": "How many emails has she written today?",
+    "intlSentence": "Сколько писем она написала сегодня?",
+    "tense": 7,
+    "to-be": "has",
+    "subject": "She",
+    "verb": "written"
+  },
+  {
+    "id": 281,
+    "sentence": "I had finished my homework before dinner",
+    "intlSentence": "Я закончил домашнее задание до ужина",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "I",
+    "verb": "finished"
+  },
+  {
+    "id": 282,
+    "sentence": "She had visited Paris before last year",
+    "intlSentence": "Она посетила Париж до прошлого года",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "She",
+    "verb": "visited"
+  },
+  {
+    "id": 283,
+    "sentence": "He had eaten breakfast before leaving home",
+    "intlSentence": "Он позавтракал перед выходом из дома",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "He",
+    "verb": "eaten"
+  },
+  {
+    "id": 284,
+    "sentence": "We had seen that movie before it was on TV",
+    "intlSentence": "Мы видели этот фильм до того, как он показали по телевизору",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "We",
+    "verb": "seen"
+  },
+  {
+    "id": 285,
+    "sentence": "They had bought a new car before moving to the city",
+    "intlSentence": "Они купили новую машину до переезда в город",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "They",
+    "verb": "bought"
+  },
+  {
+    "id": 286,
+    "sentence": "My brother had learned French before going to school",
+    "intlSentence": "Мой брат выучил французский до школы",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "My brother",
+    "verb": "learned"
+  },
+  {
+    "id": 287,
+    "sentence": "You had read this book before I suggested it",
+    "intlSentence": "Ты прочитал эту книгу до того, как я её предложил",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "You",
+    "verb": "read"
+  },
+  {
+    "id": 288,
+    "sentence": "It had rained a lot before the sun came out",
+    "intlSentence": "Сильно шёл дождь до того, как вышло солнце",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "It",
+    "verb": "rained"
+  },
+  {
+    "id": 289,
+    "sentence": "I had met him before the party started",
+    "intlSentence": "Я встречал его до начала вечеринки",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "I",
+    "verb": "met"
+  },
+  {
+    "id": 290,
+    "sentence": "She had written two letters before noon",
+    "intlSentence": "Она написала два письма до полудня",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "She",
+    "verb": "written"
+  },
+  {
+    "id": 291,
+    "sentence": "I had not finished my homework before dinner",
+    "intlSentence": "Я не закончил домашнее задание до ужина",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "I",
+    "verb": "finished"
+  },
+  {
+    "id": 292,
+    "sentence": "She had not visited Paris before last year",
+    "intlSentence": "Она не посетила Париж до прошлого года",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "She",
+    "verb": "visited"
+  },
+  {
+    "id": 293,
+    "sentence": "He had not eaten breakfast before leaving home",
+    "intlSentence": "Он не позавтракал перед выходом из дома",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "He",
+    "verb": "eaten"
+  },
+  {
+    "id": 294,
+    "sentence": "We had not seen that movie before it was on TV",
+    "intlSentence": "Мы не видели этот фильм до того, как он показали по телевизору",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "We",
+    "verb": "seen"
+  },
+  {
+    "id": 295,
+    "sentence": "They had not bought a new car before moving to the city",
+    "intlSentence": "Они не купили новую машину до переезда в город",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "They",
+    "verb": "bought"
+  },
+  {
+    "id": 296,
+    "sentence": "My brother had not learned French before going to school",
+    "intlSentence": "Мой брат не выучил французский до школы",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "My brother",
+    "verb": "learned"
+  },
+  {
+    "id": 297,
+    "sentence": "You had not read this book before I suggested it",
+    "intlSentence": "Ты не прочитал эту книгу до того, как я её предложил",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "You",
+    "verb": "read"
+  },
+  {
+    "id": 298,
+    "sentence": "It had not rained a lot before the sun came out",
+    "intlSentence": "Не было сильного дождя до того, как вышло солнце",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "It",
+    "verb": "rained"
+  },
+  {
+    "id": 299,
+    "sentence": "I had not met him before the party started",
+    "intlSentence": "Я не встречал его до начала вечеринки",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "I",
+    "verb": "met"
+  },
+  {
+    "id": 300,
+    "sentence": "She had not written two letters before noon",
+    "intlSentence": "Она не написала два письма до полудня",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "She",
+    "verb": "written"
+  },
+  {
+    "id": 301,
+    "sentence": "Had I finished my homework before dinner?",
+    "intlSentence": "Я закончил домашнее задание до ужина?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "I",
+    "verb": "finished"
+  },
+  {
+    "id": 302,
+    "sentence": "Had she visited Paris before last year?",
+    "intlSentence": "Она посетила Париж до прошлого года?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "She",
+    "verb": "visited"
+  },
+  {
+    "id": 303,
+    "sentence": "Had he eaten breakfast before leaving home?",
+    "intlSentence": "Он позавтракал перед выходом из дома?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "He",
+    "verb": "eaten"
+  },
+  {
+    "id": 304,
+    "sentence": "Had we seen that movie before it was on TV?",
+    "intlSentence": "Мы видели этот фильм до того, как он показали по телевизору?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "We",
+    "verb": "seen"
+  },
+  {
+    "id": 305,
+    "sentence": "Had they bought a new car before moving to the city?",
+    "intlSentence": "Они купили новую машину до переезда в город?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "They",
+    "verb": "bought"
+  },
+  {
+    "id": 306,
+    "sentence": "Had my brother learned French before going to school?",
+    "intlSentence": "Мой брат выучил французский до школы?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "My brother",
+    "verb": "learned"
+  },
+  {
+    "id": 307,
+    "sentence": "Had you read this book before I suggested it?",
+    "intlSentence": "Ты прочитал эту книгу до того, как я её предложил?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "You",
+    "verb": "read"
+  },
+  {
+    "id": 308,
+    "sentence": "Had it rained a lot before the sun came out?",
+    "intlSentence": "Сильно ли шёл дождь до того, как вышло солнце?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "It",
+    "verb": "rained"
+  },
+  {
+    "id": 309,
+    "sentence": "Had I met him before the party started?",
+    "intlSentence": "Я встречал его до начала вечеринки?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "I",
+    "verb": "met"
+  },
+  {
+    "id": 310,
+    "sentence": "Had she written two letters before noon?",
+    "intlSentence": "Она написала два письма до полудня?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "She",
+    "verb": "written"
+  },
+  {
+    "id": 311,
+    "sentence": "What had I finished before dinner?",
+    "intlSentence": "Что я закончил до ужина?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "I",
+    "verb": "finished"
+  },
+  {
+    "id": 312,
+    "sentence": "Where had she visited before last year?",
+    "intlSentence": "Куда она ездила до прошлого года?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "She",
+    "verb": "visited"
+  },
+  {
+    "id": 313,
+    "sentence": "What had he eaten before leaving home?",
+    "intlSentence": "Что он съел перед выходом из дома?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "He",
+    "verb": "eaten"
+  },
+  {
+    "id": 314,
+    "sentence": "Which movie had we seen before it was on TV?",
+    "intlSentence": "Какой фильм мы видели до того, как он показали по телевизору?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "We",
+    "verb": "seen"
+  },
+  {
+    "id": 315,
+    "sentence": "What had they bought before moving to the city?",
+    "intlSentence": "Что они купили до переезда в город?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "They",
+    "verb": "bought"
+  },
+  {
+    "id": 316,
+    "sentence": "What had my brother learned before going to school?",
+    "intlSentence": "Что мой брат выучил до школы?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "My brother",
+    "verb": "learned"
+  },
+  {
+    "id": 317,
+    "sentence": "Which book had you read before I suggested it?",
+    "intlSentence": "Какую книгу ты прочитал до того, как я её предложил?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "You",
+    "verb": "read"
+  },
+  {
+    "id": 318,
+    "sentence": "How much had it rained before the sun came out?",
+    "intlSentence": "Сколько дождя выпало до того, как вышло солнце?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "It",
+    "verb": "rained"
+  },
+  {
+    "id": 319,
+    "sentence": "Who had I met before the party started?",
+    "intlSentence": "С кем я встречался до начала вечеринки?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "I",
+    "verb": "met"
+  },
+  {
+    "id": 320,
+    "sentence": "How many letters had she written before noon?",
+    "intlSentence": "Сколько писем она написала до полудня?",
+    "tense": 8,
+    "to-be": "had",
+    "subject": "She",
+    "verb": "written"
+  },
+  {
+    "id": 321,
+    "sentence": "I will have finished my homework by 8 PM",
+    "intlSentence": "Я закончу домашнее задание к 8 вечера",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "I",
+    "verb": "finished"
+  },
+  {
+    "id": 322,
+    "sentence": "She will have visited Paris by next summer",
+    "intlSentence": "Она посетит Париж к следующему лету",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "She",
+    "verb": "visited"
+  },
+  {
+    "id": 323,
+    "sentence": "He will have eaten breakfast before leaving",
+    "intlSentence": "Он позавтракает до выхода",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "He",
+    "verb": "eaten"
+  },
+  {
+    "id": 324,
+    "sentence": "We will have seen that movie by tonight",
+    "intlSentence": "Мы посмотрим этот фильм к вечеру",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "We",
+    "verb": "seen"
+  },
+  {
+    "id": 325,
+    "sentence": "They will have bought a new car by next month",
+    "intlSentence": "Они купят новую машину к следующему месяцу",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "They",
+    "verb": "bought"
+  },
+  {
+    "id": 326,
+    "sentence": "My brother will have learned French by the end of the year",
+    "intlSentence": "Мой брат выучит французский к концу года",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "My brother",
+    "verb": "learned"
+  },
+  {
+    "id": 327,
+    "sentence": "You will have read this book by tomorrow",
+    "intlSentence": "Ты прочитаешь эту книгу к завтрашнему дню",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "You",
+    "verb": "read"
+  },
+  {
+    "id": 328,
+    "sentence": "It will have rained a lot by the weekend",
+    "intlSentence": "К выходным сильно пойдёт дождь",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "It",
+    "verb": "rained"
+  },
+  {
+    "id": 329,
+    "sentence": "I will have met him by the time you arrive",
+    "intlSentence": "Я встречусь с ним к твоему приходу",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "I",
+    "verb": "met"
+  },
+  {
+    "id": 330,
+    "sentence": "She will have written three emails by noon",
+    "intlSentence": "Она напишет три письма к полудню",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "She",
+    "verb": "written"
+  },
+  {
+    "id": 331,
+    "sentence": "I will not have finished my homework by 8 PM",
+    "intlSentence": "Я не закончу домашнее задание к 8 вечера",
+    "tense": 9,
+    "to-be": "will not have",
+    "subject": "I",
+    "verb": "finished"
+  },
+  {
+    "id": 332,
+    "sentence": "She will not have visited Paris by next summer",
+    "intlSentence": "Она не посетит Париж к следующему лету",
+    "tense": 9,
+    "to-be": "will not have",
+    "subject": "She",
+    "verb": "visited"
+  },
+  {
+    "id": 333,
+    "sentence": "He will not have eaten breakfast before leaving",
+    "intlSentence": "Он не позавтракает до выхода",
+    "tense": 9,
+    "to-be": "will not have",
+    "subject": "He",
+    "verb": "eaten"
+  },
+  {
+    "id": 334,
+    "sentence": "We will not have seen that movie by tonight",
+    "intlSentence": "Мы не посмотрим этот фильм к вечеру",
+    "tense": 9,
+    "to-be": "will not have",
+    "subject": "We",
+    "verb": "seen"
+  },
+  {
+    "id": 335,
+    "sentence": "They will not have bought a new car by next month",
+    "intlSentence": "Они не купят новую машину к следующему месяцу",
+    "tense": 9,
+    "to-be": "will not have",
+    "subject": "They",
+    "verb": "bought"
+  },
+  {
+    "id": 336,
+    "sentence": "My brother will not have learned French by the end of the year",
+    "intlSentence": "Мой брат не выучит французский к концу года",
+    "tense": 9,
+    "to-be": "will not have",
+    "subject": "My brother",
+    "verb": "learned"
+  },
+  {
+    "id": 337,
+    "sentence": "You will not have read this book by tomorrow",
+    "intlSentence": "Ты не прочитаешь эту книгу к завтрашнему дню",
+    "tense": 9,
+    "to-be": "will not have",
+    "subject": "You",
+    "verb": "read"
+  },
+  {
+    "id": 338,
+    "sentence": "It will not have rained a lot by the weekend",
+    "intlSentence": "К выходным дождь не пойдёт сильно",
+    "tense": 9,
+    "to-be": "will not have",
+    "subject": "It",
+    "verb": "rained"
+  },
+  {
+    "id": 339,
+    "sentence": "I will not have met him by the time you arrive",
+    "intlSentence": "Я не встречусь с ним к твоему приходу",
+    "tense": 9,
+    "to-be": "will not have",
+    "subject": "I",
+    "verb": "met"
+  },
+  {
+    "id": 340,
+    "sentence": "She will not have written three emails by noon",
+    "intlSentence": "Она не напишет три письма к полудню",
+    "tense": 9,
+    "to-be": "will not have",
+    "subject": "She",
+    "verb": "written"
+  },
+  {
+    "id": 341,
+    "sentence": "Will I have finished my homework by 8 PM?",
+    "intlSentence": "Я закончу домашнее задание к 8 вечера?",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "I",
+    "verb": "finished"
+  },
+  {
+    "id": 342,
+    "sentence": "Will she have visited Paris by next summer?",
+    "intlSentence": "Она посетит Париж к следующему лету?",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "She",
+    "verb": "visited"
+  },
+  {
+    "id": 343,
+    "sentence": "Will he have eaten breakfast before leaving?",
+    "intlSentence": "Он позавтракает до выхода?",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "He",
+    "verb": "eaten"
+  },
+  {
+    "id": 344,
+    "sentence": "Will we have seen that movie by tonight?",
+    "intlSentence": "Мы посмотрим этот фильм к вечеру?",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "We",
+    "verb": "seen"
+  },
+  {
+    "id": 345,
+    "sentence": "Will they have bought a new car by next month?",
+    "intlSentence": "Они купят новую машину к следующему месяцу?",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "They",
+    "verb": "bought"
+  },
+  {
+    "id": 346,
+    "sentence": "Will my brother have learned French by the end of the year?",
+    "intlSentence": "Мой брат выучит французский к концу года?",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "My brother",
+    "verb": "learned"
+  },
+  {
+    "id": 347,
+    "sentence": "Will you have read this book by tomorrow?",
+    "intlSentence": "Ты прочитаешь эту книгу к завтрашнему дню?",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "You",
+    "verb": "read"
+  },
+  {
+    "id": 348,
+    "sentence": "Will it have rained a lot by the weekend?",
+    "intlSentence": "К выходным сильно пойдёт дождь?",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "It",
+    "verb": "rained"
+  },
+  {
+    "id": 349,
+    "sentence": "Will I have met him by the time you arrive?",
+    "intlSentence": "Я встречусь с ним к твоему приходу?",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "I",
+    "verb": "met"
+  },
+  {
+    "id": 350,
+    "sentence": "Will she have written three emails by noon?",
+    "intlSentence": "Она напишет три письма к полудню?",
+    "tense": 9,
+    "to-be": "will have",
+    "subject": "She",
+    "verb": "written"
+  },
+  {
+    "id": 351,
+    "sentence": "I have been studying English for two hours",
+    "intlSentence": "Я учу английский уже два часа",
+    "tense": 10,
+    "to-be": "have been",
+    "subject": "I",
+    "verb": "studying"
+  },
+  {
+    "id": 352,
+    "sentence": "She has been working at the office since morning",
+    "intlSentence": "Она работает в офисе с утра",
+    "tense": 10,
+    "to-be": "has been",
+    "subject": "She",
+    "verb": "working"
+  },
+  {
+    "id": 353,
+    "sentence": "He has been playing football all afternoon",
+    "intlSentence": "Он играет в футбол весь день",
+    "tense": 10,
+    "to-be": "has been",
+    "subject": "He",
+    "verb": "playing"
+  },
+  {
+    "id": 354,
+    "sentence": "We have been waiting for the bus for 30 minutes",
+    "intlSentence": "Мы ждем автобус уже 30 минут",
+    "tense": 10,
+    "to-be": "have been",
+    "subject": "We",
+    "verb": "waiting"
+  },
+  {
+    "id": 355,
+    "sentence": "They have been learning French since January",
+    "intlSentence": "Они учат французский с января",
+    "tense": 10,
+    "to-be": "have been",
+    "subject": "They",
+    "verb": "learning"
+  },
+  {
+    "id": 356,
+    "sentence": "My brother has been reading a new book all evening",
+    "intlSentence": "Мой брат читает новую книгу весь вечер",
+    "tense": 10,
+    "to-be": "has been",
+    "subject": "My brother",
+    "verb": "reading"
+  },
+  {
+    "id": 357,
+    "sentence": "You have been practicing the piano for three hours",
+    "intlSentence": "Ты занимаешься на пианино уже три часа",
+    "tense": 10,
+    "to-be": "have been",
+    "subject": "You",
+    "verb": "practicing"
+  },
+  {
+    "id": 358,
+    "sentence": "It has been raining all day",
+    "intlSentence": "Весь день идёт дождь",
+    "tense": 10,
+    "to-be": "has been",
+    "subject": "It",
+    "verb": "raining"
+  },
+  {
+    "id": 359,
+    "sentence": "I have been meeting new people recently",
+    "intlSentence": "В последнее время я встречаю новых людей",
+    "tense": 10,
+    "to-be": "have been",
+    "subject": "I",
+    "verb": "meeting"
+  },
+  {
+    "id": 360,
+    "sentence": "She has been cooking dinner since 5 PM",
+    "intlSentence": "Она готовит ужин с 5 вечера",
+    "tense": 10,
+    "to-be": "has been",
+    "subject": "She",
+    "verb": "cooking"
+  },
+  {
+    "id": 361,
+    "sentence": "I have not been studying English for two hours",
+    "intlSentence": "Я не учу английский уже два часа",
+    "tense": 10,
+    "to-be": "have not been",
+    "subject": "I",
+    "verb": "studying"
+  },
+  {
+    "id": 362,
+    "sentence": "She has not been working at the office since morning",
+    "intlSentence": "Она не работает в офисе с утра",
+    "tense": 10,
+    "to-be": "has not been",
+    "subject": "She",
+    "verb": "working"
+  },
+  {
+    "id": 363,
+    "sentence": "He has not been playing football all afternoon",
+    "intlSentence": "Он не играет в футбол весь день",
+    "tense": 10,
+    "to-be": "has not been",
+    "subject": "He",
+    "verb": "playing"
+  },
+  {
+    "id": 364,
+    "sentence": "We have not been waiting for the bus for 30 minutes",
+    "intlSentence": "Мы не ждём автобус уже 30 минут",
+    "tense": 10,
+    "to-be": "have not been",
+    "subject": "We",
+    "verb": "waiting"
+  },
+  {
+    "id": 365,
+    "sentence": "They have not been learning French since January",
+    "intlSentence": "Они не учат французский с января",
+    "tense": 10,
+    "to-be": "have not been",
+    "subject": "They",
+    "verb": "learning"
+  },
+  {
+    "id": 366,
+    "sentence": "My brother has not been reading a new book all evening",
+    "intlSentence": "Мой брат не читает новую книгу весь вечер",
+    "tense": 10,
+    "to-be": "has not been",
+    "subject": "My brother",
+    "verb": "reading"
+  },
+  {
+    "id": 367,
+    "sentence": "You have not been practicing the piano for three hours",
+    "intlSentence": "Ты не занимаешься на пианино уже три часа",
+    "tense": 10,
+    "to-be": "have not been",
+    "subject": "You",
+    "verb": "practicing"
+  },
+  {
+    "id": 368,
+    "sentence": "It has not been raining all day",
+    "intlSentence": "Весь день не идёт дождь",
+    "tense": 10,
+    "to-be": "has not been",
+    "subject": "It",
+    "verb": "raining"
+  },
+  {
+    "id": 369,
+    "sentence": "I have not been meeting new people recently",
+    "intlSentence": "В последнее время я не встречаю новых людей",
+    "tense": 10,
+    "to-be": "have not been",
+    "subject": "I",
+    "verb": "meeting"
+  },
+  {
+    "id": 370,
+    "sentence": "She has not been cooking dinner since 5 PM",
+    "intlSentence": "Она не готовит ужин с 5 вечера",
+    "tense": 10,
+    "to-be": "has not been",
+    "subject": "She",
+    "verb": "cooking"
+  },
+  {
+    "id": 371,
+    "sentence": "Have I been studying English for two hours?",
+    "intlSentence": "Я учу английский уже два часа?",
+    "tense": 10,
+    "to-be": "have been",
+    "subject": "I",
+    "verb": "studying"
+  },
+  {
+    "id": 372,
+    "sentence": "Has she been working at the office since morning?",
+    "intlSentence": "Она работает в офисе с утра?",
+    "tense": 10,
+    "to-be": "has been",
+    "subject": "She",
+    "verb": "working"
+  },
+  {
+    "id": 373,
+    "sentence": "Has he been playing football all afternoon?",
+    "intlSentence": "Он играет в футбол весь день?",
+    "tense": 10,
+    "to-be": "has been",
+    "subject": "He",
+    "verb": "playing"
+  },
+  {
+    "id": 374,
+    "sentence": "Have we been waiting for the bus for 30 minutes?",
+    "intlSentence": "Мы ждём автобус уже 30 минут?",
+    "tense": 10,
+    "to-be": "have been",
+    "subject": "We",
+    "verb": "waiting"
+  },
+  {
+    "id": 375,
+    "sentence": "Have they been learning French since January?",
+    "intlSentence": "Они учат французский с января?",
+    "tense": 10,
+    "to-be": "have been",
+    "subject": "They",
+    "verb": "learning"
+  },
+  {
+    "id": 376,
+    "sentence": "Has my brother been reading a new book all evening?",
+    "intlSentence": "Мой брат читает новую книгу весь вечер?",
+    "tense": 10,
+    "to-be": "has been",
+    "subject": "My brother",
+    "verb": "reading"
+  },
+  {
+    "id": 377,
+    "sentence": "Have you been practicing the piano for three hours?",
+    "intlSentence": "Ты занимаешься на пианино уже три часа?",
+    "tense": 10,
+    "to-be": "have been",
+    "subject": "You",
+    "verb": "practicing"
+  },
+  {
+    "id": 378,
+    "sentence": "Has it been raining all day?",
+    "intlSentence": "Весь день идёт дождь?",
+    "tense": 10,
+    "to-be": "has been",
+    "subject": "It",
+    "verb": "raining"
+  },
+  {
+    "id": 379,
+    "sentence": "Have I been meeting new people recently?",
+    "intlSentence": "В последнее время я встречаю новых людей?",
+    "tense": 10,
+    "to-be": "have been",
+    "subject": "I",
+    "verb": "meeting"
+  },
+  {
+    "id": 380,
+    "sentence": "Has she been cooking dinner since 5 PM?",
+    "intlSentence": "Она готовит ужин с 5 вечера?",
+    "tense": 10,
+    "to-be": "has been",
+    "subject": "She",
+    "verb": "cooking"
+  },
+  {
+    "id": 381,
+    "sentence": "What have I been studying for two hours?",
+    "intlSentence": "Что я учу уже два часа?",
+    "tense": 10,
+    "to-be": "have been",
+    "subject": "I",
+    "verb": "studying"
+  },
+  {
+    "id": 382,
+    "sentence": "Where has she been working since morning?",
+    "intlSentence": "Где она работает с утра?",
+    "tense": 10,
+    "to-be": "has been",
+    "subject": "She",
+    "verb": "working"
+  },
+  {
+    "id": 383,
+    "sentence": "What has he been playing all afternoon?",
+    "intlSentence": "Во что он играет весь день?",
+    "tense": 10,
+    "to-be": "has been",
+    "subject": "He",
+    "verb": "playing"
+  },
+  {
+    "id": 384,
+    "sentence": "How long have we been waiting for the bus?",
+    "intlSentence": "Как долго мы ждём автобус?",
+    "tense": 10,
+    "to-be": "have been",
+    "subject": "We",
+    "verb": "waiting"
+  },
+  {
+    "id": 385,
+    "sentence": "What have they been learning since January?",
+    "intlSentence": "Что они учат с января?",
+    "tense": 10,
+    "to-be": "have been",
+    "subject": "They",
+    "verb": "learning"
+  },
+  {
+    "id": 386,
+    "sentence": "Which book has my brother been reading all evening?",
+    "intlSentence": "Какую книгу мой брат читает весь вечер?",
+    "tense": 10,
+    "to-be": "has been",
+    "subject": "My brother",
+    "verb": "reading"
+  },
+  {
+    "id": 387,
+    "sentence": "How long have you been practicing the piano?",
+    "intlSentence": "Как долго ты занимаешься на пианино?",
+    "tense": 10,
+    "to-be": "have been",
+    "subject": "You",
+    "verb": "practicing"
+  },
+  {
+    "id": 388,
+    "sentence": "How long has it been raining?",
+    "intlSentence": "Как долго идёт дождь?",
+    "tense": 10,
+    "to-be": "has been",
+    "subject": "It",
+    "verb": "raining"
+  },
+  {
+    "id": 389,
+    "sentence": "Who have I been meeting recently?",
+    "intlSentence": "С кем я встречаюсь в последнее время?",
+    "tense": 10,
+    "to-be": "have been",
+    "subject": "I",
+    "verb": "meeting"
+  },
+  {
+    "id": 390,
+    "sentence": "What has she been cooking since 5 PM?",
+    "intlSentence": "Что она готовит с 5 вечера?",
+    "tense": 10,
+    "to-be": "has been",
+    "subject": "She",
+    "verb": "cooking"
+  },
+  {
+    "id": 391,
+    "sentence": "I had finished my homework before dinner",
+    "intlSentence": "Я закончил домашнее задание до ужина",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "I",
+    "verb": "finished"
+  },
+  {
+    "id": 392,
+    "sentence": "She had visited London before last summer",
+    "intlSentence": "Она посетила Лондон до прошлого лета",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "She",
+    "verb": "visited"
+  },
+  {
+    "id": 393,
+    "sentence": "He had eaten breakfast before leaving for work",
+    "intlSentence": "Он позавтракал перед уходом на работу",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "He",
+    "verb": "eaten"
+  },
+  {
+    "id": 394,
+    "sentence": "We had seen that movie before it was on TV",
+    "intlSentence": "Мы видели этот фильм до того, как его показали по телевизору",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "We",
+    "verb": "seen"
+  },
+  {
+    "id": 395,
+    "sentence": "They had bought a new car before moving to the city",
+    "intlSentence": "Они купили новую машину до переезда в город",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "They",
+    "verb": "bought"
+  },
+  {
+    "id": 396,
+    "sentence": "My brother had learned French before going to school",
+    "intlSentence": "Мой брат выучил французский до школы",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "My brother",
+    "verb": "learned"
+  },
+  {
+    "id": 397,
+    "sentence": "You had read this book before I suggested it",
+    "intlSentence": "Ты прочитал эту книгу до того, как я её предложил",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "You",
+    "verb": "read"
+  },
+  {
+    "id": 398,
+    "sentence": "It had rained a lot before the sun came out",
+    "intlSentence": "Сильно шёл дождь до того, как вышло солнце",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "It",
+    "verb": "rained"
+  },
+  {
+    "id": 399,
+    "sentence": "I had met him before the party started",
+    "intlSentence": "Я встречал его до начала вечеринки",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "I",
+    "verb": "met"
+  },
+  {
+    "id": 400,
+    "sentence": "She had written two letters before noon",
+    "intlSentence": "Она написала два письма до полудня",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "She",
+    "verb": "written"
+  },
+  {
+    "id": 401,
+    "sentence": "I had not finished my homework before dinner",
+    "intlSentence": "Я не закончил домашнее задание до ужина",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "I",
+    "verb": "finished"
+  },
+  {
+    "id": 402,
+    "sentence": "She had not visited London before last summer",
+    "intlSentence": "Она не посетила Лондон до прошлого лета",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "She",
+    "verb": "visited"
+  },
+  {
+    "id": 403,
+    "sentence": "He had not eaten breakfast before leaving for work",
+    "intlSentence": "Он не позавтракал перед уходом на работу",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "He",
+    "verb": "eaten"
+  },
+  {
+    "id": 404,
+    "sentence": "We had not seen that movie before it was on TV",
+    "intlSentence": "Мы не видели этот фильм до того, как его показали по телевизору",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "We",
+    "verb": "seen"
+  },
+  {
+    "id": 405,
+    "sentence": "They had not bought a new car before moving to the city",
+    "intlSentence": "Они не купили новую машину до переезда в город",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "They",
+    "verb": "bought"
+  },
+  {
+    "id": 406,
+    "sentence": "My brother had not learned French before going to school",
+    "intlSentence": "Мой брат не выучил французский до школы",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "My brother",
+    "verb": "learned"
+  },
+  {
+    "id": 407,
+    "sentence": "You had not read this book before I suggested it",
+    "intlSentence": "Ты не прочитал эту книгу до того, как я её предложил",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "You",
+    "verb": "read"
+  },
+  {
+    "id": 408,
+    "sentence": "It had not rained a lot before the sun came out",
+    "intlSentence": "Не было сильного дождя до того, как вышло солнце",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "It",
+    "verb": "rained"
+  },
+  {
+    "id": 409,
+    "sentence": "I had not met him before the party started",
+    "intlSentence": "Я не встречал его до начала вечеринки",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "I",
+    "verb": "met"
+  },
+  {
+    "id": 410,
+    "sentence": "She had not written two letters before noon",
+    "intlSentence": "Она не написала два письма до полудня",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "She",
+    "verb": "written"
+  },
+  {
+    "id": 411,
+    "sentence": "Had I finished my homework before dinner?",
+    "intlSentence": "Я закончил домашнее задание до ужина?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "I",
+    "verb": "finished"
+  },
+  {
+    "id": 412,
+    "sentence": "Had she visited London before last summer?",
+    "intlSentence": "Она посетила Лондон до прошлого лета?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "She",
+    "verb": "visited"
+  },
+  {
+    "id": 413,
+    "sentence": "Had he eaten breakfast before leaving for work?",
+    "intlSentence": "Он позавтракал перед уходом на работу?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "He",
+    "verb": "eaten"
+  },
+  {
+    "id": 414,
+    "sentence": "Had we seen that movie before it was on TV?",
+    "intlSentence": "Мы видели этот фильм до того, как его показали по телевизору?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "We",
+    "verb": "seen"
+  },
+  {
+    "id": 415,
+    "sentence": "Had they bought a new car before moving to the city?",
+    "intlSentence": "Они купили новую машину до переезда в город?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "They",
+    "verb": "bought"
+  },
+  {
+    "id": 416,
+    "sentence": "Had my brother learned French before going to school?",
+    "intlSentence": "Мой брат выучил французский до школы?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "My brother",
+    "verb": "learned"
+  },
+  {
+    "id": 417,
+    "sentence": "Had you read this book before I suggested it?",
+    "intlSentence": "Ты прочитал эту книгу до того, как я её предложил?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "You",
+    "verb": "read"
+  },
+  {
+    "id": 418,
+    "sentence": "Had it rained a lot before the sun came out?",
+    "intlSentence": "Сильно ли шёл дождь до того, как вышло солнце?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "It",
+    "verb": "rained"
+  },
+  {
+    "id": 419,
+    "sentence": "Had I met him before the party started?",
+    "intlSentence": "Я встречал его до начала вечеринки?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "I",
+    "verb": "met"
+  },
+  {
+    "id": 420,
+    "sentence": "Had she written two letters before noon?",
+    "intlSentence": "Она написала два письма до полудня?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "She",
+    "verb": "written"
+  },
+  {
+    "id": 421,
+    "sentence": "What had I finished before dinner?",
+    "intlSentence": "Что я закончил до ужина?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "I",
+    "verb": "finished"
+  },
+  {
+    "id": 422,
+    "sentence": "Where had she visited before last summer?",
+    "intlSentence": "Где она побывала до прошлого лета?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "She",
+    "verb": "visited"
+  },
+  {
+    "id": 423,
+    "sentence": "What had he eaten before leaving for work?",
+    "intlSentence": "Что он съел перед уходом на работу?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "He",
+    "verb": "eaten"
+  },
+  {
+    "id": 424,
+    "sentence": "Which movie had we seen before it was on TV?",
+    "intlSentence": "Какой фильм мы видели до того, как его показали по телевизору?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "We",
+    "verb": "seen"
+  },
+  {
+    "id": 425,
+    "sentence": "What had they bought before moving to the city?",
+    "intlSentence": "Что они купили до переезда в город?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "They",
+    "verb": "bought"
+  },
+  {
+    "id": 426,
+    "sentence": "Which language had my brother learned before going to school?",
+    "intlSentence": "Какой язык мой брат выучил до школы?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "My brother",
+    "verb": "learned"
+  },
+  {
+    "id": 427,
+    "sentence": "Which book had you read before I suggested it?",
+    "intlSentence": "Какую книгу ты прочитал до того, как я её предложил?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "You",
+    "verb": "read"
+  },
+  {
+    "id": 428,
+    "sentence": "How much had it rained before the sun came out?",
+    "intlSentence": "Сколько дождя выпало до того, как вышло солнце?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "It",
+    "verb": "rained"
+  },
+  {
+    "id": 429,
+    "sentence": "Who had I met before the party started?",
+    "intlSentence": "С кем я встречался до начала вечеринки?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "I",
+    "verb": "met"
+  },
+  {
+    "id": 430,
+    "sentence": "How many letters had she written before noon?",
+    "intlSentence": "Сколько писем она написала до полудня?",
+    "tense": 11,
+    "to-be": "had",
+    "subject": "She",
+    "verb": "written"
+  }
+]

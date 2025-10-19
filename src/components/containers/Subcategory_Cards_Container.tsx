@@ -1,6 +1,6 @@
 "use client";
 
-import DefaultDictionary_Words from "@/lib/data/dictionary-words.json";
+import DefaultDictionary_Words from "@/data/dictionary-words.json";
 import Active_Header from "../header/Active_Header";
 import { useEffect } from "react";
 import { useToggle } from "@/features/hooks/useToggle";
