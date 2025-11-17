@@ -64,3 +64,64 @@ export type typeSidebarLink = {
   link: string;
   childItems: typeSidebarLink[];
 };
+
+
+
+
+
+
+// types/practice.ts
+export interface DialogueLine {
+  speaker: string;
+  text: string;
+  translation: string;
+  expectedWords?: string[];
+  difficulty?: number;
+}
+
+export interface Dialogue {
+  id: number;
+  title: string;
+  level: "Начальный" | "Средний" | "Продвинутый";
+  description: string;
+  lines: DialogueLine[];
+}
+
+export interface UserRecording {
+  lineIndex: number;
+  audioUrl: string;
+  text: string;
+  timestamp: string;
+  transcribedText?: string;
+  confidence?: number;
+}
+
+export interface PronunciationFeedback {
+  lineIndex: number;
+  text: string;
+  transcribedText: string;
+  mistakes: string[];
+  tips: string[];
+  score: number;
+  confidence: number;
+  wordAnalysis?: WordAnalysis[];
+}
+
+export interface WordAnalysis {
+  word: string;
+  expected: string;
+  confidence: number;
+  isCorrect: boolean;
+  phonetics?: string;
+}
+
+export interface SpeechRecognitionResult {
+  transcript: string;
+  confidence: number;
+  words: Array<{
+    word: string;
+    confidence: number;
+    startTime: number;
+    endTime: number;
+  }>;
+}
