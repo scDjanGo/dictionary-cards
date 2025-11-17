@@ -12,7 +12,7 @@ export default function Sidebar_Nav_Button({
 }: {
   navItem: typeSidebarLink;
 }) {
-  const pathname = usePathname()
+  const pathname = usePathname();
   const { dropdownRef, toggle, isOpen } = useDropdown();
   const offSidebarStore = useSidebarsStore((state) => state.offSidebarStore);
 
@@ -20,29 +20,58 @@ export default function Sidebar_Nav_Button({
     toggle();
   };
 
+  
+  const closeSidebar = () => {
+    offSidebarStore();
+  }
+
+
   const handleCloseSidebar = () => {
     handleToggle();
-    offSidebarStore();
+    closeSidebar();
   };
+
+
+
+
+
+
 
   return (
     <div ref={dropdownRef} className="my-transform">
-      <div
-        onClick={handleToggle}
-        className="hover:underline flex items-center justify-between gap-[8px] cursor-pointer"
-      >
-        <span className="text-white">{navItem.name}</span>
-        <Arrow_Nav_SVG
-          className={`${
-            isOpen ? "rotate-180" : "rotate-0"
-          } transition-transform duration-300`}
-        />
-      </div>
+      {navItem.childItems.length ? (
+        <button
+          onClick={handleToggle}
+          className="hover:underline flex items-center justify-between gap-[8px] cursor-pointer w-full"
+        >
+          <span className="text-white">{navItem.name}</span>
+          <Arrow_Nav_SVG
+            className={`${
+              isOpen ? "rotate-180" : "rotate-0"
+            } transition-transform duration-300`}
+          />
+        </button>
+      ) : (
+        <Link
+          href={navItem.link}
+          onClick={closeSidebar}
+          className="hover:underline flex items-center justify-between gap-[8px] cursor-pointer"
+        >
+          <span className="text-white">{navItem.name}</span>
+          {/* <Arrow_Nav_SVG
+            className={`${
+              isOpen ? "rotate-180" : "rotate-0"
+            } transition-transform duration-300`}
+          /> */}
+        </Link>
+      )}
 
-      <div
-      style={{scrollbarWidth: "none"}}
+      {!!navItem.childItems.length && <div
+        style={{ scrollbarWidth: "none" }}
         className={`my-transform flex flex-col gap-[12px] pl-[6px] transition-all duration-500 ease-in-out overflow-hidden
-          ${isOpen ? "max-h-[350px] mt-[12px] !overflow-y-auto" : "max-h-0 mt-0"}
+          ${
+            isOpen ? "max-h-[350px] mt-[12px] !overflow-y-auto" : "max-h-0 mt-0"
+          }
         `}
       >
         {[navItem, ...navItem.childItems]?.map((item, index) => (
@@ -52,11 +81,17 @@ export default function Sidebar_Nav_Button({
             onClick={handleCloseSidebar}
             className={`text-[500] flex items-center justify-between gap-[6px] `}
           >
-            <span className={` ${pathname === item.link ? "border-b-[1px] border-bgLight" : ""}`}>{item.name}</span>
+            <span
+              className={` ${
+                pathname === item.link ? "border-b-[1px] border-bgLight" : ""
+              }`}
+            >
+              {item.name}
+            </span>
             <Arrow_Nav_SVG className="rotate-270" />
           </Link>
         ))}
-      </div>
+      </div>}
     </div>
   );
 }

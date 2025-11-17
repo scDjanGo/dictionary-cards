@@ -40,6 +40,12 @@ const LINKS: typeSidebarLink[] = [
     name: "Времена",
     childItems: TENSE,
   },
+  {
+    id: 4,
+    link: "/modal-verbs",
+    name: "Модальные глаголы",
+    childItems: [],
+  },
 ];
 
 export default function Main_Sidebar() {

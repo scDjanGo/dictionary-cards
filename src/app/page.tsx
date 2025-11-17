@@ -4,6 +4,7 @@ export default function HomePage() {
   const LINKS = [
     { id: 1, name: "Cards", intlName: "Карточки", link: "/cards" },
     { id: 2, name: "Tense", intlName: "Времена", link: "/tense" },
+    {id: 3, name: "Modal Verbs", intlName: "Модальные глаголы", link: "/modal-verbs"}
   ];
 
   return (

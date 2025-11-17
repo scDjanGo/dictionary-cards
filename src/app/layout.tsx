@@ -7,11 +7,10 @@ import Main_Header from "@/components/header/Main_Header";
 import Main_Modals from "@/components/modals/Main_Modals";
 import Sidebars_Container from "@/components/sidebars/Sidebars_Container";
 import Main_Features from "@/features/features/Main_Features";
+import { Analytics } from "@vercel/analytics/next";
+import { Main_Metadata } from "@/meta/main-metadata";
 
-export const metadata: Metadata = {
-  title: "Cards",
-  description: "Made by scDjanGo",
-};
+export const metadata: Metadata = Main_Metadata
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -31,15 +30,21 @@ export default function RootLayout({
       >
         <AppRouterCacheProvider>
           <>
-          {/* Features */}
-          <Main_Features />
+            {/* Features */}
+            <Main_Features />
             <>
               {/* Ui elems */}
               <Sidebars_Container />
               <Main_Modals />
             </>
             <Main_Header />
-            <div id="main-container" className="max-w-7xl mx-auto !p-[60px_16px_16px_16px]">{children}</div>
+            <div
+              id="main-container"
+              className="max-w-7xl mx-auto !p-[60px_16px_16px_16px]"
+            >
+              {children}
+              <Analytics />
+            </div>
           </>
         </AppRouterCacheProvider>
       </body>

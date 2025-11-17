@@ -398,7 +398,7 @@ export default function Past_Simple_Page() {
             🔑 Сигнальные слова и выражения
           </h2>
 
-          <div className="bg-white dark:from-blue-900/20 dark:to-green-900/20 p-6 rounded-2xl">
+          <div className="bg-white  dark:bg-bgDark p-6 rounded-2xl">
             <p className="dark:text-bgLight/70 mb-4">
               Эти слова и фразы часто указывают на необходимость использования
               Past Simple:
