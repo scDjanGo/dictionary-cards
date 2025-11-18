@@ -10,7 +10,7 @@ import Main_Features from "@/features/features/Main_Features";
 import { Analytics } from "@vercel/analytics/next";
 import { Main_Metadata } from "@/meta/main-metadata";
 
-export const metadata: Metadata = Main_Metadata
+export const metadata: Metadata = Main_Metadata;
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -37,6 +37,7 @@ export default function RootLayout({
               <Sidebars_Container />
               <Main_Modals />
             </>
+            {/* Header */}
             <Main_Header />
             <div
               id="main-container"

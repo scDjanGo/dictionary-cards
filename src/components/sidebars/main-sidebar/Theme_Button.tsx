@@ -1,8 +1,7 @@
 "use client";
 
-import { IconButton, Tooltip } from "@mui/material";
-import { Brightness4, Brightness7 } from "@mui/icons-material";
 import { useChangeThemeStore } from "@/lib/zustand/chageThemeStore/useChangeThemeStore";
+import { Moon, Sun } from "lucide-react";
 
 export default function Theme_Button() {
   const darkTheme = useChangeThemeStore((state) => state.theme);
@@ -21,22 +20,16 @@ export default function Theme_Button() {
   };
 
   return (
-    <Tooltip title={darkTheme ? "Светлая тема" : "Тёмная тема"}>
-      <IconButton
-        onClick={toggleTheme}
-        size="small"
-        color="inherit"
-        sx={{
-          maxWidth: "24px",
-          p: 0.5,
-        }}
-      >
-        {darkTheme ? (
-          <Brightness7 fontSize="small" />
-        ) : (
-          <Brightness4 fontSize="small" />
-        )}
-      </IconButton>
-    </Tooltip>
+    <button
+      onClick={toggleTheme}
+      className="p-1.5 rounded-md transition hover:bg-black/10 dark:hover:bg-white/10"
+      title={darkTheme ? "Светлая тема" : "Тёмная тема"}
+    >
+      {darkTheme ? (
+        <Sun className="w-4 h-4" />
+      ) : (
+        <Moon className="w-4 h-4" />
+      )}
+    </button>
   );
 }

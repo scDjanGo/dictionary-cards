@@ -96,12 +96,20 @@ export default function Main_Sidebar() {
 
         <Type_Of_Cards_Button />
 
-        <Link
-          href={`https://t.me/scDjanG0?text=У меня есть предложение насчёт U-Card`}
-          className={`absolute bottom-[10px] right-[10px]`}
+        <div
+          className={`absolute bottom-[10px] right-[10px] flex flex-col gap-[2px]`}
         >
-          Оставить отзыв
-        </Link>
+          <Link
+            href={`https://t.me/scDjanG0?text=У меня есть предложение насчёт easy-eng-app`}
+          >
+            Оставить отзыв
+          </Link>
+          <Link
+            href={`https://t.me/easy_eng_app`}
+          >
+            Телеграм канал
+          </Link>
+        </div>
       </div>
     </>
   );
