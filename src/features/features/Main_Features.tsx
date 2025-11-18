@@ -1,12 +1,15 @@
 "use client";
 
 import { CardType, typeViewCards } from "@/lib/types/types";
-import { useBlockedCardsStore, useTypeOfCards } from "@/lib/zustand";
+import { useBlockedCardsStore, useTimerQuizStore, useTypeOfCards } from "@/lib/zustand";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 export default function Main_Features() {
+  const pathname = usePathname()
   const setBlockedCards = useBlockedCardsStore((state) => state.setBlockCards);
   const setTypeOfCards = useTypeOfCards((state) => state.setTypeOfCard);
+  const finishOfTimerQuiz = useTimerQuizStore((s) => s.useFinishTimer);
 
   //  Create First category
   useEffect(() => {
@@ -46,6 +49,14 @@ export default function Main_Features() {
     if (!selectedType) return;
     setTypeOfCards(selectedType as typeViewCards);
   }, []);
+
+
+  // Отключение таймера 
+    useEffect(() => {
+    if (pathname !== "/quiz/play") {
+      finishOfTimerQuiz();
+    }
+  }, [pathname]);
 
   return <></>;
 }

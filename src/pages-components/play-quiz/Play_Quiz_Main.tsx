@@ -9,6 +9,7 @@ import { useQuizSettingsStore } from "@/lib/zustand/quizSettings/useQuizSettings
 import Play_Quiz_Write_Type from "./Play_Quiz_Write";
 import Play_Quiz_Speech_Type from "./Play_Quiz_Speech";
 import Play_Quiz_Connect from "./Play_Quiz_Connect";
+import { useTimerQuizStore } from "@/lib/zustand";
 
 export default function Play_Quiz_Main() {
   const router = useRouter();
@@ -20,13 +21,12 @@ export default function Play_Quiz_Main() {
     null
   );
 
-  const [errors, setErrors] = useState<{count: number, cards: CardType[]}>({
+  const [errors, setErrors] = useState<{ count: number; cards: CardType[] }>({
     count: 0,
-    cards: []
-  })
+    cards: [],
+  });
+  const { useStartTimer } = useTimerQuizStore();
 
-
-  // Check items
   useEffect(() => {
     const quiz_cards = JSON.parse(sessionStorage.getItem("quiz-cards") || "[]");
 
@@ -59,6 +59,26 @@ export default function Play_Quiz_Main() {
     }
   }, []);
 
+  useEffect(() => {
+    const quiz_settings = JSON.parse(
+      sessionStorage.getItem("quiz-settings") || "null"
+    );
+
+    if (quiz_settings && typeof quiz_settings === "object") {
+      setQuizSetting(quiz_settings);
+      setQuizSettingsStore(quiz_settings);
+
+      useStartTimer();
+      return;
+    }
+
+    if (window.history.length <= 1) {
+      router.push("/cards");
+    } else {
+      router.back();
+    }
+  }, [router, setQuizSettingsStore, useStartTimer]);
+
   return (
     <div className={``}>
       <Loading_Component
@@ -66,17 +86,36 @@ export default function Play_Quiz_Main() {
         message="Подгружаем контент"
       />
       {quizCards && quizSettings && quizSettings.type === "swipe" && (
-        <Play_Quiz_Swipe_Type  cards={quizCards} random={quizSettings.random} errors={errors} setErrors={setErrors} />
+        <Play_Quiz_Swipe_Type
+          cards={quizCards}
+          random={quizSettings.random}
+          errors={errors}
+          setErrors={setErrors}
+        />
       )}{" "}
       {quizCards && quizSettings && quizSettings.type === "write" && (
-        <Play_Quiz_Write_Type cards={quizCards} random={quizSettings.random} errors={errors} setErrors={setErrors}  />
+        <Play_Quiz_Write_Type
+          cards={quizCards}
+          random={quizSettings.random}
+          errors={errors}
+          setErrors={setErrors}
+        />
       )}
-       {quizCards && quizSettings && quizSettings.type === "speech" && (
-        <Play_Quiz_Speech_Type cards={quizCards} random={quizSettings.random} errors={errors} setErrors={setErrors} />
+      {quizCards && quizSettings && quizSettings.type === "speech" && (
+        <Play_Quiz_Speech_Type
+          cards={quizCards}
+          random={quizSettings.random}
+          errors={errors}
+          setErrors={setErrors}
+        />
       )}
-      
-       {quizCards && quizSettings && quizSettings.type === "connect" && (
-        <Play_Quiz_Connect cards={quizCards} random={quizSettings.random} errors={errors} setErrors={setErrors} />
+      {quizCards && quizSettings && quizSettings.type === "connect" && (
+        <Play_Quiz_Connect
+          cards={quizCards}
+          random={quizSettings.random}
+          errors={errors}
+          setErrors={setErrors}
+        />
       )}
     </div>
   );

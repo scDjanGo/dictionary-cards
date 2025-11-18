@@ -61,7 +61,7 @@ export default function Main_Header() {
           <button
             onClick={handleBack}
             className={`flex items-center space-x-2 text-2xl font-bold text-[#1976D2] hover:underline cursor-pointer ${
-              (pathname === "/" || pathname === "/cards") && "opacity-0"
+              (pathname === "/") && "opacity-0"
             }`}
           >
             <Arrow_Button_SVG className="min-w-[38px] min-h-[38px]" />

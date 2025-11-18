@@ -7,6 +7,7 @@ import { useCurrentCard } from "./useCurrentCard/useCurrentCard";
 import { useCurrentCardsStore } from "./useCurrentCardsStore/useCurrentCardsStore";
 import { useTypeOfCards } from "./useTypeOfCard/useTypeOfCard";
 import { useCurrentCategory } from './useCurrentCategory/useCurrentCategory';
+import { useTimerQuizStore } from "./useTimerQuizStore/useTimerQuizStore";
 
 export {
   useBlockedCardsStore,
@@ -17,4 +18,5 @@ export {
   useUiModalsStore,
   useTypeOfCards,
   useCurrentCategory,
+  useTimerQuizStore,
 };

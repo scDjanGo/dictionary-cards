@@ -5,6 +5,7 @@ import { CardType } from "@/lib/types/types";
 import { Trophy, ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useQuizSettingsStore } from "@/lib/zustand/quizSettings/useQuizSettings";
+import { useTimerQuizStore } from "@/lib/zustand";
 
 function shuffleArray<T>(array: T[]): T[] {
   return [...array].sort(() => Math.random() - 0.5);
@@ -27,11 +28,12 @@ export default function Play_Quiz_Write_Type({
   const [flipped, setFlipped] = useState(false);
   const [input, setInput] = useState("");
   const [wasCorrect, setWasCorrect] = useState<boolean | null>(null);
-
   const inputRef = useRef<HTMLInputElement>(null);
   const continueButtonRef = useRef<HTMLButtonElement>(null);
-
   const quizSettings = useQuizSettingsStore((state) => state.quizSettingsStore);
+  const timerOfQuiz = useTimerQuizStore((store) => store.stringValue);
+  const { useFinishTimer } = useTimerQuizStore();
+
   const router = useRouter();
 
   useEffect(() => {
@@ -82,6 +84,9 @@ export default function Play_Quiz_Write_Type({
     setFlipped(false);
     setInput("");
     setWasCorrect(null);
+    if (!newDeck.length) {
+      useFinishTimer();
+    }
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -112,6 +117,12 @@ export default function Play_Quiz_Write_Type({
         ) : (
           <p className="text-gray-600 mb-4  dark:text-bgLight">
             Отличная работа — ты справился!
+          </p>
+        )}
+
+        {quizSettings.time && (
+          <p className="text-xl font-bold mb-2 dark:text-bgLight ">
+            Время: {timerOfQuiz}
           </p>
         )}
 

@@ -9,6 +9,8 @@ import { Lines_Container } from "./play-quiz-connect/Lines_Container";
 import { shuffleSortArray } from "@/features/features/shuffle-sort";
 import { ArrowRight, Trophy } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useTimerQuizStore } from "@/lib/zustand";
+import { useQuizSettingsStore } from "@/lib/zustand/quizSettings/useQuizSettings";
 
 const OFFSET = 1_000_000;
 function chunkArray<CardType>(array: CardType[], size: number): CardType[][] {
@@ -44,8 +46,11 @@ export default function Play_Quiz_Connect({
   const buttonRefs = useRef<Record<number, HTMLButtonElement | null>>({});
   const [lines, setLines] = useState<typeLine[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
+  const quizSettings = useQuizSettingsStore((state) => state.quizSettingsStore);
   const [currentGroup, setCurrentGroup] = useState(groups[step] || []);
   const [endQuiz, setEndQuiz] = useState(false);
+  const timerOfQuiz = useTimerQuizStore((store) => store.stringValue);
+  const { useFinishTimer } = useTimerQuizStore();
 
   useEffect(() => {
     if (step === 0) return;
@@ -55,6 +60,7 @@ export default function Play_Quiz_Connect({
   useEffect(() => {
     if (groups[step]) return;
     setEndQuiz(true);
+    useFinishTimer()
   }, [step]);
 
   const leftSide = useMemo(() => {
@@ -124,31 +130,30 @@ export default function Play_Quiz_Connect({
     setMousePos(null);
   };
 
-const handleNextGroup = () => {
-  const normalizeId = (id: number) => (id >= OFFSET ? id - OFFSET : id);
+  const handleNextGroup = () => {
+    const normalizeId = (id: number) => (id >= OFFSET ? id - OFFSET : id);
 
-  // проверяем правильность соединений
-  if (
-    lines.some((item) => normalizeId(item.fromId) !== normalizeId(item.toId))
-  ) {
-    setCurrentGroup((prev) => [
-      ...prev.filter(
-        (item) =>
-          !lines.some(
-            (elem) =>
-              normalizeId(elem.fromId) === item.id &&
-              normalizeId(elem.toId) === item.id
-          )
-      ),
-    ]);
+    // проверяем правильность соединений
+    if (
+      lines.some((item) => normalizeId(item.fromId) !== normalizeId(item.toId))
+    ) {
+      setCurrentGroup((prev) => [
+        ...prev.filter(
+          (item) =>
+            !lines.some(
+              (elem) =>
+                normalizeId(elem.fromId) === item.id &&
+                normalizeId(elem.toId) === item.id
+            )
+        ),
+      ]);
+      setLines([]);
+      return;
+    }
+
+    setStep((s) => s + 1);
     setLines([]);
-    return;
-  }
-
-  setStep((s) => s + 1);
-  setLines([]);
-};
-
+  };
 
   return !endQuiz ? (
     <div
@@ -244,6 +249,12 @@ const handleNextGroup = () => {
       <p className="text-gray-600 mb-4 dark:text-bgLight">
         Отличная работа — ты справился!
       </p>
+
+      {quizSettings.time && (
+        <p className="text-xl font-bold mb-2 dark:text-bgLight ">
+          Время: {timerOfQuiz}
+        </p>
+      )}
 
       <button
         onClick={() => router.push("/my-cards")}

@@ -5,6 +5,7 @@ import { CardType } from "@/lib/types/types";
 import { RotateCcw, CheckCircle, Trophy, ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useQuizSettingsStore } from "@/lib/zustand/quizSettings/useQuizSettings";
+import { useTimerQuizStore } from "@/lib/zustand";
 
 const PRIMARY_COLOR = "text-blue-700";
 const PRIMARY_LIGHT = "bg-blue-50";
@@ -31,6 +32,8 @@ export default function Play_Quiz_Swipe_Type({
   const [flipped, setFlipped] = useState(false);
   const quizSettings = useQuizSettingsStore((state) => state.quizSettingsStore);
   const router = useRouter();
+  const timerOfQuiz = useTimerQuizStore((store) => store.stringValue);
+  const { useFinishTimer } = useTimerQuizStore();
 
   useEffect(() => {
     setCardDeck(random ? shuffleArray(cards) : [...cards]);
@@ -60,15 +63,22 @@ export default function Play_Quiz_Swipe_Type({
 
     setCardDeck(newDeck);
     setFlipped(false);
+
+    if (newDeck.length === 0) {
+      useFinishTimer();
+    }
   };
 
   const currentCard = cardDeck[0];
+
 
   if (!currentCard) {
     return (
       <div className=" p-6 bg-blue-50 dark:bg-bgItem rounded-2xl shadow text-center mt-[20%]">
         <Trophy className="w-14 h-14 text-blueCl dark:text-bgLight mx-auto mb-2" />
-        <h2 className="text-xl font-bold mb-2 dark:text-bgLight">Все карточки просмотрены!</h2>
+        <h2 className="text-xl font-bold mb-2 dark:text-bgLight">
+          Все карточки просмотрены!
+        </h2>
 
         {errors?.count ? (
           <p className="text-gray-600 dark:text-bgLight mb-4">
@@ -82,6 +92,12 @@ export default function Play_Quiz_Swipe_Type({
           </p>
         ) : (
           <p className="text-gray-600 mb-4">Отличная работа — ты справился!</p>
+        )}
+
+        {quizSettings.time && (
+          <p className="text-xl font-bold mb-2 dark:text-bgLight ">
+            Время: {timerOfQuiz}
+          </p>
         )}
 
         <button

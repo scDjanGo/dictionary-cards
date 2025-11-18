@@ -15,6 +15,7 @@ import {
   Rotate3d,
 } from "lucide-react";
 import { speakWord } from "@/features/features/speak-word";
+import { useTimerQuizStore } from "@/lib/zustand";
 
 export default function Play_Quiz_Speech_Type({
   cards,
@@ -34,6 +35,8 @@ export default function Play_Quiz_Speech_Type({
   const [revealed, setRevealed] = useState(false);
   const quizSettings = useQuizSettingsStore((state) => state.quizSettingsStore);
   const router = useRouter();
+  const timerOfQuiz = useTimerQuizStore((store) => store.stringValue);
+  const { useFinishTimer } = useTimerQuizStore();
 
   useEffect(() => {
     setCardDeck(random ? shuffleSortArray(cards) : [...cards]);
@@ -72,6 +75,10 @@ export default function Play_Quiz_Speech_Type({
     setCardDeck(newDeck);
     setFlipped(false);
     setRevealed(false);
+
+    if(!newDeck.length) {
+      useFinishTimer()
+    }
   };
 
   if (!currentCard) {
@@ -95,6 +102,12 @@ export default function Play_Quiz_Speech_Type({
         ) : (
           <p className="text-gray-600 mb-4 dark:text-bgLight">
             Отличная работа — ты справился!
+          </p>
+        )}
+        
+        {quizSettings.time && (
+          <p className="text-xl font-bold mb-2 dark:text-bgLight ">
+            Время: {timerOfQuiz}
           </p>
         )}
 

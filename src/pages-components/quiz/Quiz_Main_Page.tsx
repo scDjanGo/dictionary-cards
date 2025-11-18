@@ -8,6 +8,7 @@ import { Hand, Languages, LinkIcon, Pencil, Play, Volume2 } from "lucide-react";
 import Custom_Radio from "@/UI/buttons/quiz/Custom_Radio";
 import Custom_Checkbox from "@/UI/buttons/quiz/Custom_Checkbox";
 import Custom_Button from "@/UI/buttons/quiz/Custom_Button";
+import Timer_Checkbox from "@/UI/buttons/quiz/Timer_Chechbox";
 
 export default function Quiz_Main_Page() {
   const router = useRouter();
@@ -62,7 +63,6 @@ export default function Quiz_Main_Page() {
         <h2 className="text-center font-bold text-xl text-blueCl dark:text-bgLight">
           Настройки квиза
         </h2>
-
         {/* Язык */}
         <div className="mt-6">
           <label className="flex text-xl items-center font-semibold text-gray-700 mb-2 dark:text-bgLight">
@@ -83,6 +83,14 @@ export default function Quiz_Main_Page() {
               onChange={() => handleChange("language", "ru")}
             />
           </div>
+        </div>
+
+        <div className="mt-6">
+          <Timer_Checkbox
+            label="Таймер"
+            checked={quizSettings.time}
+            onChange={() => handleChange("time", !quizSettings.time)}
+          />
         </div>
 
         {/* Рандом */}
