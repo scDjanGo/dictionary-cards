@@ -1,10 +1,6 @@
-"use client";
-
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Tense_Navbar() {
-  const router = useRouter();
-
   const tenses = [
     { name: "Present Simple", path: "/tense/present-simple" },
     { name: "Past Simple", path: "/tense/past-simple" },
@@ -32,13 +28,13 @@ export default function Tense_Navbar() {
       className="w-full flex  justify-start gap-4  rounded-md overflow-x-auto mb-[16px]"
     >
       {tenses.map((tense) => (
-        <button
+        <Link
           key={tense.path}
-          onClick={() => router.push(tense.path)}
+          href={tense.path}
           className="px-6 py-3 rounded-xl text-[14px] text-nowrap bg-blueCl dark:bg-bgItem  text-bgLight font-medium hover:bg-gray-800 transition-transform hover:scale-105 active:scale-95 shadow-md"
         >
           {tense.name}
-        </button>
+        </Link>
       ))}
     </div>
   );

@@ -260,7 +260,7 @@ const data: { aspect: string; description: string; tenses: Tense[] }[] = [
 
 export default function Page() {
   return (
-    <div className="min-h-screen  py-6 sm:p-10">
+    <div className="min-h-screen  ">
       <Tense_Navbar />
 
       <div className="  bg-bgLight dark:bg-bgItem rounded-2xl p-6 sm:p-10 shadow-md">

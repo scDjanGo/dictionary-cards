@@ -10,6 +10,7 @@ import Type_Of_Cards_Button from "./Type_Of_Cards_Button";
 import Sidebar_Nav_Button from "./Sidebar_Nav_Button";
 import { typeSidebarLink } from "@/lib/types/types";
 import { TENSE } from "@/data/tense";
+import { PREPOSITIONS } from "@/data/prepositions";
 
 const LINKS: typeSidebarLink[] = [
   { id: 1, link: "/", name: "Главная", childItems: [] },
@@ -42,6 +43,12 @@ const LINKS: typeSidebarLink[] = [
   },
   {
     id: 4,
+    link: "/prepositions",
+    name: "Предлоги",
+    childItems: PREPOSITIONS,
+  },
+  {
+    id: 5,
     link: "/modal-verbs",
     name: "Модальные глаголы",
     childItems: [],
@@ -71,8 +78,9 @@ export default function Main_Sidebar() {
       ></div>
 
       <div
-        className={`fixed z-[1001] top-0 right-0 h-full bg-blueCl dark:bg-bgDark text-white shadow-lg transition-transform duration-300`}
+        className={`fixed z-[1001] top-0 right-0 h-full bg-blueCl dark:bg-bgDark text-white shadow-lg transition-transform duration-300 overflow-y-auto`}
         style={{
+          scrollbarWidth: "none",
           width: 250,
           transform: isOpen ? "translateX(0)" : `translateX(${250}px)`,
         }}
@@ -95,7 +103,7 @@ export default function Main_Sidebar() {
         </nav>
 
         <Type_Of_Cards_Button />
-
+        {/* 
         <div
           className={`absolute bottom-[10px] right-[10px] flex flex-col gap-[2px]`}
         >
@@ -109,7 +117,7 @@ export default function Main_Sidebar() {
           >
             Телеграм канал
           </Link>
-        </div>
+        </div> */}
       </div>
     </>
   );
