@@ -1,6 +1,6 @@
 export default function PassiveVoicePage() {
   return (
-    <div className=" bg-lightBg dark:bg-darkBg py-8">
+    <div className=" bg-lightBg dark:bg-darkBg p-[6px_0_12px]">
       <div className="">
         {/* Header */}
         <header className="text-center mb-12">

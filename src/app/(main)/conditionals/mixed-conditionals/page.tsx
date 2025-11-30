@@ -279,7 +279,7 @@ const advancedExamples = [
 
 export default function page() {
   return (
-    <div className=" py-8">
+    <div className="">
       <div className="">
         {/* Hero Section */}
         <header className="text-center mb-12">

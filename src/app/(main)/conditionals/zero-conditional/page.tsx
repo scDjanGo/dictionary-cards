@@ -161,7 +161,7 @@ const faqItems = [
 
 export default function ZeroConditionalPage() {
   return (
-    <div className="bg-lightBg dark:bg-darkBg py-8">
+    <div className="bg-lightBg dark:bg-darkBg p-[6px_0_12px]">
       <div className="">
         {/* Hero Section with Breadcrumbs */}
         {/* <nav className="mb-8" aria-label="Хлебные крошки">

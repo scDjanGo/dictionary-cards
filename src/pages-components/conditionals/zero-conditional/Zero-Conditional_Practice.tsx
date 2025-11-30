@@ -146,8 +146,8 @@ const Zero_Conditional_Practice = () => {
   const currentEx = exercises[currentExercise];
 
   return (
-    <div className="min-h-screen bg-bgLight dark:bg-bgDark py-8 px-4 transition-colors duration-200">
-      <div className="max-w-4xl mx-auto">
+    <div className="">
+      <div className="">
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">

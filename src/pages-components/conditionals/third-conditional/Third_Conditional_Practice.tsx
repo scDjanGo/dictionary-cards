@@ -146,7 +146,7 @@ const Third_Conditional_Practice = () => {
   const currentEx = exercises[currentExercise];
 
   return (
-    <div className=" bg-bgLight dark:bg-bgDark py-8  transition-colors duration-200">
+    <div className=" ">
       <div className="">
         {/* Header */}
         <div className="text-center mb-8">

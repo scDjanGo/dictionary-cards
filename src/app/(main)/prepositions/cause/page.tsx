@@ -210,7 +210,7 @@ const formalityLevels = [
 
 export default function PrepositionsOfCausePage() {
   return (
-    <div className="min-h-screen bg-lightBg dark:bg-darkBg py-8">
+    <div className="min-h-screen bg-lightBg dark:bg-darkBg p-[6px_0_12px]">
       <div className=" mx-auto ">
         {/* Header */}
         <header className="text-center mb-8">
