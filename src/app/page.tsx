@@ -1,27 +1,13 @@
 import Link from "next/link";
 
+import { PAGES_LINKS } from "@/data/pages-links";
+
 export default function HomePage() {
-  const LINKS = [
-    { id: 1, name: "Cards", intlName: "Карточки", link: "/cards" },
-    { id: 2, name: "Tense", intlName: "Времена", link: "/tense" },
-    {
-      id: 3,
-      name: "Prepositions",
-      intlName: "Предлоги",
-      link: "/prepositions",
-    },
-    {
-      id: 4,
-      name: "Modal Verbs",
-      intlName: "Модальные глаголы",
-      link: "/modal-verbs",
-    },
-  ];
 
   return (
     <main className="flex flex-col items-center justify-center  gap-6 ">
       <div className="flex flex-col gap-4 w-full">
-        {LINKS.map((item) => (
+        {PAGES_LINKS.filter(item => item.link !== "/").map((item) => (
           <Link key={item.id} href={item.link} className="block w-full">
             <span
               className="relative flex justify-center items-center gap-2 w-full px-6 py-4 text-lg font-bold text-white 
@@ -29,9 +15,9 @@ export default function HomePage() {
                    transition-all duration-300 ease-in-out hover:scale-[1.02]"
             >
               <span className="relative z-10 flex flex-col items-center ">
-                <span className="text-center">{item.name}</span>
+                <span className="text-center">{item.name_en}</span>
                 <span className="max-w-">------------</span>
-                <span className="text-center">{item.intlName}</span>
+                <span className="text-center">{item.name_ru}</span>
               </span>
             </span>
           </Link>

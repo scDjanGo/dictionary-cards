@@ -1,124 +1,103 @@
 "use client";
 
-import Link from "next/link";
-import { IconButton } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
+import { useEffect } from "react";
 import { useSidebarsStore } from "@/lib/zustand/sidebarsStore/useSidebarsStore";
 import Theme_Button from "./Theme_Button";
-import { useEffect } from "react";
 import Type_Of_Cards_Button from "./Type_Of_Cards_Button";
 import Sidebar_Nav_Button from "./Sidebar_Nav_Button";
-import { typeSidebarLink } from "@/lib/types/types";
-import { TENSE } from "@/data/tense";
-import { PREPOSITIONS } from "@/data/prepositions";
+import { PAGES_LINKS } from "@/data/pages-links";
 
-const LINKS: typeSidebarLink[] = [
-  { id: 1, link: "/", name: "Главная", childItems: [] },
-  {
-    id: 2,
-    link: "/cards",
-    name: "Карточки",
-    childItems: [
-      { id: 1, link: "/my-cards", name: "Мои карточки", childItems: [] },
-      { id: 2, link: "/create-card", name: "Создать карточку", childItems: [] },
-      {
-        id: 3,
-        link: "/create-category",
-        name: "Создать категорию",
-        childItems: [],
-      },
-      {
-        id: 4,
-        link: "/blocked-cards",
-        name: "Заблокированные",
-        childItems: [],
-      },
-    ],
-  },
-  {
-    id: 3,
-    link: "/tense",
-    name: "Времена",
-    childItems: TENSE,
-  },
-  {
-    id: 4,
-    link: "/prepositions",
-    name: "Предлоги",
-    childItems: PREPOSITIONS,
-  },
-  {
-    id: 5,
-    link: "/modal-verbs",
-    name: "Модальные глаголы",
-    childItems: [],
-  },
-];
+// Иконка крестика (SVG) вместо MUI CloseIcon
+const CloseIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-7 w-7"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M6 18L18 6M6 6l12 12"
+    />
+  </svg>
+);
 
 export default function Main_Sidebar() {
   const isOpen = useSidebarsStore((state) => state.sidebarsStore.state);
   const offSidebarStore = useSidebarsStore((state) => state.offSidebarStore);
 
+  // Блокируем скролл body при открытом сайдбаре
   useEffect(() => {
-    isOpen
-      ? document.body.classList.add("overflow-y-hidden")
-      : document.body.classList.remove("overflow-y-hidden");
+    if (isOpen) {
+      document.body.classList.add("overflow-y-hidden");
+    } else {
+      document.body.classList.remove("overflow-y-hidden");
+    }
+
     return () => document.body.classList.remove("overflow-y-hidden");
   }, [isOpen]);
 
+  const handleOffSidebarStore = () => {
+    offSidebarStore();
+  };
+
   return (
     <>
+      {/* Overlay */}
       <div
-        className={`fixed z-[1000] inset-0 bg-black/50 transition-opacity ${
+        className={`fixed inset-0 bg-black/50 transition-opacity duration-300 z-[1000] ${
           isOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
         }`}
-        onClick={() => offSidebarStore()}
-      ></div>
+        onClick={handleOffSidebarStore}
+      />
 
-      <div
-        className={`fixed z-[1001] top-0 right-0 h-full bg-blueCl dark:bg-bgDark text-white shadow-lg transition-transform duration-300 overflow-y-auto`}
+      {/* Sidebar */}
+      <aside
+        className={`fixed top-0 right-0 h-full w-64 bg-blueCl dark:bg-bgDark text-white shadow-2xl transition-transform duration-300 ease-in-out z-[1001] overflow-y-auto scrollbar-hide`}
         style={{
-          scrollbarWidth: "none",
-          width: 250,
-          transform: isOpen ? "translateX(0)" : `translateX(${250}px)`,
+          transform: isOpen ? "translateX(0)" : "translateX(100%)",
         }}
       >
-        <div className="w-full flex items-center justify-between px-[24px] my-[24px]">
+        {/* Header: Theme + Close */}
+        <div className="flex items-center justify-between px-6 py-6">
           <Theme_Button />
-          <div className="flex justify-end ">
-            <IconButton
-              onClick={() => offSidebarStore()}
-              className="text-white"
-            >
-              <CloseIcon sx={{ color: "#ffffff" }} />
-            </IconButton>
-          </div>
+          <button
+            onClick={handleOffSidebarStore}
+            className="p-2 rounded-full hover:bg-white/10 transition-colors duration-200"
+            aria-label="Закрыть боковое меню"
+          >
+            <CloseIcon />
+          </button>
         </div>
-        <nav className="flex flex-col space-y-4 px-6 text-lg font-medium">
-          {LINKS.map((item) => (
+
+        {/* Navigation */}
+        <nav className="flex flex-col space-y-2 px-6 text-lg font-medium">
+          {PAGES_LINKS.map((item) => (
             <Sidebar_Nav_Button key={item.id} navItem={item} />
           ))}
         </nav>
 
-        <Type_Of_Cards_Button />
-        {/* 
-        <div
-          className={`absolute bottom-[10px] right-[10px] flex flex-col gap-[2px]`}
-        >
-          <Link
-            href={`https://t.me/scDjanG0?text=У меня есть предложение насчёт easy-eng-app`}
-          >
-            Оставить отзыв
-          </Link>
-          <Link
-            href={`https://t.me/easy_eng_app`}
-          >
-            Телеграм канал
-          </Link>
-        </div> */}
-      </div>
+        {/* Нижняя кнопка (тип карточек) */}
+        <div className="mt-8 px-6">
+          <Type_Of_Cards_Button />
+        </div>
+      </aside>
+
+      {/* Скрываем скроллбар, но оставляем функциональность прокрутки */}
+      <style jsx>{`
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </>
   );
 }

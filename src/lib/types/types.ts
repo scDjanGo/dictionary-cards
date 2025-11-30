@@ -60,7 +60,8 @@ export interface typeLine {
 // Sidebar Elems
 export type typeSidebarLink = {
   id: number;
-  name: string;
+  name_ru: string;
+  name_en: string
   link: string;
   childItems: typeSidebarLink[];
 };

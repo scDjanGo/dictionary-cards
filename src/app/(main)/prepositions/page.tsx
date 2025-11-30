@@ -1,9 +1,10 @@
-import Prepositions_Navbar from "@/pages-components/prepositions/components/Prepositions_Navbar";
+import Pages_Navbar from "@/components/navbar/Pages_Navbar";
+import { PREPOSITIONS } from "@/data/prepositions";
 
 export default function page() {
   return (
     <div className="min-h-screen bg-lightBg dark:bg-darkBg">
-        <Prepositions_Navbar />
+        <Pages_Navbar navItems={PREPOSITIONS} />
       {/* Header */}
       <section className="bg-blueCl dark:bg-bgItem  rounded-[0_0_12px_12px] text-white py-8">
         <div className=" mx-auto px-4 text-center">

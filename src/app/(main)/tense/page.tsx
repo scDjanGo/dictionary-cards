@@ -1,5 +1,7 @@
-import Tense_Navbar from "@/pages-components/tense/components/Tense_Navbar";
+
 import Link from "next/link";
+import Pages_Navbar from "./../../../components/navbar/Pages_Navbar";
+import { TENSE } from "@/data/tense";
 
 type Tense = {
   id: string;
@@ -261,8 +263,7 @@ const data: { aspect: string; description: string; tenses: Tense[] }[] = [
 export default function Page() {
   return (
     <div className="min-h-screen  ">
-      <Tense_Navbar />
-
+      <Pages_Navbar navItems={TENSE} />
       <div className="  bg-bgLight dark:bg-bgItem rounded-2xl p-6 sm:p-10 shadow-md">
         <header className="mb-6">
           <h1 className="text-3xl text-center font-bold mb-2 dark:text-bgLight">

@@ -44,7 +44,7 @@ export default function Sidebar_Nav_Button({
           onClick={handleToggle}
           className="hover:underline flex items-center justify-between gap-[8px] cursor-pointer w-full"
         >
-          <span className="text-white">{navItem.name}</span>
+          <span className="text-white  text-start">{navItem.name_ru}</span>
           <Arrow_Nav_SVG
             className={`${
               isOpen ? "rotate-180" : "rotate-0"
@@ -57,7 +57,7 @@ export default function Sidebar_Nav_Button({
           onClick={closeSidebar}
           className="hover:underline flex items-center justify-between gap-[8px] cursor-pointer"
         >
-          <span className="text-white">{navItem.name}</span>
+          <span className="text-white text-start">{navItem.name_ru}</span>
           {/* <Arrow_Nav_SVG
             className={`${
               isOpen ? "rotate-180" : "rotate-0"
@@ -86,7 +86,7 @@ export default function Sidebar_Nav_Button({
                 pathname === item.link ? "border-b-[1px] border-bgLight" : ""
               }`}
             >
-              {item.name}
+              {item.name_en}
             </span>
             <Arrow_Nav_SVG className="rotate-270" />
           </Link>
