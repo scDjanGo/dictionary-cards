@@ -1,8 +1,7 @@
 "use client";
 
 import { useDropdown } from "@/features/hooks/useDropdown";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-import { IconButton } from "@mui/material";
+import { MoreVertical } from "lucide-react";
 
 type CardData = {
   id: number;
@@ -23,11 +22,14 @@ export default function User_Card({ data }: { data: CardData }) {
       ref={dropdownRef}
       className="relative p-4 border border-blue-200 rounded-md shadow-md bg-white hover:shadow-lg transition-all duration-200 w-full max-w-xs"
     >
-      {/* Меню кнопка */}
+      {/* Кнопка меню */}
       <div className="absolute top-2 right-2 z-10">
-        <IconButton onClick={toggle} size="small">
-          <MoreVertIcon fontSize="small" />
-        </IconButton>
+        <button
+          onClick={toggle}
+          className="p-1 rounded-full hover:bg-gray-100 transition"
+        >
+          <MoreVertical size={18} />
+        </button>
 
         {isOpen && (
           <div className="absolute right-0 mt-1 w-32 bg-white rounded shadow-md border border-gray-200 z-20">
@@ -57,9 +59,13 @@ export default function User_Card({ data }: { data: CardData }) {
       <div className="flex flex-col items-center">
         <h5 className="text-lg font-bold text-blue-700">{data.name}</h5>
         <h6 className="text-sm font-medium text-blue-500">{data.intlName}</h6>
+
         <div className="w-full border-t border-indigo-200 my-2" />
+
         <p className="text-sm text-indigo-600">{data.description}</p>
+
         <div className="w-full border-t border-indigo-200 my-2" />
+
         <p className="text-sm text-indigo-600">{data.intlDescription}</p>
       </div>
     </div>

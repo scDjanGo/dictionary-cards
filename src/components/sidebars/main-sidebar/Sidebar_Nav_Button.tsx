@@ -20,22 +20,14 @@ export default function Sidebar_Nav_Button({
     toggle();
   };
 
-  
   const closeSidebar = () => {
     offSidebarStore();
-  }
-
+  };
 
   const handleCloseSidebar = () => {
     handleToggle();
     closeSidebar();
   };
-
-
-
-
-
-
 
   return (
     <div ref={dropdownRef} className="my-transform">
@@ -44,7 +36,10 @@ export default function Sidebar_Nav_Button({
           onClick={handleToggle}
           className="hover:underline flex items-center justify-between gap-[8px] cursor-pointer w-full"
         >
-          <span className="text-white  text-start">{navItem.name_ru}</span>
+          <div className="flex items-center gap-[6px]">
+            {navItem.icon && navItem.icon()}
+            <span className="text-white  text-start leading-[1.2]">{navItem.name_ru}</span>
+          </div>
           <Arrow_Nav_SVG
             className={`${
               isOpen ? "rotate-180" : "rotate-0"
@@ -57,7 +52,10 @@ export default function Sidebar_Nav_Button({
           onClick={closeSidebar}
           className="hover:underline flex items-center justify-between gap-[8px] cursor-pointer"
         >
-          <span className="text-white text-start">{navItem.name_ru}</span>
+          <div className="flex items-center gap-[6px]">
+            {navItem.icon && navItem.icon()}
+            <span className="text-white  text-start leading-[1.2]">{navItem.name_ru}</span>
+          </div>
           {/* <Arrow_Nav_SVG
             className={`${
               isOpen ? "rotate-180" : "rotate-0"
@@ -66,32 +64,34 @@ export default function Sidebar_Nav_Button({
         </Link>
       )}
 
-      {!!navItem.childItems.length && <div
-        style={{ scrollbarWidth: "none" }}
-        className={`my-transform flex flex-col gap-[12px] pl-[6px] transition-all duration-500 ease-in-out overflow-hidden
+      {!!navItem.childItems.length && (
+        <div
+          style={{ scrollbarWidth: "none" }}
+          className={`my-transform flex flex-col gap-[12px] pl-[6px] transition-all duration-500 ease-in-out overflow-hidden
           ${
             isOpen ? "max-h-[350px] mt-[12px] !overflow-y-auto" : "max-h-0 mt-0"
           }
         `}
-      >
-        {[navItem, ...navItem.childItems]?.map((item, index) => (
-          <Link
-            key={index}
-            href={item.link}
-            onClick={handleCloseSidebar}
-            className={`text-[500] flex items-center justify-between gap-[6px] `}
-          >
-            <span
-              className={` ${
-                pathname === item.link ? "border-b-[1px] border-bgLight" : ""
-              }`}
+        >
+          {[navItem, ...navItem.childItems]?.map((item, index) => (
+            <Link
+              key={index}
+              href={item.link}
+              onClick={handleCloseSidebar}
+              className={`text-[500] flex items-center justify-between gap-[6px] `}
             >
-              {item.name_en}
-            </span>
-            <Arrow_Nav_SVG className="rotate-270" />
-          </Link>
-        ))}
-      </div>}
+              <span
+                className={` ${
+                  pathname === item.link ? "border-b-[1px] border-bgLight" : ""
+                }`}
+              >
+                {item.name_en}
+              </span>
+              <Arrow_Nav_SVG className="rotate-270" />
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

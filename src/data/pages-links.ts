@@ -3,6 +3,16 @@ import { PREPOSITIONS } from "./prepositions";
 import { TENSE } from "./tense";
 import { CONDITIONALS } from "./conditionals";
 
+
+
+// Icons
+import Cards_SVG from "@/UI/svgs/sidebar/Cards_SVG";
+import Tense_SVG from "@/UI/svgs/sidebar/Tense_SVG";
+import Prepositions_SVG from "@/UI/svgs/sidebar/Prepositions_SVG";
+import Passive_Voice_SVG from "@/UI/svgs/sidebar/Passive_Voice_SVG";
+import Conditional_SVG from "@/UI/svgs/sidebar/Conditional_SVG";
+import Modal_Verbs_SVG from "@/UI/svgs/sidebar/Modal_Verbs_SVG";
+
 export const PAGES_LINKS: typeSidebarLink[] = [
   { id: 1, link: "/", name_ru: "Главная", name_en: "Home", childItems: [] },
   {
@@ -40,13 +50,15 @@ export const PAGES_LINKS: typeSidebarLink[] = [
         childItems: [],
       },
     ],
+    icon: Cards_SVG
   },
   {
     id: 3,
     link: "/tense",
     name_ru: "Времена",
-    name_en: "Times",
+    name_en: "Tense",
     childItems: TENSE,
+    icon: Tense_SVG
   },
   {
     id: 4,
@@ -54,6 +66,7 @@ export const PAGES_LINKS: typeSidebarLink[] = [
     name_ru: "Предлоги",
     name_en: "Prepositions",
     childItems: PREPOSITIONS,
+    icon: Prepositions_SVG
   },
   {
     id: 5,
@@ -61,6 +74,7 @@ export const PAGES_LINKS: typeSidebarLink[] = [
     name_ru: "Условные предложения",
     name_en: "Conditional sentences",
     childItems: CONDITIONALS,
+    icon: Conditional_SVG
   },
   {
     id: 6,
@@ -68,6 +82,7 @@ export const PAGES_LINKS: typeSidebarLink[] = [
     name_ru: "Модальные глаголы",
     name_en: "Modal verbs",
     childItems: [],
+    icon: Modal_Verbs_SVG
   },
   {
     id: 7,
@@ -75,5 +90,6 @@ export const PAGES_LINKS: typeSidebarLink[] = [
     name_ru: "Пассивный Залог",
     name_en: "Passive Voice",
     childItems: [],
+    icon: Passive_Voice_SVG
   },
 ];

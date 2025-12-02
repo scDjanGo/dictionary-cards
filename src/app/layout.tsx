@@ -1,4 +1,4 @@
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
+
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 
@@ -28,7 +28,6 @@ export default function RootLayout({
       <body
         className={`${roboto.className} bg-bgLight dark:bg-bgDark min-h-[100dvh]`}
       >
-        <AppRouterCacheProvider>
           <>
             {/* Features */}
             <Main_Features />
@@ -47,7 +46,6 @@ export default function RootLayout({
               <Analytics />
             </div>
           </>
-        </AppRouterCacheProvider>
       </body>
     </html>
   );

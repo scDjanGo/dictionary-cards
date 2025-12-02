@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { PlayArrow, Search, Quiz } from "@mui/icons-material";
+import { Play,  Puzzle  } from "lucide-react";
 import { CardType } from "@/lib/types/types";
 import { useRouter } from "next/navigation";
 import Search_SVG from "@/UI/svgs/Search_SVG";
@@ -32,15 +32,17 @@ export default function Active_Header({
       setCurrentCards(defaultCards);
       return;
     }
-    const filterCards = currentCards.filter(
+
+    const lower = newValue.toLowerCase();
+    const filtered = currentCards.filter(
       (item) =>
-        item.name.toLowerCase().includes(newValue.toLowerCase()) ||
-        item.intlName.toLowerCase().includes(newValue.toLowerCase()) ||
-        item.description.toLowerCase().includes(newValue.toLowerCase()) ||
-        item.intlDescription.toLowerCase().includes(newValue.toLowerCase())
+        item.name.toLowerCase().includes(lower) ||
+        item.intlName.toLowerCase().includes(lower) ||
+        item.description.toLowerCase().includes(lower) ||
+        item.intlDescription.toLowerCase().includes(lower)
     );
 
-    setCurrentCards(filterCards);
+    setCurrentCards(filtered);
   };
 
   const handlePlayClick = () => {
@@ -53,16 +55,14 @@ export default function Active_Header({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      inputRef.current?.blur();
-    }
+    if (e.key === "Enter") inputRef.current?.blur();
   };
 
   return (
     <div className="flex flex-col items-center gap-6 max-w-full mx-auto mt-[12px] mb-[12px]">
-      {/* Комбинированная строка с input и кнопкой Play */}
+      {/* Комбинированная строка */}
       <div className="flex items-center w-full gap-2">
-        {/* Поле ввода с иконкой поиска */}
+        {/* Поле ввода */}
         <div className="flex items-center flex-1 border border-blueCl dark:border-bgLight rounded-md overflow-hidden shadow-sm dark:bg-bgItem">
           <button
             onClick={handleSearchIconClick}
@@ -70,6 +70,7 @@ export default function Active_Header({
           >
             <Search_SVG />
           </button>
+
           <input
             type="text"
             ref={inputRef}
@@ -81,14 +82,14 @@ export default function Active_Header({
           />
         </div>
 
-        {/* Кнопка Play с иконкой Quiz */}
+        {/* Кнопка запуска теста */}
         <button
           onClick={handlePlayClick}
-          className="flex items-center gap-2 bg-blueCl dark:bg-bgItem dark:border-bgLight dark:border-[1px] hover:bg-[#155a9c] dark:hover:bg-bgDark text-white font-medium px-4 py-2 rounded-md transition duration-200 shadow cursor-pointer"
+          className="flex items-center gap-2 h-10 bg-blueCl dark:bg-bgItem dark:border-bgLight dark:border-[1px] hover:bg-[#155a9c] dark:hover:bg-bgDark text-white font-medium px-4 py-2 rounded-md transition duration-200 shadow cursor-pointer"
           title="Запустить тест"
         >
-          <Quiz />
-          <PlayArrow fontSize="small" />
+          <Puzzle size={18} />
+          <Play size={18} />
         </button>
       </div>
     </div>

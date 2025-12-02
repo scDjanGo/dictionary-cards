@@ -1,7 +1,5 @@
 "use client";
 
-import Box from "@mui/material/Box";
-import Default_Card from "@/components/cards/Default_Card";
 import Empty_Page from "@/components/empty-pages/Empty_Page";
 
 import { useBlockedCardsStore } from "@/lib/zustand";

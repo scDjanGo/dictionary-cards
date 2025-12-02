@@ -64,6 +64,7 @@ export type typeSidebarLink = {
   name_en: string
   link: string;
   childItems: typeSidebarLink[];
+  icon?: () => React.ReactNode
 };
 
 

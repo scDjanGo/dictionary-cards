@@ -163,26 +163,15 @@ export default function ZeroConditionalPage() {
   return (
     <div className="bg-lightBg dark:bg-darkBg p-[6px_0_12px]">
       <div className="">
-        {/* Hero Section with Breadcrumbs */}
-        {/* <nav className="mb-8" aria-label="Хлебные крошки">
-          <div className="text-sm text-gray-600 dark:text-gray-400">
-            <a href="/" className="hover:text-blueCl transition-colors">Главная</a>
-            <span className="mx-2">/</span>
-            <a href="/grammar" className="hover:text-blueCl transition-colors">Грамматика</a>
-            <span className="mx-2">/</span>
-            <span className="text-blueCl font-medium">Zero Conditional</span>
-          </div>
-        </nav> */}
-
         {/* Main Header */}
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
             Zero Conditional в Английском Языке
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Zero Conditional - используется, когда мы говорим о фактах, правилах,
-            закономерностях, которые всегда верны. Это не фантазия, не будущее и
-            не гипотетическая ситуация — это универсальная истина.
+            Zero Conditional - используется, когда мы говорим о фактах,
+            правилах, закономерностях, которые всегда верны. Это не фантазия, не
+            будущее и не гипотетическая ситуация — это универсальная истина.
           </p>
         </header>
 
