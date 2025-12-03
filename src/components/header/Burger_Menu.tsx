@@ -23,9 +23,9 @@ export default function Burger_Menu() {
   };
   return (
     <button onClick={() => handleTurnSidebar("main-sidebar")} className={``}>
-      <div className="min-w-[17px] h-[2px] min-h-[2px] bg-blueCl dark:bg-bgLight" />
-      <div className="min-w-[17px] h-[2px] min-h-[2px] bg-blueCl dark:bg-bgLight my-[2.8px]" />
-      <div className="min-w-[17px] h-[2px] min-h-[2px] bg-blueCl dark:bg-bgLight" />
+      <div className="min-w-[17px] h-[2px] min-h-[2px] bg-blueCl dark:bg-bgLight rounded-[4px]" />
+      <div className="min-w-[17px] h-[2px] min-h-[2px] bg-blueCl dark:bg-bgLight my-[2.8px] rounded-[4px]" />
+      <div className="min-w-[17px] h-[2px] min-h-[2px] bg-blueCl dark:bg-bgLight rounded-[4px]" />
     </button>
   );
 }
